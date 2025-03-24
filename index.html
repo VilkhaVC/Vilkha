@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KALIMANTAN KOMODITAS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Animasi fade-in */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        /* Efek hover pada card */
+        .hover-scale {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Gradient background untuk header */
+        .gradient-bg {
+            background: linear-gradient(135deg, #F77E04, #F70404);
+        }
+
+        /* Gradient background untuk sidebar */
+        .sidebar-gradient {
+            background: linear-gradient(135deg, #FDE68A, #F59E0B);
+        }
+
+        /* Warna tombol yang lebih cerah */
+        .btn-primary {
+            background: linear-gradient(135deg, #3B82F6, #1D4ED8);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+        }
+
+        /* Warna card yang lebih cerah */
+        .card {
+            background: linear-gradient(135deg, #F9FAFB, #E5E7EB);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Warna teks yang kontras */
+        .text-primary {
+            color: #1E3A8A;
+        }
+
+        .text-secondary {
+            color: #6B7280;
+        }
+
+        /* Efek hover pada daftar komoditas */
+        #komoditasList div {
+            transition: background-color 0.3s ease;
+        }
+
+        #komoditasList div:hover {
+            background-color: #F3F4F6;
+        }
+
+        /* Gaya untuk tombol hapus */
+        #komoditasList button {
+            transition: color 0.3s ease;
+        }
+
+        #komoditasList button:hover {
+            color: #EF4444;
+        }
+
+        /* Gaya untuk tombol menu */
+        .header-menu {
+            position: absolute;
+            left: 1rem; /* Jarak dari kiri */
+            top: 1rem; /* Jarak dari atas */
+            z-index: 50; /* Pastikan tombol menu di atas elemen lain */
+        }
+
+        /* Gaya untuk logo di header */
+        .logo-container {
+            position: absolute;
+            right: 1.5rem; /* Jarak dari kanan */
+            top: 1rem; /* Jarak dari atas */
+            z-index: 50; /* Pastikan logo di atas elemen lain */
+        }
+
+        /* Gaya untuk dropdown menu */
+        #menuDropdown {
+            position: absolute;
+            left: 0; /* Dropdown muncul di sebelah kiri tombol */
+            top: 100%; /* Dropdown muncul di bawah tombol */
+            margin-top: 0.5rem; /* Jarak antara tombol dan dropdown */
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 12rem; /* Lebar dropdown */
+        }
+
+        /* Gaya untuk item di dalam dropdown */
+        #menuDropdown a {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: #4a5568; /* Warna teks */
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        #menuDropdown a:hover {
+            background-color: #f7fafc; /* Warna latar saat hover */
+        }
+
+        /* Gaya untuk logo di header */
+        .logo-header {
+            height: 95px; /* Sesuaikan ukuran logo */
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+        }
+
+        /* Efek hover untuk logo */
+        .logo-header:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        /* Gaya untuk container logo */
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-left: auto; /* Pindahkan logo ke kanan */
+        }
+
+        /* Gaya untuk judul di tengah */
+        .text-center {
+            text-align: center;
+            flex-grow: 1;
+            margin: 0 20px; /* Beri jarak antara judul dan logo */
+        }
+
+        /* Gaya untuk daftar komoditas di popup */
+        .komoditas-container {
+            max-height: 260px; /* Tinggi maksimum container */
+            overflow-y: auto; /* Aktifkan scrollbar vertikal */
+            padding-right: 8px; /* Beri jarak untuk scrollbar */
+        }
+
+        /* Gaya untuk scrollbar */
+        .komoditas-container::-webkit-scrollbar {
+            width: 6px; /* Lebar scrollbar */
+        }
+
+        .komoditas-container::-webkit-scrollbar-track {
+            background: #f1f1f1; /* Warna track scrollbar */
+            border-radius: 4px;
+        }
+
+        .komoditas-container::-webkit-scrollbar-thumb {
+            background: #888; /* Warna thumb scrollbar */
+            border-radius: 4px;
+        }
+
+        .komoditas-container::-webkit-scrollbar-thumb:hover {
+            background: #555; /* Warna thumb scrollbar saat hover */
+        }
+		
+		/* Media Query untuk perangkat mobile (lebar layar <= 768px) */
+		@media (max-width: 768px) {
+			.logo-header {
+				height: 40px; /* Ukuran diperkecil untuk mobile */
+			}
+		}
+		
+		/* Header Styling */
+        .gradient-bg {
+            background: linear-gradient(135deg, #F77E04, #F70404);
+            padding: 4rem 1rem; /* Menambah tinggi header */
+            border-radius: 12px;
+        }
+        .header-title {
+            font-size: 4rem; /* Memperbesar font size */
+            font-weight: bold;
+            text-align: center;
+        }
+        .header-subtitle {
+            font-size: 2.5rem;
+            text-align: center;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <!-- Container Utama -->
+    <div class="container mx-auto p-4 pt-8">
+        <!-- Header -->
+        <header class="gradient-bg text-white py-8 rounded-lg shadow-lg mb-6 fade-in relative flex items-center justify-between px-6">
+            <!-- Menu di Pojok Kiri -->
+            <div class="header-menu">
+                <div class="relative">
+                    <button id="menuButton" class="btn-primary">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div id="menuDropdown" class="hidden">
+                        <a href="login.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100"><i class="fas fa-sign-in-alt mr-2"></i>Login</a>
+                        <a href="daftar komoditas.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100"><i class="fas fa-newspaper mr-2"></i>Daftar Komoditas</a>
+                        <a href="manufaktur.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100"><i class="fas fa-info-circle mr-2"></i>Manufaktur</a>
+                        <a href="kontak.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100"><i class="fas fa-envelope mr-2"></i>Kontak</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Judul di Tengah -->
+            <div class="text-center flex-grow mx-4">
+                <h1 class="text-4xl font-bold">Natural Resource Maps KALIMANTAN</h1>
+                <p class="mt-2 text-lg opacity-90">Visualisasi Data Komoditas/Desa di KALIMANTAN</p>
+            </div>
+
+            <!-- Logo di Kanan -->
+            <div class="logo-container flex flex-col items-center justify-center">
+                <img src="logo.png" alt="Logo Bhinneka Tunggal Ika" class="logo-header">
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="flex flex-col lg:flex-row gap-6">
+            <!-- Sidebar -->
+            <aside class="sidebar-gradient w-full lg:w-1/3 p-6 rounded-lg shadow-lg hover-scale fade-in">
+                <!-- Formulir Edit Data Desa -->
+                <div id="editForm" class="hidden">
+                    <h2 class="text-xl font-semibold text-primary mb-4">Daftar Komoditas Desa</h2>
+                    <form id="desaForm">
+                        <!-- Input Nama Desa -->
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-secondary mb-2">Nama Desa</label>
+                            <input type="text" id="editName" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all bg-white text-gray-900" readonly>
+                        </div>
+
+                        <!-- Daftar Komoditas -->
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-secondary mb-2">Komoditas</label>
+                            <div id="komoditasList" class="space-y-2">
+                                <!-- Daftar komoditas akan dimasukkan di sini secara dinamis -->
+                            </div>
+                        </div>
+
+                        <!-- Input untuk Menambahkan Komoditas Baru -->
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-secondary mb-2">Tambah Komoditas</label>
+                            <div class="flex gap-2">
+                                <input type="text" id="newKomoditas" placeholder="Masukkan komoditas baru" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all bg-white text-gray-900">
+                                <button type="button" id="addKomoditas" class="btn-primary">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Tombol Simpan Perubahan -->
+                        <button type="submit" class="btn-primary w-full">
+                            <i class="fas fa-save mr-2"></i>Simpan Perubahan
+                        </button>
+                    </form>
+                    <button id="closeEditForm" class="btn-primary w-full mt-4">
+                        <i class="fas fa-times mr-2"></i>Tutup Formulir
+                    </button>
+                </div>
+
+                <!-- Filter Data (Awalnya Ditampilkan) -->
+                <div id="filterSection">
+                    <h2 class="text-xl font-semibold text-primary mb-4">Filter Lokasi</h2>
+                    <div class="mt-4">
+                        <!-- Filter State -->
+                        <label class="block text-sm font-medium text-secondary mb-2">Filter Provinsi</label>
+                        <select id="filterState" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all bg-white text-gray-900">
+                            <option value="">Provinsi</option>
+                        </select>
+
+                        <!-- Filter Region -->
+                        <label class="block text-sm font-medium text-secondary mt-4 mb-2">Filter Kabupaten</label>
+                        <select id="filterRegion" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all bg-white text-gray-900">
+                            <option value="">Semua Kabupaten</option>
+                        </select>
+
+                        <!-- Filter County -->
+                        <label class="block text-sm font-medium text-secondary mt-4 mb-2">Filter Kecamatan</label>
+                        <select id="filterCounty" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all bg-white text-gray-900">
+                            <option value="">Semua Kecamatan</option>
+                        </select>
+
+                        <!-- Tombol Reset Filter -->
+                        <button id="resetFilter" class="btn-primary w-full mt-4">
+                            <i class="fas fa-sync-alt mr-2"></i>Reset Filter
+                        </button>
+                    </div>
+
+                    <!-- Fitur Pencarian -->
+                    <div class="mt-6">
+                        <label class="block text-sm font-medium text-secondary mb-2">Cari Nama Desa</label>
+                        <input type="text" id="searchInput" placeholder="Masukkan nama desa..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all bg-white text-gray-900">
+                        <!-- Daftar hasil pencarian -->
+                        <div id="searchResults" class="mt-2 bg-white border border-gray-300 rounded-lg shadow-lg max-h-48 overflow-y-auto hidden"></div>
+                    </div>
+
+                    <!-- Tombol Ekspor Data -->
+                    <button id="exportButton" class="btn-primary w-full mt-4">
+                        <i class="fas fa-download mr-2"></i>Ekspor Data ke CSV
+                    </button>
+                </div>
+            </aside>
+
+            <!-- Peta -->
+            <div class="w-full lg:w-2/3 map-container fade-in">
+                <div id="map" class="w-full h-96 lg:h-[70vh] rounded-lg"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 bg-gray-800 text-white mt-8">
+        <p class="text-sm">
+            Dibuat oleh <a href="https://www.facebook.com/profile.php?id=100079076676302" target="_blank" class="text-blue-400 hover:text-blue-300 underline">Ardiansyah/Ancang</a> Pasir Mayang
+        </p>
+    </footer>
+
+    <script>
+        // Inisialisasi Peta
+        var map = L.map('map', {
+            center: [-1.8567, 116.2167], // Koordinat Tanah Grogot
+            zoom: 13, // Level zoom awal (sesuaikan agar Tanah Grogot terlihat jelas)
+            scrollWheelZoom: true, // Aktifkan zoom dengan scroll wheel
+            doubleClickZoom: false, // Nonaktifkan zoom dengan double click
+            touchZoom: false, // Nonaktifkan zoom dengan touch (untuk perangkat mobile)
+            dragging: true // Aktifkan dragging (geser peta)
+        });
+
+        // Ganti URL tile layer ke CyclOSM
+        L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
+            attribution: '<a href="https://github.com/cyclosm/cyclosm-cartocss-style/releases" title="CyclOSM - Open Bicycle render">CyclOSM</a> | Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Variabel untuk menyimpan data GeoJSON
+        var geoJsonData;
+        var geoJsonLayer;
+        var selectedFeature; // Untuk menyimpan marker yang dipilih
+
+        // Fungsi untuk memuat data GeoJSON
+        async function loadGeoJSON() {
+            try {
+                const response = await fetch('data.geojson'); // Ganti dengan path ke file GeoJSON Anda
+                const data = await response.json();
+                geoJsonData = data;
+
+                // Tambahkan data GeoJSON ke peta
+                geoJsonLayer = L.geoJSON(data, {
+                    pointToLayer: function (feature, latlng) {
+                        return L.marker(latlng);
+                    },
+                    onEachFeature: function (feature, layer) {
+                        // Tambahkan popup dengan informasi desa, county, dan region
+                        layer.bindPopup(`
+                            <b>${feature.properties.name}</b><br>
+                            County: ${feature.properties["is_in:county"]}<br>
+                            Region: ${feature.properties["is_in:region"]}
+                        `);
+
+                        // Tambahkan event listener untuk menampilkan formulir edit saat marker diklik
+                        layer.on('click', function () {
+                            selectedFeature = feature;
+                            showEditForm(feature);
+                        });
+                    }
+                }).addTo(map);
+
+                // Isi dropdown filter dengan data GeoJSON
+                populateDropdowns(data);
+
+                // Set filter State secara otomatis ke "Kalimantan Timur"
+                setDefaultStateFilter();
+            } catch (error) {
+                console.error('Error loading GeoJSON:', error);
+            }
+        }
+
+        // Fungsi untuk mengatur filter State secara otomatis
+        function setDefaultStateFilter() {
+            const stateSelect = document.getElementById('filterState');
+            const defaultState = "Kalimantan Timur"; // State yang ingin Anda pilih secara default
+
+            // Cari opsi yang sesuai dengan "Kalimantan Timur"
+            for (let i = 0; i < stateSelect.options.length; i++) {
+                if (stateSelect.options[i].text === defaultState) {
+                    stateSelect.selectedIndex = i; // Pilih opsi tersebut
+                    break;
+                }
+            }
+
+            // Trigger perubahan pada dropdown State untuk memfilter data
+            stateSelect.dispatchEvent(new Event('change'));
+        }
+
+        // Fungsi untuk menampilkan formulir edit
+        async function showEditForm(feature) {
+            const desa_name = feature.properties.name; // Ambil nama desa dari GeoJSON
+            try {
+                // Ambil data komoditas dari backend
+                const response = await fetch(`http://localhost/paser_komoditas/api.php?desa_name=${desa_name}`);
+                const komoditasData = await response.json();
+                feature.properties.komoditas = komoditasData; // Tambahkan komoditas ke feature
+            } catch (error) {
+                console.error('Gagal mengambil komoditas:', error);
+            }
+
+            // Tampilkan formulir edit
+            document.getElementById('filterSection').classList.add('hidden');
+            document.getElementById('editForm').classList.remove('hidden');
+            document.getElementById('editName').value = feature.properties.name;
+
+            const komoditasList = document.getElementById('komoditasList');
+            komoditasList.innerHTML = '';
+
+            if (feature.properties.komoditas && feature.properties.komoditas.length > 0) {
+                // Buat container untuk komoditas dengan scrollbar
+                const komoditasContainer = document.createElement('div');
+                komoditasContainer.className = 'komoditas-container'; // Tambahkan class untuk styling scrollbar
+
+                feature.properties.komoditas.forEach((komoditas, index) => {
+                    const komoditasItem = document.createElement('div');
+                    komoditasItem.className = 'flex justify-between items-center bg-gray-100 p-2 rounded-lg mb-2'; // Tambahkan margin-bottom
+                    komoditasItem.innerHTML = `
+                        <span>${komoditas}</span>
+                        <button type="button" onclick="removeKomoditas(${index})" class="text-red-500 hover:text-red-700">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    `;
+                    komoditasContainer.appendChild(komoditasItem);
+                });
+
+                komoditasList.appendChild(komoditasContainer);
+            } else {
+                komoditasList.innerHTML = '<p class="text-gray-500">Tidak ada komoditas.</p>';
+            }
+
+            selectedFeature = feature;
+        }
+
+        // Fungsi untuk menambahkan komoditas baru
+        document.getElementById('addKomoditas').addEventListener('click', async function () {
+            const newKomoditasInput = document.getElementById('newKomoditas');
+            const newKomoditas = newKomoditasInput.value.trim();
+
+            if (newKomoditas) {
+                try {
+                    // Kirim data ke backend
+                    const response = await fetch('http://localhost/paser_komoditas/api.php', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            desa_name: selectedFeature.properties.name, // Nama desa dari GeoJSON
+                            komoditas: newKomoditas
+                        })
+                    });
+
+                    if (response.ok) {
+                        // Jika berhasil, perbarui tampilan
+                        newKomoditasInput.value = ''; // Kosongkan input
+                        showEditForm(selectedFeature); // Perbarui tampilan daftar komoditas
+                    } else {
+                        console.error('Gagal menambahkan komoditas');
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                }
+            }
+        });
+
+        // Fungsi untuk menghapus komoditas
+        async function removeKomoditas(index) {
+            if (selectedFeature.properties.komoditas && selectedFeature.properties.komoditas.length > index) {
+                const komoditas = selectedFeature.properties.komoditas[index];
+
+                try {
+                    // Kirim permintaan hapus ke backend
+                    const response = await fetch('http://localhost/paser_komoditas/api.php', {
+                        method: 'DELETE',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            desa_name: selectedFeature.properties.name,
+                            komoditas: komoditas
+                        })
+                    });
+
+                    if (response.ok) {
+                        // Jika berhasil, perbarui tampilan
+                        selectedFeature.properties.komoditas.splice(index, 1);
+                        showEditForm(selectedFeature); // Perbarui tampilan daftar komoditas
+                    } else {
+                        console.error('Gagal menghapus komoditas');
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                }
+            }
+        }
+
+        // Fungsi untuk menyimpan perubahan
+        function saveChanges(event) {
+            event.preventDefault();
+
+            // Perbarui popup marker dengan data yang baru
+            geoJsonLayer.eachLayer(function (layer) {
+                if (layer.feature === selectedFeature) {
+                    layer.bindPopup(`
+                        <b>${selectedFeature.properties.name}</b><br>
+                        County: ${selectedFeature.properties["is_in:county"]}<br>
+                        Region: ${selectedFeature.properties["is_in:region"]}
+                    `);
+                }
+            });
+
+            // Sembunyikan formulir edit
+            hideEditForm();
+        }
+
+        // Fungsi untuk menyembunyikan formulir edit
+        function hideEditForm() {
+            document.getElementById('editForm').classList.add('hidden');
+            document.getElementById('filterSection').classList.remove('hidden');
+        }
+
+        // Event listener untuk formulir edit
+        document.getElementById('desaForm').addEventListener('submit', saveChanges);
+
+        // Event listener untuk tombol tutup formulir
+        document.getElementById('closeEditForm').addEventListener('click', hideEditForm);
+
+        // Fungsi untuk mengisi dropdown filter
+        function populateDropdowns(data) {
+            const states = new Set();
+            const regions = new Set();
+            const counties = new Set();
+
+            data.features.forEach(feature => {
+                states.add(feature.properties["is_in:state"]);
+                regions.add(feature.properties["is_in:region"]);
+                counties.add(feature.properties["is_in:county"]);
+            });
+
+            const stateSelect = document.getElementById('filterState');
+            const regionSelect = document.getElementById('filterRegion');
+            const countySelect = document.getElementById('filterCounty');
+
+            // Isi dropdown State
+            states.forEach(state => {
+                const option = document.createElement('option');
+                option.value = state;
+                option.textContent = state;
+                stateSelect.appendChild(option);
+            });
+
+            // Isi dropdown Region
+            regions.forEach(region => {
+                const option = document.createElement('option');
+                option.value = region;
+                option.textContent = region;
+                regionSelect.appendChild(option);
+            });
+
+            // Isi dropdown County
+            counties.forEach(county => {
+                const option = document.createElement('option');
+                option.value = county;
+                option.textContent = county;
+                countySelect.appendChild(option);
+            });
+        }
+
+        // Fungsi untuk memperbarui dropdown Region dan County berdasarkan State yang dipilih
+        function updateRegionAndCountyFilters() {
+            const selectedState = document.getElementById('filterState').value;
+            const selectedRegion = document.getElementById('filterRegion').value;
+
+            const regionSelect = document.getElementById('filterRegion');
+            const countySelect = document.getElementById('filterCounty');
+
+            // Kosongkan dropdown Region dan County
+            regionSelect.innerHTML = '<option value="">Kabupaten</option>';
+            countySelect.innerHTML = '<option value="">Kecamatan</option>';
+
+            if (selectedState) {
+                // Filter Region berdasarkan State yang dipilih
+                const filteredRegions = new Set();
+                geoJsonData.features.forEach(feature => {
+                    if (feature.properties["is_in:state"] === selectedState) {
+                        filteredRegions.add(feature.properties["is_in:region"]);
+                    }
+                });
+
+                // Isi dropdown Region
+                filteredRegions.forEach(region => {
+                    const option = document.createElement('option');
+                    option.value = region;
+                    option.textContent = region;
+                    regionSelect.appendChild(option);
+                });
+
+                // Jika Region dipilih, filter County berdasarkan Region yang dipilih
+                if (selectedRegion) {
+                    const filteredCounties = new Set();
+                    geoJsonData.features.forEach(feature => {
+                        if (
+                            feature.properties["is_in:state"] === selectedState &&
+                            feature.properties["is_in:region"] === selectedRegion
+                        ) {
+                            filteredCounties.add(feature.properties["is_in:county"]);
+                        }
+                    });
+
+                    // Isi dropdown County
+                    filteredCounties.forEach(county => {
+                        const option = document.createElement('option');
+                        option.value = county;
+                        option.textContent = county;
+                        countySelect.appendChild(option);
+                    });
+                }
+            }
+        }
+
+        // Fungsi untuk memfilter data berdasarkan dropdown
+        function filterData() {
+            const selectedState = document.getElementById('filterState').value;
+            const selectedRegion = document.getElementById('filterRegion').value;
+            const selectedCounty = document.getElementById('filterCounty').value;
+
+            const filteredData = {
+                ...geoJsonData,
+                features: geoJsonData.features.filter(feature => {
+                    const stateMatch = selectedState === "" || feature.properties["is_in:state"] === selectedState;
+                    const regionMatch = selectedRegion === "" || feature.properties["is_in:region"] === selectedRegion;
+                    const countyMatch = selectedCounty === "" || feature.properties["is_in:county"] === selectedCounty;
+
+                    return stateMatch && regionMatch && countyMatch;
+                })
+            };
+
+            // Hapus layer GeoJSON yang lama
+            if (geoJsonLayer) {
+                map.removeLayer(geoJsonLayer);
+            }
+
+            // Tambahkan layer GeoJSON yang baru dengan data yang difilter
+            geoJsonLayer = L.geoJSON(filteredData, {
+                pointToLayer: function (feature, latlng) {
+                    return L.marker(latlng);
+                },
+                onEachFeature: function (feature, layer) {
+                    layer.bindPopup(`
+                        <b>${feature.properties.name}</b><br>
+                        Kecamatan: ${feature.properties["is_in:county"]}<br>
+                        Kabupaten: ${feature.properties["is_in:region"]}
+                    `);
+                    layer.on('click', function () {
+                        selectedFeature = feature;
+                        showEditForm(feature);
+                    });
+                }
+            }).addTo(map);
+        }
+
+        // Fungsi untuk mereset filter
+        function resetFilter() {
+            document.getElementById('filterState').value = "";
+            document.getElementById('filterRegion').value = "";
+            document.getElementById('filterCounty').value = "";
+
+            // Perbarui dropdown Region dan County
+            updateRegionAndCountyFilters();
+
+            // Hapus layer GeoJSON yang lama
+            if (geoJsonLayer) {
+                map.removeLayer(geoJsonLayer);
+            }
+
+            // Tambahkan layer GeoJSON yang baru dengan semua data
+            geoJsonLayer = L.geoJSON(geoJsonData, {
+                pointToLayer: function (feature, latlng) {
+                    return L.marker(latlng);
+                },
+                onEachFeature: function (feature, layer) {
+                    layer.bindPopup(`
+                        <b>${feature.properties.name}</b><br>
+                        County: ${feature.properties["is_in:county"]}<br>
+                        Region: ${feature.properties["is_in:region"]}
+                    `);
+                    layer.on('click', function () {
+                        selectedFeature = feature;
+                        showEditForm(feature);
+                    });
+                }
+            }).addTo(map);
+        }
+
+        // Fungsi untuk menampilkan hasil pencarian
+        function displaySearchResults(results) {
+            const searchResults = document.getElementById('searchResults');
+            searchResults.innerHTML = ''; // Kosongkan daftar sebelumnya
+
+            if (results.length > 0) {
+                results.forEach(result => {
+                    const resultItem = document.createElement('div');
+                    resultItem.className = 'p-2 hover:bg-gray-100 cursor-pointer';
+                    resultItem.textContent = result.properties.name;
+                    resultItem.addEventListener('click', () => {
+                        // Pindahkan peta ke koordinat desa yang dipilih
+                        map.setView([result.geometry.coordinates[1], result.geometry.coordinates[0]], 13);
+                        // Tampilkan popup marker
+                        geoJsonLayer.eachLayer(layer => {
+                            if (layer.feature === result) {
+                                layer.openPopup();
+                            }
+                        });
+                        // Sembunyikan daftar hasil pencarian
+                        searchResults.classList.add('hidden');
+                    });
+                    searchResults.appendChild(resultItem);
+                });
+                searchResults.classList.remove('hidden');
+            } else {
+                searchResults.classList.add('hidden');
+            }
+        }
+
+        // Fungsi untuk melakukan pencarian
+        function searchData() {
+            const searchQuery = document.getElementById('searchInput').value.toLowerCase();
+            const selectedState = document.getElementById('filterState').value;
+
+            const filteredData = geoJsonData.features.filter(feature => {
+                const desaName = feature.properties.name.toLowerCase();
+                const stateMatch = selectedState === "" || feature.properties["is_in:state"] === selectedState;
+                return desaName.includes(searchQuery) && stateMatch;
+            });
+
+            // Tampilkan hasil pencarian
+            displaySearchResults(filteredData);
+
+            // Filter data pada peta
+            const filteredGeoJSON = {
+                ...geoJsonData,
+                features: filteredData
+            };
+
+            // Hapus layer GeoJSON yang lama
+            if (geoJsonLayer) {
+                map.removeLayer(geoJsonLayer);
+            }
+
+            // Tambahkan layer GeoJSON yang baru dengan hasil pencarian
+            geoJsonLayer = L.geoJSON(filteredGeoJSON, {
+                pointToLayer: function (feature, latlng) {
+                    return L.marker(latlng);
+                },
+                onEachFeature: function (feature, layer) {
+                    layer.bindPopup(`
+                        <b>${feature.properties.name}</b><br>
+                        County: ${feature.properties["is_in:county"]}<br>
+                        Region: ${feature.properties["is_in:region"]}
+                    `);
+                    layer.on('click', function () {
+                        selectedFeature = feature;
+                        showEditForm(feature);
+                    });
+                }
+            }).addTo(map);
+        }
+
+        // Event listener untuk dropdown filter
+        document.getElementById('filterState').addEventListener('change', function () {
+            updateRegionAndCountyFilters();
+            filterData();
+        });
+
+        document.getElementById('filterRegion').addEventListener('change', function () {
+            updateRegionAndCountyFilters();
+            filterData();
+        });
+
+        document.getElementById('filterCounty').addEventListener('change', filterData);
+
+        // Event listener untuk tombol reset filter
+        document.getElementById('resetFilter').addEventListener('click', resetFilter);
+
+        // Event listener untuk input pencarian
+        document.getElementById('searchInput').addEventListener('input', searchData);
+
+        // Panggil fungsi loadGeoJSON saat halaman dimuat
+        loadGeoJSON();
+
+        // Event listener untuk menu dropdown
+        document.getElementById('menuButton').addEventListener('click', function () {
+            const menuDropdown = document.getElementById('menuDropdown');
+            menuDropdown.classList.toggle('hidden');
+        });
+
+        // Sembunyikan daftar hasil pencarian saat klik di luar
+        document.addEventListener('click', function (event) {
+            const searchResults = document.getElementById('searchResults');
+            const searchInput = document.getElementById('searchInput');
+            if (event.target !== searchInput && !searchInput.contains(event.target)) {
+                searchResults.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

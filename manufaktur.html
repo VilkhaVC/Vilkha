@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manufaktur dan Produksi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Animasi fade-in */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        /* Efek hover pada card */
+        .hover-scale {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Gradient background untuk header */
+        .gradient-bg {
+            background: linear-gradient(135deg, #F77E04, #F70404);
+        }
+
+        /* Gradient background untuk sidebar */
+        .sidebar-gradient {
+            background: linear-gradient(135deg, #FDE68A, #F59E0B);
+        }
+
+        /* Warna tombol yang lebih cerah */
+        .btn-primary {
+            background: linear-gradient(135deg, #3B82F6, #1D4ED8);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+        }
+
+        /* Warna card yang lebih cerah */
+        .card {
+            background: linear-gradient(135deg, #F9FAFB, #E5E7EB);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Warna teks yang kontras */
+        .text-primary {
+            color: #1E3A8A;
+        }
+
+        .text-secondary {
+            color: #6B7280;
+        }
+
+        /* Efek hover pada daftar komoditas */
+        #komoditasList div {
+            transition: background-color 0.3s ease;
+        }
+
+        #komoditasList div:hover {
+            background-color: #F3F4F6;
+        }
+
+        /* Gaya untuk tombol hapus */
+        #komoditasList button {
+            transition: color 0.3s ease;
+        }
+
+        #komoditasList button:hover {
+            color: #EF4444;
+        }
+
+        /* Gaya untuk tombol menu */
+        .header-menu {
+            position: absolute;
+            left: 1rem; /* Jarak dari kiri */
+            top: 1rem; /* Jarak dari atas */
+            z-index: 50; /* Pastikan tombol menu di atas elemen lain */
+        }
+
+        /* Gaya untuk logo di header */
+        .logo-container {
+            position: absolute;
+            right: 1.5rem; /* Jarak dari kanan */
+            top: 1rem; /* Jarak dari atas */
+            z-index: 50; /* Pastikan logo di atas elemen lain */
+        }
+
+        /* Gaya untuk dropdown menu */
+        #menuDropdown {
+            position: absolute;
+            left: 0; /* Dropdown muncul di sebelah kiri tombol */
+            top: 100%; /* Dropdown muncul di bawah tombol */
+            margin-top: 0.5rem; /* Jarak antara tombol dan dropdown */
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 12rem; /* Lebar dropdown */
+        }
+
+        /* Gaya untuk item di dalam dropdown */
+        #menuDropdown a {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: #4a5568; /* Warna teks */
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        #menuDropdown a:hover {
+            background-color: #f7fafc; /* Warna latar saat hover */
+        }
+
+        /* Gaya untuk logo di header */
+        .logo-header {
+            height: 95px; /* Sesuaikan ukuran logo */
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+        }
+
+        /* Efek hover untuk logo */
+        .logo-header:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        /* Gaya untuk container logo */
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-left: auto; /* Pindahkan logo ke kanan */
+        }
+
+        /* Gaya untuk judul di tengah */
+        .text-center {
+            text-align: center;
+            flex-grow: 1;
+            margin: 0 20px; /* Beri jarak antara judul dan logo */
+        }
+
+        /* Gaya untuk daftar komoditas di popup */
+        .komoditas-container {
+            max-height: 260px; /* Tinggi maksimum container */
+            overflow-y: auto; /* Aktifkan scrollbar vertikal */
+            padding-right: 8px; /* Beri jarak untuk scrollbar */
+        }
+
+        /* Gaya untuk scrollbar */
+        .komoditas-container::-webkit-scrollbar {
+            width: 6px; /* Lebar scrollbar */
+        }
+
+        .komoditas-container::-webkit-scrollbar-track {
+            background: #f1f1f1; /* Warna track scrollbar */
+            border-radius: 4px;
+        }
+
+        .komoditas-container::-webkit-scrollbar-thumb {
+            background: #888; /* Warna thumb scrollbar */
+            border-radius: 4px;
+        }
+
+        .komoditas-container::-webkit-scrollbar-thumb:hover {
+            background: #555; /* Warna thumb scrollbar saat hover */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <!-- Container Utama -->
+    <div class="container mx-auto p-4 pt-8">
+        <!-- Header -->
+        <header class="gradient-bg text-white py-8 rounded-lg shadow-lg mb-6 fade-in relative flex items-center justify-between px-6">
+            <!-- Menu di Pojok Kiri -->
+            <div class="header-menu">
+                <div class="relative">
+                    <button id="menuButton" class="btn-primary">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div id="menuDropdown" class="hidden">
+                        <a href="login.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100"><i class="fas fa-sign-in-alt mr-2"></i>Login</a>
+                        <a href="daftar komoditas.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100"><i class="fas fa-newspaper mr-2"></i>Daftar Komoditas</a>
+                        <a href="manufaktur.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100"><i class="fas fa-info-circle mr-2"></i>Manufaktur</a>
+                        <a href="kontak.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100"><i class="fas fa-envelope mr-2"></i>Kontak</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Judul di Tengah -->
+            <div class="text-center flex-grow mx-4">
+                <h1 class="text-4xl font-bold">Manufaktur dan Produksi</h1>
+                <p class="mt-2 text-lg opacity-90">Visualisasi Data Manufaktur dan Produksi di KALIMANTAN</p>
+            </div>
+
+            <!-- Logo di Kanan -->
+            <div class="logo-container flex flex-col items-center justify-center">
+                <img src="logo.png" alt="Logo Bhinneka Tunggal Ika" class="logo-header">
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="flex flex-col lg:flex-row gap-6">
+            <!-- Sidebar -->
+            <aside class="sidebar-gradient w-full lg:w-1/3 p-6 rounded-lg shadow-lg hover-scale fade-in">
+                <!-- Tabel Manufaktur dan Produksi -->
+                <h2 class="text-xl font-semibold text-primary mb-4">Data Manufaktur dan Produksi</h2>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full bg-white rounded-lg overflow-hidden">
+                        <thead class="bg-gray-200">
+                            <tr>
+                                <th class="px-4 py-2 text-left">Jenis</th>
+                                <th class="px-4 py-2 text-left">Nama</th>
+                                <th class="px-4 py-2 text-left">Jumlah</th>
+                                <th class="px-4 py-2 text-left">Satuan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="hover:bg-gray-100">
+                                <td class="px-4 py-2">Produksi</td>
+                                <td class="px-4 py-2">Minyak Sawit</td>
+                                <td class="px-4 py-2">5000</td>
+                                <td class="px-4 py-2">Ton</td>
+                            </tr>
+                            <tr class="hover:bg-gray-100">
+                                <td class="px-4 py-2">Raw Material</td>
+                                <td class="px-4 py-2">Biji Sawit</td>
+                                <td class="px-4 py-2">10000</td>
+                                <td class="px-4 py-2">Ton</td>
+                            </tr>
+                            <tr class="hover:bg-gray-100">
+                                <td class="px-4 py-2">Intermediate Goods</td>
+                                <td class="px-4 py-2">CPO</td>
+                                <td class="px-4 py-2">3000</td>
+                                <td class="px-4 py-2">Ton</td>
+                            </tr>
+                            <tr class="hover:bg-gray-100">
+                                <td class="px-4 py-2">Finished Goods</td>
+                                <td class="px-4 py-2">Minyak Goreng</td>
+                                <td class="px-4 py-2">2000</td>
+                                <td class="px-4 py-2">Ton</td>
+                            </tr>
+                            <!-- Tambahkan baris data lainnya sesuai kebutuhan -->
+                        </tbody>
+                    </table>
+                </div>
+            </aside>
+
+            <!-- Peta -->
+            <div class="w-full lg:w-2/3 map-container fade-in">
+                <div id="map" class="w-full h-96 lg:h-[70vh] rounded-lg"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 bg-gray-800 text-white mt-8">
+        <p class="text-sm">
+            Dibuat oleh <a href="https://www.facebook.com/profile.php?id=100079076676302" target="_blank" class="text-blue-400 hover:text-blue-300 underline">Ardiansyah/Ancang</a> Pasir Mayang
+        </p>
+    </footer>
+
+    <script>
+        // Inisialisasi Peta
+        var map = L.map('map', {
+            center: [-1.8567, 116.2167], // Koordinat Tanah Grogot
+            zoom: 13, // Level zoom awal (sesuaikan agar Tanah Grogot terlihat jelas)
+            scrollWheelZoom: true, // Aktifkan zoom dengan scroll wheel
+            doubleClickZoom: false, // Nonaktifkan zoom dengan double click
+            touchZoom: false, // Nonaktifkan zoom dengan touch (untuk perangkat mobile)
+            dragging: true // Aktifkan dragging (geser peta)
+        });
+
+        // Ganti URL tile layer ke CyclOSM
+        L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
+            attribution: '<a href="https://github.com/cyclosm/cyclosm-cartocss-style/releases" title="CyclOSM - Open Bicycle render">CyclOSM</a> | Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Fungsi untuk memuat data GeoJSON (sama seperti di index.html)
+        async function loadGeoJSON() {
+            try {
+                const response = await fetch('data.geojson'); // Ganti dengan path ke file GeoJSON Anda
+                const data = await response.json();
+                geoJsonData = data;
+
+                // Tambahkan data GeoJSON ke peta
+                geoJsonLayer = L.geoJSON(data, {
+                    pointToLayer: function (feature, latlng) {
+                        return L.marker(latlng);
+                    },
+                    onEachFeature: function (feature, layer) {
+                        layer.bindPopup(`
+                            <b>${feature.properties.name}</b><br>
+                            County: ${feature.properties["is_in:county"]}<br>
+                            Region: ${feature.properties["is_in:region"]}
+                        `);
+                    }
+                }).addTo(map);
+            } catch (error) {
+                console.error('Error loading GeoJSON:', error);
+            }
+        }
+
+        // Panggil fungsi loadGeoJSON saat halaman dimuat
+        loadGeoJSON();
+    </script>
+</body>
+</html>
