@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Biodiesel Lengkap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #3498db;
+            --primary-dark: #2980b9;
+            --secondary: #27ae60;
+            --secondary-dark: #219653;
+            --danger: #e74c3c;
+            --danger-dark: #c0392b;
+            --warning: #f39c12;
+            --warning-dark: #e67e22;
+            --dark: #2c3e50;
+            --darker: #1a252f;
+            --light: #ecf0f1;
+            --lighter: #f8f9fa;
+            --white: #ffffff;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: var(--lighter);
+            color: var(--darker);
+            padding: 20px;
+            font-weight: 400;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 30px;
+            box-shadow: var(--shadow-md);
+        }
+
+        h1, h2, h3 {
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: var(--primary-dark);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            border-bottom: 2px solid var(--light);
+            padding-bottom: 8px;
+            margin-top: 30px;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-top: 20px;
+        }
+
+        .card {
+            background-color: var(--white);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid #eee;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .form-col {
+            flex: 1;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark);
+            font-size: 0.95rem;
+        }
+
+        input[type="number"], input[type="text"], select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: var(--radius-sm);
+            font-size: 1rem;
+            transition: all 0.3s;
+            background-color: var(--white);
+        }
+
+        input[type="number"]:focus, input[type="text"]:focus, select:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: var(--radius-sm);
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--secondary-dark);
+            transform: translateY(-1px);
+        }
+
+        .btn-danger {
+            background-color: var(--danger);
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background-color: var(--danger-dark);
+            transform: translateY(-1px);
+        }
+
+        .btn-block {
+            display: block;
+            width: 100%;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 0.95rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: var(--primary);
+            color: white;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        tr:nth-child(even) td {
+            background-color: var(--lighter);
+        }
+
+        .highlight {
+            font-weight: 600;
+        }
+
+        .profit {
+            color: var(--secondary-dark);
+        }
+
+        .loss {
+            color: var(--danger-dark);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .summary-card {
+            background-color: #f8fafc;
+            border-left: 4px solid var(--primary);
+        }
+
+        .edit-btn {
+            background: none;
+            border: none;
+            color: var(--primary);
+            cursor: pointer;
+            font-size: 0.9rem;
+            padding: 2px 5px;
+            margin-left: 5px;
+        }
+
+        .edit-btn:hover {
+            text-decoration: underline;
+        }
+
+        .config-panel {
+            display: none;
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: var(--radius-sm);
+            margin-top: 10px;
+            border: 1px solid #eee;
+        }
+
+        .toggle-panel {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .toggle-panel:hover {
+            text-decoration: underline;
+        }
+
+        .toggle-icon {
+            margin-right: 5px;
+            transition: transform 0.3s;
+        }
+
+        .panel-open .toggle-icon {
+            transform: rotate(90deg);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            h1 {
+                font-size: 1.6rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            th, td {
+                padding: 8px 10px;
+                font-size: 0.85rem;
+            }
+        }
+        
+        .info-box {
+            background-color: #f0f7ff;
+            border-left: 4px solid var(--primary);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: var(--radius-sm);
+            font-size: 0.9rem;
+        }
+        
+        .info-box h4 {
+            margin-top: 0;
+            color: var(--primary-dark);
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Kalkulator Produksi Biodiesel</h1>
+
+        <div class="card">
+            <h2>Input Dasar</h2>
+            <div class="form-group">
+                <label for="minyak">Jumlah Minyak Goreng Bekas (liter):</label>
+                <input type="number" id="minyak" name="minyak" value="1" min="0" step="0.1">
+            </div>
+            
+            <div class="toggle-panel" onclick="togglePanel('configPanel')">
+                <span class="toggle-icon">▶</span>
+                <span>Pengaturan Lanjutan</span>
+            </div>
+            
+            <div id="configPanel" class="config-panel">
+                <h3>Rasio Bahan Baku</h3>
+                <div class="form-row">
+                    <div class="form-col">
+                        <label for="rasioMetanol">Rasio Metanol (ml per liter minyak):</label>
+                        <input type="number" id="rasioMetanol" value="200" min="0" step="1">
+                    </div>
+                    <div class="form-col">
+                        <label for="rasioSodaApi">Rasio Soda Api (gram per liter minyak):</label>
+                        <input type="number" id="rasioSodaApi" value="5" min="0" step="0.1">
+                    </div>
+                </div>
+                
+                <h3>Harga Bahan Baku</h3>
+                <div class="form-row">
+                    <div class="form-col">
+                        <label for="hargaMinyak">Harga Minyak Goreng Bekas (per liter):</label>
+                        <input type="number" id="hargaMinyak" value="2000" min="0" step="100" onchange="updateHargaDisplay('hargaMinyak', '/liter')">
+                    </div>
+                    <div class="form-col">
+                        <label for="hargaMetanol">Harga Metanol (per liter):</label>
+                        <input type="number" id="hargaMetanol" value="12000" min="0" step="100" onchange="updateHargaDisplay('hargaMetanol', '/liter')">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-col">
+                        <label for="hargaSodaApi">Harga Soda Api (per kg):</label>
+                        <input type="number" id="hargaSodaApi" value="19000" min="0" step="100" onchange="updateHargaDisplay('hargaSodaApi', '/kg')">
+                    </div>
+                    <div class="form-col">
+                        <label for="hargaJual">Harga Jual Biodiesel (per liter):</label>
+                        <input type="number" id="hargaJual" value="8000" min="0" step="100" onchange="updateHargaDisplay('hargaJual', '/liter')">
+                    </div>
+                </div>
+                
+                <h3>Parameter Produksi</h3>
+                <div class="form-row">
+                    <div class="form-col">
+                        <label for="efisiensi">Efisiensi Produksi (%):</label>
+                        <input type="number" id="efisiensi" value="80" min="0" max="100" step="0.1">
+                    </div>
+                    <div class="form-col">
+                        <label for="biayaTambahan">Biaya Tambahan (per produksi):</label>
+                        <input type="number" id="biayaTambahan" value="0" min="0" step="1000">
+                    </div>
+                </div>
+            </div>
+            
+            <button type="button" onclick="hitungBiaya()" class="btn-primary btn-block">Hitung Produksi</button>
+        </div>
+
+        <div class="card summary-card">
+            <h2>Ringkasan Produksi</h2>
+            <table id="hasilTable">
+                <thead>
+                    <tr>
+                        <th>Komponen</th>
+                        <th>Jumlah</th>
+                        <th>Harga Satuan</th>
+                        <th>Total Biaya</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Minyak Goreng Bekas</td>
+                        <td id="jumlahMinyak" class="text-right">1 liter</td>
+                        <td id="displayHargaMinyak" class="text-right">Rp 2.000/liter</td>
+                        <td id="totalMinyak" class="text-right">Rp 2.000</td>
+                    </tr>
+                    <tr>
+                        <td>Metanol</td>
+                        <td id="jumlahMetanol" class="text-right">200 ml</td>
+                        <td id="displayHargaMetanol" class="text-right">Rp 12.000/liter</td>
+                        <td id="totalMetanol" class="text-right">Rp 2.400</td>
+                    </tr>
+                    <tr>
+                        <td>Soda Api</td>
+                        <td id="jumlahSodaApi" class="text-right">5 gram</td>
+                        <td id="displayHargaSodaApi" class="text-right">Rp 19.000/kg</td>
+                        <td id="totalSodaApi" class="text-right">Rp 95</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Biaya Tambahan</td>
+                        <td id="totalBiayaTambahan" class="text-right">Rp 0</td>
+                    </tr>
+                    <tr>
+                        <th colspan="3">Total Biaya Produksi</th>
+                        <th id="totalBiaya" class="text-right highlight">Rp 4.495</th>
+                    </tr>
+                    <tr>
+                        <th colspan="3">Total Biodiesel Dihasilkan</th>
+                        <th id="totalBiodiesel" class="text-right highlight">0.8 liter</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card summary-card">
+            <h2>Analisis Keuntungan</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Harga Jual Biodiesel</td>
+                        <td id="displayHargaJual" class="text-right">Rp 8.000/liter</td>
+                    </tr>
+                    <tr>
+                        <td>Total Pendapatan</td>
+                        <td id="totalPendapatan" class="text-right">Rp 6.400</td>
+                    </tr>
+                    <tr>
+                        <th>Keuntungan Kotor</th>
+                        <th id="keuntunganKotor" class="text-right profit">Rp 1.905</th>
+                    </tr>
+                    <tr>
+                        <td>Persentase Keuntungan</td>
+                        <td id="persentaseKeuntungan" class="text-right profit">42.4%</td>
+                    </tr>
+                    <tr>
+                        <td>Biaya Produksi per Liter</td>
+                        <td id="biayaPerLiter" class="text-right">Rp 5.619</td>
+                    </tr>
+                    <tr>
+                        <td>Keuntungan per Liter</td>
+                        <td id="keuntunganPerLiter" class="text-right profit">Rp 2.381</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>Simulasi Produksi</h2>
+            
+            <div class="info-box">
+                <h4>Penjelasan Simulasi Produksi</h4>
+                <p>Simulasi ini membantu Anda merencanakan produksi biodiesel dalam skala yang lebih besar. Anda dapat menentukan:</p>
+                <ul>
+                    <li><strong>Target Produksi</strong>: Jumlah biodiesel (dalam liter) yang ingin dihasilkan dalam satu kali produksi</li>
+                    <li><strong>Frekuensi Produksi</strong>: Berapa kali produksi dilakukan dalam satu bulan</li>
+                </ul>
+                <p>Kalkulator akan menghitung kebutuhan bahan baku, total biaya, pendapatan, dan keuntungan bulanan berdasarkan parameter yang telah ditentukan.</p>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-col">
+                    <label for="targetProduksi">Target Produksi (liter):</label>
+                    <input type="number" id="targetProduksi" value="100" min="0" step="1">
+                </div>
+                <div class="form-col">
+                    <label for="frekuensiProduksi">Frekuensi Produksi (per bulan):</label>
+                    <input type="number" id="frekuensiProduksi" value="4" min="0" step="1">
+                </div>
+            </div>
+            <button type="button" onclick="hitungSimulasi()" class="btn-secondary btn-block">Hitung Simulasi</button>
+            
+            <div id="hasilSimulasi" style="margin-top: 20px; display: none;">
+                <h3>Hasil Simulasi Produksi</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Kebutuhan Minyak per Produksi</td>
+                            <td id="simulasiMinyak" class="text-right">125 liter</td>
+                        </tr>
+                        <tr>
+                            <td>Kebutuhan Metanol per Produksi</td>
+                            <td id="simulasiMetanol" class="text-right">25.000 ml</td>
+                        </tr>
+                        <tr>
+                            <td>Kebutuhan Soda Api per Produksi</td>
+                            <td id="simulasiSodaApi" class="text-right">625 gram</td>
+                        </tr>
+                        <tr>
+                            <td>Total Biaya Produksi Bulanan</td>
+                            <td id="simulasiBiaya" class="text-right">Rp 2.248.000</td>
+                        </tr>
+                        <tr>
+                            <td>Total Pendapatan Bulanan</td>
+                            <td id="simulasiPendapatan" class="text-right">Rp 3.200.000</td>
+                        </tr>
+                        <tr>
+                            <th>Keuntungan Bulanan</th>
+                            <th id="simulasiKeuntungan" class="text-right profit">Rp 952.000</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Toggle panel visibility
+        function togglePanel(id) {
+            const panel = document.getElementById(id);
+            const toggle = panel.previousElementSibling;
+            
+            if (panel.style.display === 'block') {
+                panel.style.display = 'none';
+                toggle.classList.remove('panel-open');
+            } else {
+                panel.style.display = 'block';
+                toggle.classList.add('panel-open');
+            }
+        }
+
+        // Format currency
+        function formatRupiah(angka) {
+            return 'Rp ' + angka.toLocaleString('id-ID');
+        }
+        
+        // Update harga display with units
+        function updateHargaDisplay(id, unit) {
+            const input = document.getElementById(id);
+            const value = parseFloat(input.value);
+            const displayId = 'display' + id.charAt(0).toUpperCase() + id.slice(1);
+            
+            if (!isNaN(value)) {
+                document.getElementById(displayId).textContent = formatRupiah(value) + unit;
+            }
+        }
+
+        // Main calculation function
+        function hitungBiaya() {
+            // Get input values
+            const minyak = parseFloat(document.getElementById('minyak').value);
+            const rasioMetanol = parseFloat(document.getElementById('rasioMetanol').value);
+            const rasioSodaApi = parseFloat(document.getElementById('rasioSodaApi').value);
+            const hargaMinyak = parseFloat(document.getElementById('hargaMinyak').value);
+            const hargaMetanol = parseFloat(document.getElementById('hargaMetanol').value);
+            const hargaSodaApi = parseFloat(document.getElementById('hargaSodaApi').value);
+            const hargaJual = parseFloat(document.getElementById('hargaJual').value);
+            const efisiensi = parseFloat(document.getElementById('efisiensi').value) / 100;
+            const biayaTambahan = parseFloat(document.getElementById('biayaTambahan').value);
+
+            // Calculate material requirements
+            const jumlahMetanol = minyak * rasioMetanol; // in ml
+            const jumlahSodaApi = minyak * rasioSodaApi; // in gram
+
+            // Calculate biodiesel production
+            const biodieselDihasilkan = minyak * efisiensi; // in liters
+
+            // Calculate costs
+            const totalMinyak = minyak * hargaMinyak;
+            const totalMetanol = (jumlahMetanol / 1000) * hargaMetanol;
+            const totalSodaApi = (jumlahSodaApi / 1000) * hargaSodaApi;
+            const totalBiaya = totalMinyak + totalMetanol + totalSodaApi + biayaTambahan;
+
+            // Calculate revenue and profit
+            const pendapatan = biodieselDihasilkan * hargaJual;
+            const keuntungan = pendapatan - totalBiaya;
+            const persentaseKeuntungan = (keuntungan / totalBiaya) * 100;
+            const biayaPerLiter = totalBiaya / biodieselDihasilkan;
+            const keuntunganPerLiter = hargaJual - biayaPerLiter;
+
+            // Update display
+            document.getElementById('jumlahMinyak').textContent = minyak.toFixed(2) + ' liter';
+            document.getElementById('displayHargaMinyak').textContent = formatRupiah(hargaMinyak) + '/liter';
+            document.getElementById('totalMinyak').textContent = formatRupiah(totalMinyak);
+
+            document.getElementById('jumlahMetanol').textContent = jumlahMetanol.toFixed(0) + ' ml';
+            document.getElementById('displayHargaMetanol').textContent = formatRupiah(hargaMetanol) + '/liter';
+            document.getElementById('totalMetanol').textContent = formatRupiah(totalMetanol);
+
+            document.getElementById('jumlahSodaApi').textContent = jumlahSodaApi.toFixed(1) + ' gram';
+            document.getElementById('displayHargaSodaApi').textContent = formatRupiah(hargaSodaApi) + '/kg';
+            document.getElementById('totalSodaApi').textContent = formatRupiah(totalSodaApi);
+
+            document.getElementById('totalBiayaTambahan').textContent = formatRupiah(biayaTambahan);
+            document.getElementById('totalBiaya').textContent = formatRupiah(totalBiaya);
+            document.getElementById('totalBiodiesel').textContent = biodieselDihasilkan.toFixed(2) + ' liter';
+
+            document.getElementById('displayHargaJual').textContent = formatRupiah(hargaJual) + '/liter';
+            document.getElementById('totalPendapatan').textContent = formatRupiah(pendapatan);
+            
+            // Set profit/loss class
+            const profitClass = keuntungan >= 0 ? 'profit' : 'loss';
+            
+            document.getElementById('keuntunganKotor').textContent = formatRupiah(keuntungan);
+            document.getElementById('keuntunganKotor').className = 'text-right highlight ' + profitClass;
+            
+            document.getElementById('persentaseKeuntungan').textContent = persentaseKeuntungan.toFixed(1) + '%';
+            document.getElementById('persentaseKeuntungan').className = 'text-right ' + profitClass;
+            
+            document.getElementById('biayaPerLiter').textContent = formatRupiah(biayaPerLiter);
+            document.getElementById('keuntunganPerLiter').textContent = formatRupiah(keuntunganPerLiter);
+            document.getElementById('keuntunganPerLiter').className = 'text-right ' + profitClass;
+        }
+
+        // Production simulation function
+        function hitungSimulasi() {
+            const targetProduksi = parseFloat(document.getElementById('targetProduksi').value);
+            const frekuensiProduksi = parseFloat(document.getElementById('frekuensiProduksi').value);
+            const efisiensi = parseFloat(document.getElementById('efisiensi').value) / 100;
+            
+            // Calculate required materials for target production
+            const minyakPerProduksi = targetProduksi / efisiensi;
+            const rasioMetanol = parseFloat(document.getElementById('rasioMetanol').value);
+            const rasioSodaApi = parseFloat(document.getElementById('rasioSodaApi').value);
+            const hargaMinyak = parseFloat(document.getElementById('hargaMinyak').value);
+            const hargaMetanol = parseFloat(document.getElementById('hargaMetanol').value);
+            const hargaSodaApi = parseFloat(document.getElementById('hargaSodaApi').value);
+            const biayaTambahan = parseFloat(document.getElementById('biayaTambahan').value);
+            const hargaJual = parseFloat(document.getElementById('hargaJual').value);
+            
+            // Calculate per production
+            const jumlahMetanol = minyakPerProduksi * rasioMetanol;
+            const jumlahSodaApi = minyakPerProduksi * rasioSodaApi;
+            
+            const totalMinyak = minyakPerProduksi * hargaMinyak;
+            const totalMetanol = (jumlahMetanol / 1000) * hargaMetanol;
+            const totalSodaApi = (jumlahSodaApi / 1000) * hargaSodaApi;
+            const totalBiayaPerProduksi = totalMinyak + totalMetanol + totalSodaApi + biayaTambahan;
+            
+            // Calculate monthly
+            const totalBiayaBulanan = totalBiayaPerProduksi * frekuensiProduksi;
+            const totalPendapatanBulanan = targetProduksi * hargaJual * frekuensiProduksi;
+            const keuntunganBulanan = totalPendapatanBulanan - totalBiayaBulanan;
+            
+            // Update simulation results
+            document.getElementById('simulasiMinyak').textContent = minyakPerProduksi.toFixed(2) + ' liter';
+            document.getElementById('simulasiMetanol').textContent = jumlahMetanol.toFixed(0) + ' ml';
+            document.getElementById('simulasiSodaApi').textContent = jumlahSodaApi.toFixed(1) + ' gram';
+            document.getElementById('simulasiBiaya').textContent = formatRupiah(totalBiayaBulanan);
+            document.getElementById('simulasiPendapatan').textContent = formatRupiah(totalPendapatanBulanan);
+            
+            const profitClass = keuntunganBulanan >= 0 ? 'profit' : 'loss';
+            document.getElementById('simulasiKeuntungan').textContent = formatRupiah(keuntunganBulanan);
+            document.getElementById('simulasiKeuntungan').className = 'text-right ' + profitClass;
+            
+            // Show results
+            document.getElementById('hasilSimulasi').style.display = 'block';
+        }
+
+        // Initialize calculation on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Update all harga displays
+            updateHargaDisplay('hargaMinyak', '/liter');
+            updateHargaDisplay('hargaMetanol', '/liter');
+            updateHargaDisplay('hargaSodaApi', '/kg');
+            updateHargaDisplay('hargaJual', '/liter');
+            
+            // Perform initial calculation
+            hitungBiaya();
+        });
+    </script>
+</body>
+</html>
