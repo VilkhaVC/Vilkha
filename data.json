@@ -1,0 +1,1958 @@
+[
+  {
+    "judul": "Minyak Kelapa Murni (VCO)",
+    "bahan": ["Daging kelapa segar 2 buah", "Air hangat 500ml"],
+    "alat": ["Blender", "Kain saring", "Wadah transparan"],
+    "metode": "Fermentasi alami",
+    "langkah": [
+      "Parut daging kelapa",
+      "Campur dengan air hangat dan blender",
+      "Peras santan dengan kain saring",
+      "Diamkan 24 jam hingga terpisah",
+      "Ambil minyak yang mengapung"
+    ],
+    "produk": "Virgin Coconut Oil (VCO)",
+    "manfaat": "Bahan kosmetik, suplemen kesehatan, dan memasak",
+    "yield": "15-20%",
+    "catatan": "Proses sederhana tanpa pemanasan, nilai jual tinggi"
+  },
+  {
+    "judul": "Sabun Transparan dari Minyak Kelapa",
+    "bahan": ["Minyak kelapa 500ml", "NaOH 70g", "Air 150ml", "Gliserin 50ml"],
+    "alat": ["Panci stainless", "Mixer", "Cetakan sabun"],
+    "metode": "Saponifikasi dingin",
+    "langkah": [
+      "Larutkan NaOH dalam air (hati-hati!)",
+      "Campur dengan minyak dan gliserin",
+      "Mixer hingga trace",
+      "Tuang ke cetakan",
+      "Diamkan 4 minggu untuk curing"
+    ],
+    "produk": "Sabun transparan",
+    "manfaat": "Produk perawatan tubuh alami",
+    "yield": "600-650g",
+    "catatan": "Bisa ditambahkan essential oil untuk aroma"
+  },
+  {
+    "judul": "Pewarna Alami dari Kulit Manggis",
+    "bahan": ["Kulit manggis kering 200g", "Air 1L", "Garam 20g"],
+    "alat": ["Panci", "Saringan", "Wadah penyimpanan"],
+    "metode": "Ekstraksi panas",
+    "langkah": [
+      "Rebus kulit manggis dengan air",
+      "Tambahkan garam sebagai mordan",
+      "Saring setelah 1 jam perebusan",
+      "Konsentratkan dengan pemanasan",
+      "Simpan dalam botol kaca"
+    ],
+    "produk": "Pewarna tekstil alami (ungu)",
+    "manfaat": "Zat warna untuk batik dan tekstil organik",
+    "yield": "300-400ml",
+    "catatan": "Warna ungu alami tanpa bahan kimia"
+  },
+  {
+    "judul": "Briket Arang Sekam Padi",
+    "bahan": ["Sekam padi 5kg", "Pati singkong 200g", "Air 500ml"],
+    "alat": ["Drum pembakar", "Pencetak briket", "Pengering"],
+    "metode": "Karbonisasi",
+    "langkah": [
+      "Bakar sekam dalam drum tertutup",
+      "Campur arang dengan pati singkong",
+      "Cetak dengan tekanan manual",
+      "Keringkan dibawah sinar matahari",
+      "Kemas dalam plastik kedap udara"
+    ],
+    "produk": "Briket arang sekam",
+    "manfaat": "Bahan bakar ramah lingkungan",
+    "yield": "3-3.5kg",
+    "catatan": "Nilai kalori tinggi, asap minimal"
+  },
+  {
+    "judul": "Pupuk Cair dari Limbah Dapur",
+    "bahan": ["Sampah organik 2kg", "Air 5L", "Gula merah 100g", "EM4 50ml"],
+    "alat": ["Drum plastik", "Selang aerator", "Botol penyimpan"],
+    "metode": "Fermentasi anaerob",
+    "langkah": [
+      "Chopper sampah organik",
+      "Campur dengan air, gula dan EM4",
+      "Fermentasi 14 hari dengan aerasi",
+      "Saring larutan",
+      "Kemas dalam botol"
+    ],
+    "produk": "Pupuk organik cair",
+    "manfaat": "Penyubur tanaman dan perbaikan tanah",
+    "yield": "4-4.5L",
+    "catatan": "Bisa menggunakan limbah sayur/buah"
+  },
+  {
+    "judul": "Lilin Aromaterapi dari Soybean Wax",
+    "bahan": ["Soy wax 500g", "Essential oil 10ml", "Sumbu lilin", "Pewarna alami"],
+    "alat": ["Panci double boiler", "Cetakan lilin", "Thermometer"],
+    "metode": "Pencetakan",
+    "langkah": [
+      "Lelehkan soy wax dengan double boiler",
+      "Tambahkan essential oil di suhu 60°C",
+      "Pasang sumbu di cetakan",
+      "Tuang wax leleh ke cetakan",
+      "Dinginkan selama 4 jam"
+    ],
+    "produk": "Lilin aromaterapi",
+    "manfaat": "Terapi relaksasi dan pengharum ruangan",
+    "yield": "8-10 lilin kecil",
+    "catatan": "Bisa menggunakan wadah bekas sebagai cetakan"
+  },
+  {
+    "judul": "Kertas Daur Ulang dari Kardus",
+    "bahan": ["Kardus bekas 1kg", "Air 10L", "Pati 50g", "Pewarna alami opsional"],
+    "alat": ["Blender", "Screen cetak", "Press manual"],
+    "metode": "Pulp manual",
+    "langkah": [
+      "Rendam kardus hingga lunak",
+      "Blender menjadi pulp",
+      "Campur dengan pati sebagai pengikat",
+      "Cetak dengan screen dan press",
+      "Jemur hingga kering"
+    ],
+    "produk": "Kertas daur ulang",
+    "manfaat": "Bahan kerajinan dan kemasan eco-friendly",
+    "yield": "20-25 lembar A4",
+    "catatan": "Bisa ditambahkan bunga/daun untuk efek dekoratif"
+  },
+  {
+    "judul": "Sabun Cuci Piring dari Lerak",
+    "bahan": ["Buah lerak 500g", "Air 2L", "Jeruk nipis 3 buah"],
+    "alat": ["Panci", "Saringan", "Botol pump"],
+    "metode": "Ekstraksi panas",
+    "langkah": [
+      "Tumbuk kasar buah lerak",
+      "Rebus dengan air selama 1 jam",
+      "Tambahkan perasan jeruk nipis",
+      "Saring larutan",
+      "Kemas dalam botol"
+    ],
+    "produk": "Sabun cuci piring alami",
+    "manfaat": "Pembersih ramah lingkungan",
+    "yield": "1.5-1.8L",
+    "catatan": "Tanpa bahan kimia keras, aman untuk kulit"
+  },
+  {
+    "judul": "Bioplastik dari Pati Singkong",
+    "bahan": ["Pati singkong 100g", "Air 400ml", "Gliserin 20ml", "Cuka 10ml"],
+    "alat": ["Panci", "Pengaduk", "Cetakan"],
+    "metode": "Gelatinisasi",
+    "langkah": [
+      "Campur semua bahan dalam panci",
+      "Panaskan sambil diaduk hingga kental",
+      "Tuang ke cetakan",
+      "Keringkan dalam oven suhu rendah",
+      "Lepaskan dari cetakan"
+    ],
+    "produk": "Bioplastik",
+    "manfaat": "Pengganti plastik kemasan",
+    "yield": "15-20 lembar ukuran A5",
+    "catatan": "Bisa ditambahkan pewarna makanan"
+  },
+  {
+    "judul": "Pelembab Bibir dari Beeswax",
+    "bahan": ["Beeswax 30g", "Minyak kelapa 50ml", "Essential oil 5 tetes"],
+    "alat": ["Double boiler", "Cetakan lipbalm", "Pipet"],
+    "metode": "Pencampuran leleh",
+    "langkah": [
+      "Lelehkan beeswax dengan double boiler",
+      "Tambahkan minyak kelapa",
+      "Matikan api, tambahkan essential oil",
+      "Tuang ke cetakan dengan pipet",
+      "Dinginkan hingga mengeras"
+    ],
+    "produk": "Lipbalm alami",
+    "manfaat": "Pelembab bibir organik",
+    "yield": "10-12 tube kecil",
+    "catatan": "Bisa divariasikan dengan warna alami"
+  },
+  {
+    "judul": "Minyak Atsiri Serai Wangi (Cymbopogon nardus)",
+    "bahan": ["Daun serai segar 5kg", "Air bersih 10L"],
+    "alat": ["Destilator sederhana", "Kondensor", "Pisau"],
+    "metode": "Destilasi uap",
+    "langkah": [
+      "Potong serai 2-3cm",
+      "Masukkan ke destilator dengan air",
+      "Panaskan 4-6 jam hingga minyak terpisah",
+      "Tampung minyak yang mengembun",
+      "Saring dengan kertas saring"
+    ],
+    "produk": "Minyak atsiri citronella",
+    "manfaat": "Bahan obat nyamuk, aromaterapi, sabun",
+    "yield": "0.5-0.8%",
+    "catatan": "1kg serai ≈ 5-8ml minyak"
+  },
+  {
+    "judul": "Tepung Mocaf (Modified Cassava Flour)",
+    "bahan": ["Singkong segar 10kg", "Air bersih 20L", "Starter fermentasi 50g"],
+    "alat": ["Parutan", "Karung", "Pengering"],
+    "metode": "Fermentasi asam laktat",
+    "langkah": [
+      "Kupas dan parut singkong",
+      "Fermentasi dalam air + starter selama 48 jam",
+      "Press untuk mengurangi air",
+      "Jemur hingga kering",
+      "Giling menjadi tepung"
+    ],
+    "produk": "Tepung mocaf",
+    "manfaat": "Pengganti terigu untuk makanan bebas gluten",
+    "yield": "25-30%",
+    "catatan": "Butuh pengeringan sempurna untuk mencegah jamur"
+  },
+  {
+    "judul": "Briket Arang Tempurung Kelapa",
+    "bahan": ["Tempurung kelapa 5kg", "Perekat tepung tapioka 200g"],
+    "alat": ["Drum karbonisasi", "Pencetak briket", "Kompor"],
+    "metode": "Karbonisasi",
+    "langkah": [
+      "Bakar tempurung dalam drum tertutup 5 jam",
+      "Haluskan menjadi arang powder",
+      "Campur dengan larutan perekat",
+      "Cetak dengan tekanan manual",
+      "Jemur 2 hari"
+    ],
+    "produk": "Briket arang premium",
+    "manfaat": "Bahan bakar restoran & industri makanan",
+    "yield": "60-65%",
+    "catatan": "Nilai kalori 7000-7500 kal/g"
+  },
+  {
+    "judul": "Pewarna Alami Indigofera (Indigofera tinctoria)",
+    "bahan": ["Daun indigo segar 3kg", "Air kapur 5L", "Garam 500g"],
+    "alat": ["Ember plastik", "Mixer", "Saringan"],
+    "metode": "Ekstraksi basah",
+    "langkah": [
+      "Blender daun dengan air kapur",
+      "Fermentasi 24 jam hingga berbusa",
+      "Tambahkan garam sambil diaduk",
+      "Endapkan 12 jam",
+      "Ambil pasta biru yang mengendap"
+    ],
+    "produk": "Pasta indigo alami",
+    "manfaat": "Pewarna tekstil & batik organik",
+    "yield": "300-400g pasta",
+    "catatan": "1kg daun ≈ 100g pasta pewarna"
+  },
+  {
+    "judul": "Sabun Cuci Pakaian dari Lidah Buaya",
+    "bahan": ["Gel lidah buaya 1L", "Soda api 200g", "Minyak jelantah 2L"],
+    "alat": ["Panci stainless", "Mixer", "Cetakan"],
+    "metode": "Saponifikasi dingin",
+    "langkah": [
+      "Campur soda api dengan gel lidah buaya",
+      "Tambahkan minyak jelantah sambil diaduk",
+      "Mixer hingga trace",
+      "Cetak dalam wadah",
+      "Curing 4 minggu"
+    ],
+    "produk": "Sabun cuci alami",
+    "manfaat": "Deterjen ramah lingkungan",
+    "yield": "3-3.5kg",
+    "catatan": "pH 9-10, aman untuk kulit sensitif"
+  },
+  {
+    "judul": "Silica Gel dari Sekam Padi",
+    "bahan": ["Sekam padi 10kg", "NaOH 500g", "Air 5L"],
+    "alat": ["Tungku pembakar", "Beaker glass", "Oven"],
+    "metode": "Ekstraksi alkali",
+    "langkah": [
+      "Bakar sekam menjadi abu",
+      "Rebus abu dengan NaOH 2 jam",
+      "Saring larutan sodium silikat",
+      "Asamkan dengan HCl hingga gel terbentuk",
+      "Cuci dan keringkan gel"
+    ],
+    "produk": "Silica gel",
+    "manfaat": "Penyerap kelembaban industri",
+    "yield": "8-10%",
+    "catatan": "Bisa diaktifkan dengan pemanasan 200°C"
+  },
+  {
+    "judul": "Minyak Cengkeh (Syzygium aromaticum)",
+    "bahan": ["Bunga cengkeh kering 2kg", "Air destilasi 15L"],
+    "alat": ["Destilator stainless", "Kondensor", "Pisau"],
+    "metode": "Hydrodistilasi",
+    "langkah": [
+      "Giling kasar bunga cengkeh",
+      "Destilasi selama 6-8 jam",
+      "Pisahkan minyak dari air",
+      "Dehidrasi dengan Na2SO4 anhidrat",
+      "Saring dengan kertas whatman"
+    ],
+    "produk": "Minyak cengkeh murni",
+    "manfaat": "Bahan obat gigi & analgesik",
+    "yield": "15-18%",
+    "catatan": "Kandungan eugenol >80%"
+  },
+  {
+    "judul": "Bioplastik dari Rumput Laut",
+    "bahan": ["Agar-agar 200g", "Gliserin 50ml", "Air 1L"],
+    "alat": ["Panci", "Pengaduk", "Cetakan"],
+    "metode": "Gelatinisasi",
+    "langkah": [
+      "Larutkan agar dalam air panas",
+      "Tambahkan gliserin sebagai plasticizer",
+      "Tuang ke cetakan datar",
+      "Keringkan pada suhu ruang",
+      "Lepaskan dari cetakan"
+    ],
+    "produk": "Bioplastik transparan",
+    "manfaat": "Kemasan edible & ramah lingkungan",
+    "yield": "20-25 lembar A5",
+    "catatan": "Tahan 2-3 minggu di udara terbuka"
+  },
+  {
+    "judul": "Ekstrak Pektin dari Kulit Jeruk",
+    "bahan": ["Kulit jeruk kering 1kg", "Air asam (pH 2.5) 5L"],
+    "alat": ["Blender", "Water bath", "Saringan"],
+    "metode": "Ekstraksi asam",
+    "langkah": [
+      "Blender kulit jeruk hingga halus",
+      "Ekstrak dengan air asam 90°C selama 1 jam",
+      "Saring dan endapkan",
+      "Presipitasi dengan alkohol 95%",
+      "Keringkan pektin yang mengendap"
+    ],
+    "produk": "Pektin murni",
+    "manfaat": "Bahan pengental makanan & farmasi",
+    "yield": "10-12%",
+    "catatan": "Grade LM (low methoxyl)"
+  },
+  {
+    "judul": "Karbon Aktif dari Batok Kelapa",
+    "bahan": ["Tempurung kelapa 5kg", "ZnCl2 500g", "Air 2L"],
+    "alat": ["Tungku pirolisis", "Beaker glass", "Oven"],
+    "metode": "Aktivasi kimia",
+    "langkah": [
+      "Karbonisasi tempurung pada 500°C",
+      "Rendam arang dalam larutan ZnCl2 24 jam",
+      "Aktivasi pada 700°C selama 2 jam",
+      "Cuci hingga pH netral",
+      "Keringkan pada 105°C"
+    ],
+    "produk": "Karbon aktif granular",
+    "manfaat": "Filter air & pemurnian industri",
+    "yield": "30-35%",
+    "catatan": "Luas permukaan >1000 m²/g"
+  },
+  {
+    "judul": "Minyak Nilam (Pogostemon cablin)",
+    "bahan": ["Daun nilam kering 3kg", "Air destilasi 10L"],
+    "alat": ["Destilator", "Kondensor", "Pisau"],
+    "metode": "Destilasi uap",
+    "langkah": [
+      "Rajang daun nilam",
+      "Destilasi selama 8-10 jam",
+      "Pisahkan minyak dari air",
+      "Dehidrasi dengan Na2SO4",
+      "Saring dengan kertas saring"
+    ],
+    "produk": "Minyak nilam",
+    "manfaat": "Fiksatif parfum & aromaterapi",
+    "yield": "2-2.5%",
+    "catatan": "Kandungan patchouli alcohol >30%"
+  },
+  {
+    "judul": "Biopestisida dari Bintaro (Cerbera manghas)",
+    "bahan": ["Biji bintaro 1kg", "Etanol 70% 5L"],
+    "alat": ["Blender", "Rotary evaporator", "Saringan"],
+    "metode": "Ekstraksi pelarut",
+    "langkah": [
+      "Kupas dan keringkan biji",
+      "Blender menjadi bubuk",
+      "Ekstrak dengan etanol 24 jam",
+      "Evaporasi pelarut",
+      "Tingkatkan konsentrasi ekstrak"
+    ],
+    "produk": "Ekstrak biji bintaro",
+    "manfaat": "Pestisida alami untuk hama tanaman",
+    "yield": "15-20%",
+    "catatan": "Beracun - hanya untuk penggunaan pertanian"
+  },
+  {
+    "judul": "Asap Cair dari Tempurung Kelapa",
+    "bahan": ["Tempurung kelapa 10kg"],
+    "alat": ["Piroliser", "Kondensor", "Penyaring"],
+    "metode": "Pirolisis lambat",
+    "langkah": [
+      "Pirolisis pada suhu 400°C selama 8 jam",
+      "Tampung asap yang terkondensasi",
+      "Destilasi fraksional pada suhu berbeda",
+      "Aging selama 1 bulan",
+      "Saring dengan karbon aktif"
+    ],
+    "produk": "Asap cair grade food",
+    "manfaat": "Pengawet makanan alami",
+    "yield": "25-30%",
+    "catatan": "pH 2.5-3.0, kandungan fenol >20%"
+  },
+  {
+    "judul": "Glukomanan dari Porang (Amorphophallus muelleri)",
+    "bahan": ["Chip porang kering 2kg", "Air 10L", "Etanol 95% 5L"],
+    "alat": ["Blender", "Sentrifuge", "Oven"],
+    "metode": "Ekstraksi presipitasi",
+    "langkah": [
+      "Blender chip porang menjadi tepung",
+      "Ekstrak dengan air pada suhu 80°C",
+      "Presipitasi dengan etanol",
+      "Cuci dengan etanol 70%",
+      "Keringkan pada suhu 50°C"
+    ],
+    "produk": "Glukomanan powder",
+    "manfaat": "Bahan makanan rendah kalori",
+    "yield": "60-65%",
+    "catatan": "Kemurnian >85%"
+  },
+  {
+    "judul": "Minyak Kayu Putih (Melaleuca leucadendra)",
+    "bahan": ["Daun kayu putih segar 5kg", "Air destilasi 15L"],
+    "alat": ["Destilator", "Kondensor", "Pisau"],
+    "metode": "Hydrodistilasi",
+    "langkah": [
+      "Rajang daun kayu putih",
+      "Destilasi selama 6 jam",
+      "Pisahkan minyak dari air",
+      "Dehidrasi dengan Na2SO4",
+      "Saring dengan kertas saring"
+    ],
+    "produk": "Minyak kayu putih",
+    "manfaat": "Bahan obat & aromaterapi",
+    "yield": "1.2-1.5%",
+    "catatan": "Kandungan cineole >60%"
+  },
+  {
+    "judul": "Kitin dari Kulit Udang",
+    "bahan": ["Kulit udang kering 1kg", "HCl 1M 5L", "NaOH 1M 5L"],
+    "alat": ["Beaker glass", "Magnetic stirrer", "Oven"],
+    "metode": "Deproteinasi & demineralisasi",
+    "langkah": [
+      "Demineralisasi dengan HCl 24 jam",
+      "Deproteinasi dengan NaOH 24 jam",
+      "Netralkan dengan air DI",
+      "Bleaching dengan H2O2 3%",
+      "Keringkan pada suhu 60°C"
+    ],
+    "produk": "Kitin murni",
+    "manfaat": "Bahan kosmetik & pengemulsi makanan",
+    "yield": "15-20%",
+    "catatan": "Derajat deasetilasi 75-80%"
+  },
+  {
+    "judul": "Gula Aren Kristal (Arenga pinnata)",
+    "bahan": ["Nira aren segar 10L", "Kapur sirih 50g"],
+    "alat": ["Wajan besar", "Saringan", "Cetakan"],
+    "metode": "Kristalisasi",
+    "langkah": [
+      "Saring nira untuk menghilangkan kotoran",
+      "Masak dengan api sedang hingga mengental",
+      "Tambahkan kapur sirih sebagai pemucat",
+      "Aduk terus hingga terbentuk kristal",
+      "Cetak dan keringkan"
+    ],
+    "produk": "Gula aren kristal",
+    "manfaat": "Pemanis alami untuk industri makanan",
+    "yield": "12-15%",
+    "catatan": "Kadar air akhir <5% untuk daya simpan panjang"
+  },
+  {
+    "judul": "Bioplastik dari Pati Gadung (Dioscorea hispida)",
+    "bahan": ["Pati gadung 500g", "Gliserin 100ml", "Cuka 50ml"],
+    "alat": ["Panci", "Pengaduk", "Cetakan"],
+    "metode": "Thermoplastic",
+    "langkah": [
+      "Larutkan pati dalam air panas",
+      "Tambahkan gliserin dan cuka",
+      "Panaskan sambil diaduk hingga membentuk gel",
+      "Tuang ke cetakan",
+      "Keringkan dalam oven suhu rendah"
+    ],
+    "produk": "Bioplastik biodegradable",
+    "manfaat": "Kemasan ramah lingkungan",
+    "yield": "20-25 lembar ukuran A4",
+    "catatan": "Tahan air dengan penambahan beeswax"
+  },
+  {
+    "judul": "Minyak Biji Alpukat (Persea americana)",
+    "bahan": ["Biji alpukat kering 2kg", "Pelarut n-heksana 5L"],
+    "alat": ["Sokhlet", "Evaporator", "Saringan"],
+    "metode": "Ekstraksi pelarut",
+    "langkah": [
+      "Keringkan dan haluskan biji alpukat",
+      "Ekstrak dengan n-heksana selama 6 jam",
+      "Recovery pelarut",
+      "Saring minyak yang dihasilkan",
+      "Kemas dalam botol kaca gelap"
+    ],
+    "produk": "Minyak biji alpukat",
+    "manfaat": "Bahan kosmetik premium",
+    "yield": "10-12%",
+    "catatan": "Kaya antioksidan dan vitamin E"
+  },
+  {
+    "judul": "Pewarna Alami dari Kayu Secang (Caesalpinia sappan)",
+    "bahan": ["Serutan kayu secang 1kg", "Air 5L", "Tawas 100g"],
+    "alat": ["Panci stainless", "Saringan", "Wadah"],
+    "metode": "Ekstraksi panas",
+    "langkah": [
+      "Rebus serutan kayu selama 2 jam",
+      "Saring larutan berwarna merah",
+      "Tambahkan tawas sebagai mordan",
+      "Konsentratkan dengan pemanasan",
+      "Kemas dalam botol"
+    ],
+    "produk": "Pewarna tekstil merah alami",
+    "manfaat": "Zat warna untuk batik dan kosmetik alami",
+    "yield": "2-3L larutan pekat",
+    "catatan": "Warna stabil pada pH 5-6"
+  },
+  {
+    "judul": "Briket Serbuk Kayu Gergaji",
+    "bahan": ["Serbuk kayu 10kg", "Perekat tepung tapioka 500g"],
+    "alat": ["Pencetak briket", "Press manual", "Pengering"],
+    "metode": "Pengepresan",
+    "langkah": [
+      "Campur serbuk kayu dengan larutan perekat",
+      "Masukkan ke cetakan briket",
+      "Press dengan tekanan tinggi",
+      "Keringkan dibawah sinar matahari",
+      "Kemas dalam plastik kedap udara"
+    ],
+    "produk": "Briket bahan bakar",
+    "manfaat": "Bahan bakar alternatif industri kecil",
+    "yield": "8-9kg",
+    "catatan": "Nilai kalori ≈4000 kal/g"
+  },
+  {
+    "judul": "Ekstrak Daun Insulin (Tithonia diversifolia)",
+    "bahan": ["Daun insulin segar 2kg", "Etanol 70% 10L"],
+    "alat": ["Chopper", "Tangki perendaman", "Evaporator"],
+    "metode": "Maserasi",
+    "langkah": [
+      "Cincang daun segar",
+      "Rendam dalam etanol selama 72 jam",
+      "Saring dan evaporasi pelarut",
+      "Keringkan ekstrak",
+      "Kemas dalam wadah kedap cahaya"
+    ],
+    "produk": "Ekstrak daun insulin pekat",
+    "manfaat": "Suplemen herbal antidiabetes",
+    "yield": "8-10%",
+    "catatan": "Kandungan senyawa aktif sesquiterpen lakton"
+  },
+  {
+    "judul": "Tepung Porang (Amorphophallus muelleri)",
+    "bahan": ["Umbi porang segar 10kg"],
+    "alat": ["Slicer", "Pengering", "Penggiling"],
+    "metode": "Pengolahan kering",
+    "langkah": [
+      "Kupas dan iris tipis umbi porang",
+      "Rendam dalam air mengalir 48 jam",
+      "Keringkan dengan sinar matahari",
+      "Giling menjadi tepung halus",
+      "Ayak untuk mendapatkan tepung homogen"
+    ],
+    "produk": "Tepung porang",
+    "manfaat": "Bahan baku konjac dan industri makanan",
+    "yield": "10-12%",
+    "catatan": "Kandungan glukomanan >60%"
+  },
+  {
+    "judul": "Sabun Mandi dari Minyak Jelantah",
+    "bahan": ["Minyak jelantah 2L", "NaOH 300g", "Air 700ml"],
+    "alat": ["Panci stainless", "Mixer", "Cetakan"],
+    "metode": "Saponifikasi dingin",
+    "langkah": [
+      "Saring minyak jelantah",
+      "Campur NaOH dengan air (hati-hati!)",
+      "Tambahkan larutan NaOH ke minyak",
+      "Mixer hingga trace",
+      "Cetak dan curing 4 minggu"
+    ],
+    "produk": "Sabun batang",
+    "manfaat": "Produk perawatan tubuh ramah lingkungan",
+    "yield": "2.5-3kg",
+    "catatan": "Bisa ditambahkan essential oil untuk aroma"
+  },
+  {
+    "judul": "Ekstrak Kulit Manggis (Garcinia mangostana)",
+    "bahan": ["Kulit manggis kering 1kg", "Etanol 70% 5L"],
+    "alat": ["Blender", "Water bath", "Evaporator"],
+    "metode": "Ekstraksi bertingkat",
+    "langkah": [
+      "Haluskan kulit manggis menjadi bubuk",
+      "Ekstrak dengan etanol 48 jam",
+      "Saring dan evaporasi pelarut",
+      "Keringkan ekstrak",
+      "Kemas dalam wadah kedap cahaya"
+    ],
+    "produk": "Ekstrak xanthone pekat",
+    "manfaat": "Suplemen antioksidan tinggi",
+    "yield": "5-7%",
+    "catatan": "Kandungan α-mangostin >10%"
+  },
+  {
+    "judul": "Minyak Kemiri (Aleurites moluccana)",
+    "bahan": ["Biji kemiri 3kg", "Air mendidih 5L"],
+    "alat": ["Pemarut", "Kain saring", "Penyaring"],
+    "metode": "Pengepresan panas",
+    "langkah": [
+      "Sangrai biji kemiri hingga kecoklatan",
+      "Haluskan menjadi pasta",
+      "Campur dengan air mendidih",
+      "Peras dengan kain saring",
+      "Pisahkan minyak yang mengapung"
+    ],
+    "produk": "Minyak kemiri",
+    "manfaat": "Bahan kosmetik dan penyubur rambut",
+    "yield": "25-30%",
+    "catatan": "Kaya asam lemak omega-6"
+  },
+  {
+    "judul": "Pakan Ternak dari Limbah Pertanian",
+    "bahan": ["Jerami padi 5kg", "Dedak 2kg", "Molases 1L"],
+    "alat": ["Chopper", "Silage bag", "Timbangan"],
+    "metode": "Fermentasi",
+    "langkah": [
+      "Cacah jerami menjadi potongan kecil",
+      "Campur dengan dedak dan molases",
+      "Padatkan dalam silage bag",
+      "Fermentasi selama 21 hari",
+      "Kemas dalam karung kedap udara"
+    ],
+    "produk": "Pakan ternak fermentasi",
+    "manfaat": "Pakan sapi & kambing bernutrisi tinggi",
+    "yield": "7-8kg",
+    "catatan": "Kadar protein meningkat 2-3x setelah fermentasi"
+  },
+  {
+    "judul": "Minyak Biji Bunga Matahari (Helianthus annuus)",
+    "bahan": ["Biji bunga matahari 3kg", "Air hangat 2L"],
+    "alat": ["Pemeras manual", "Saringan", "Botol kaca"],
+    "metode": "Pengepresan dingin",
+    "langkah": [
+      "Sangrai biji hingga matang",
+      "Haluskan dengan blender",
+      "Peras dengan alat manual",
+      "Saring minyak yang dihasilkan",
+      "Simpan dalam botol kaca gelap"
+    ],
+    "produk": "Minyak biji bunga matahari",
+    "manfaat": "Minyak goreng premium & bahan kosmetik",
+    "yield": "30-35%",
+    "catatan": "Kaya vitamin E dan asam linoleat"
+  },
+  {
+    "judul": "Kompos Cacing (Vermicompost)",
+    "bahan": ["Kotoran sapi 10kg", "Sisa sayuran 2kg", "Cacing tanah 500g"],
+    "alat": ["Kotak kayu", "Penyemprot", "Sekop kecil"],
+    "metode": "Vermikompos",
+    "langkah": [
+      "Campur kotoran sapi dengan sisa sayuran",
+      "Tempatkan dalam kotak kayu",
+      "Masukkan cacing tanah",
+      "Jaga kelembaban 60-70%",
+      "Panen setelah 45 hari"
+    ],
+    "produk": "Vermicompos",
+    "manfaat": "Pupuk organik kualitas tinggi",
+    "yield": "6-7kg",
+    "catatan": "NPK 2-1-1 dengan mikroba menguntungkan"
+  },
+  {
+    "judul": "Ekstrak Kunyit (Curcuma longa)",
+    "bahan": ["Rimpang kunyit segar 5kg", "Etanol 70% 10L"],
+    "alat": ["Parutan", "Tangki perendaman", "Evaporator"],
+    "metode": "Maserasi",
+    "langkah": [
+      "Kupas dan parut rimpang kunyit",
+      "Rendam dalam etanol 72 jam",
+      "Saring dan evaporasi pelarut",
+      "Keringkan ekstrak",
+      "Kemas dalam wadah kedap cahaya"
+    ],
+    "produk": "Ekstrak kurkuminoid",
+    "manfaat": "Bahan obat antiinflamasi alami",
+    "yield": "8-10%",
+    "catatan": "Kandungan kurkumin >5%"
+  },
+  {
+    "judul": "Tepung Pisang Kepok (Musa paradisiaca)",
+    "bahan": ["Pisang kepok mentah 10kg"],
+    "alat": ["Pengiris", "Pengering", "Penggiling"],
+    "metode": "Pengolahan kering",
+    "langkah": [
+      "Kupas dan iris tipis pisang",
+      "Rendam dalam air kapur 1 jam",
+      "Keringkan dengan oven 60°C",
+      "Giling menjadi tepung halus",
+      "Ayak ukuran 80 mesh"
+    ],
+    "produk": "Tepung pisang",
+    "manfaat": "Bahan makanan bebas gluten",
+    "yield": "12-15%",
+    "catatan": "Kadar pati resisten tinggi (>20%)"
+  },
+  {
+    "judul": "Minyak Biji Wijen (Sesamum indicum)",
+    "bahan": ["Biji wijen 3kg", "Air hangat 1L"],
+    "alat": ["Pemanggang", "Pengepres manual", "Saringan"],
+    "metode": "Pengepresan dingin",
+    "langkah": [
+      "Sangrai biji hingga kecoklatan",
+      "Giling menjadi pasta",
+      "Campur dengan air hangat",
+      "Peras dengan alat manual",
+      "Pisahkan minyak yang mengapung"
+    ],
+    "produk": "Minyak wijen murni",
+    "manfaat": "Bahan makanan premium & kosmetik",
+    "yield": "40-45%",
+    "catatan": "Kaya asam oleat dan linoleat"
+  },
+  {
+    "judul": "Pewarna Kunyit Cair (Curcuma longa)",
+    "bahan": ["Rimpang kunyit segar 2kg", "Air 5L", "Garam 100g"],
+    "alat": ["Blender", "Saringan", "Panci"],
+    "metode": "Ekstraksi air",
+    "langkah": [
+      "Blender kunyit dengan air",
+      "Rebus selama 1 jam",
+      "Saring dan tambahkan garam",
+      "Konsentratkan dengan pemanasan",
+      "Kemas dalam botol gelap"
+    ],
+    "produk": "Pewarna makanan kuning alami",
+    "manfaat": "Zat warna untuk industri makanan",
+    "yield": "1.5-2L",
+    "catatan": "Stabil pada pH 3-5"
+  },
+  {
+    "judul": "Briket Ampas Tebu (Saccharum officinarum)",
+    "bahan": ["Ampas tebu kering 5kg", "Perekat tepung tapioka 200g"],
+    "alat": ["Pencetak briket", "Press manual", "Pengering"],
+    "metode": "Pengepresan",
+    "langkah": [
+      "Campur ampas tebu dengan larutan perekat",
+      "Masukkan ke cetakan briket",
+      "Press dengan tekanan tinggi",
+      "Keringkan dibawah sinar matahari",
+      "Kemas dalam plastik kedap udara"
+    ],
+    "produk": "Briket biomassa",
+    "manfaat": "Bahan bakar alternatif",
+    "yield": "70-75%",
+    "catatan": "Nilai kalori ≈3500 kal/g"
+  },
+  {
+    "judul": "Ekstrak Daun Katuk (Sauropus androgynus)",
+    "bahan": ["Daun katuk segar 2kg", "Etanol 70% 5L"],
+    "alat": ["Chopper", "Tangki perendaman", "Evaporator"],
+    "metode": "Maserasi",
+    "langkah": [
+      "Cincang daun segar",
+      "Rendam dalam etanol 48 jam",
+      "Saring dan evaporasi pelarut",
+      "Keringkan ekstrak",
+      "Kemas dalam kapsul"
+    ],
+    "produk": "Ekstrak daun katuk",
+    "manfaat": "Suplemen laktagogum alami",
+    "yield": "8-10%",
+    "catatan": "Kaya flavonoid dan steroid"
+  },
+  {
+    "judul": "Sabun Kopi (Coffea arabica)",
+    "bahan": ["Bubuk kopi 200g", "Minyak kelapa 1L", "NaOH 150g"],
+    "alat": ["Panci stainless", "Mixer", "Cetakan"],
+    "metode": "Saponifikasi dingin",
+    "langkah": [
+      "Campur NaOH dengan air (hati-hati!)",
+      "Tambahkan minyak kelapa dan kopi",
+      "Mixer hingga trace",
+      "Tuang ke cetakan",
+      "Curing 4 minggu"
+    ],
+    "produk": "Sabun scrub kopi",
+    "manfaat": "Eksfoliator alami",
+    "yield": "1.2-1.5kg",
+    "catatan": "pH 8-9, aman untuk kulit"
+  },
+  {
+    "judul": "Minyak Biji Anggur (Vitis vinifera)",
+    "bahan": ["Biji anggur kering 2kg", "Pelarut n-heksana 5L"],
+    "alat": ["Sokhlet", "Evaporator", "Saringan"],
+    "metode": "Ekstraksi pelarut",
+    "langkah": [
+      "Keringkan dan haluskan biji",
+      "Ekstrak dengan n-heksana 6 jam",
+      "Recovery pelarut",
+      "Saring minyak hasil ekstraksi",
+      "Kemas dalam botol gelap"
+    ],
+    "produk": "Minyak biji anggur",
+    "manfaat": "Bahan kosmetik anti-aging",
+    "yield": "12-15%",
+    "catatan": "Kaya asam linoleat dan proanthocyanidin"
+  },
+  {
+    "judul": "Pakan Ikan dari Azolla (Azolla pinnata)",
+    "bahan": ["Azolla segar 10kg", "Molases 1L"],
+    "alat": ["Chopper", "Silage bag", "Timbangan"],
+    "metode": "Fermentasi",
+    "langkah": [
+      "Cacah azolla menjadi potongan kecil",
+      "Campur dengan molases",
+      "Padatkan dalam silage bag",
+      "Fermentasi selama 14 hari",
+      "Kemas dalam karung kedap udara"
+    ],
+    "produk": "Pakan ikan fermentasi",
+    "manfaat": "Pakan lele/nila bernutrisi tinggi",
+    "yield": "6-7kg",
+    "catatan": "Protein >25% setelah fermentasi"
+  },
+  {
+    "judul": "Ekstrak Kulit Buah Naga (Hylocereus undatus)",
+    "bahan": ["Kulit buah naga 3kg", "Etanol 70% 5L"],
+    "alat": ["Blender", "Water bath", "Evaporator"],
+    "metode": "Ekstraksi bertingkat",
+    "langkah": [
+      "Keringkan kulit buah naga",
+      "Blender menjadi bubuk",
+      "Ekstrak dengan etanol 48 jam",
+      "Saring dan evaporasi pelarut",
+      "Keringkan ekstrak"
+    ],
+    "produk": "Ekstrak betalain",
+    "manfaat": "Pewarna makanan alami (merah-ungu)",
+    "yield": "5-7%",
+    "catatan": "Stabil pada pH 5-7"
+  },
+  {
+    "judul": "Briket Daun Kering",
+    "bahan": ["Daun kering 5kg", "Perekat tepung tapioka 200g"],
+    "alat": ["Pencetak briket", "Press manual", "Pengering"],
+    "metode": "Pengepresan",
+    "langkah": [
+      "Haluskan daun menjadi serbuk",
+      "Campur dengan larutan perekat",
+      "Cetak dengan tekanan tinggi",
+      "Keringkan dibawah sinar matahari",
+      "Kemas dalam plastik kedap udara"
+    ],
+    "produk": "Briket biomassa daun",
+    "manfaat": "Bahan bakar alternatif",
+    "yield": "65-70%",
+    "catatan": "Nilai kalori ≈3000 kal/g"
+  },
+  {
+    "judul": "Minyak Kemangi (Ocimum basilicum)",
+    "bahan": ["Daun kemangi segar 5kg", "Air destilasi 10L"],
+    "alat": ["Destilator", "Kondensor", "Pisau"],
+    "metode": "Hydrodistilasi",
+    "langkah": [
+      "Rajang daun kemangi",
+      "Destilasi selama 4-5 jam",
+      "Pisahkan minyak dari air",
+      "Dehidrasi dengan Na2SO4",
+      "Saring dengan kertas saring"
+    ],
+    "produk": "Minyak atsiri kemangi",
+    "manfaat": "Aromaterapi & bahan obat",
+    "yield": "0.5-0.7%",
+    "catatan": "Kandungan linalool >50%"
+  },
+  {
+    "judul": "Pupuk Granul dari Kotoran Kelinci",
+    "bahan": ["Kotoran kelinci 10kg", "Dedak 1kg"],
+    "alat": ["Pencetak granulator", "Pengering", "Timbangan"],
+    "metode": "Granulasi",
+    "langkah": [
+      "Campur kotoran dengan dedak",
+      "Tambahkan air hingga lembab",
+      "Cetak dengan granulator manual",
+      "Keringkan dibawah sinar matahari",
+      "Kemas dalam karung"
+    ],
+    "produk": "Pupuk granul organik",
+    "manfaat": "Pupuk slow-release untuk tanaman",
+    "yield": "8-9kg",
+    "catatan": "NPK 2-1-1, lengkap dengan mikroba"
+  },
+  {
+    "judul": "Sabun Tomat (Solanum lycopersicum)",
+    "bahan": ["Tomat matang 2kg", "Minyak zaitun 1L", "NaOH 140g"],
+    "alat": ["Blender", "Panci stainless", "Cetakan"],
+    "metode": "Saponifikasi dingin",
+    "langkah": [
+      "Blender tomat hingga halus",
+      "Campur NaOH dengan air (hati-hati!)",
+      "Tambahkan minyak zaitun dan pasta tomat",
+      "Mixer hingga trace",
+      "Cetak dan curing 4 minggu"
+    ],
+    "produk": "Sabun tomat",
+    "manfaat": "Sabun antioksidan untuk kulit",
+    "yield": "1.3-1.6kg",
+    "catatan": "Kaya likopen dan vitamin C"
+  },
+  {
+    "judul": "Ekstrak Daun Jambu Biji (Psidium guajava)",
+    "bahan": ["Daun jambu biji segar 2kg", "Etanol 70% 5L"],
+    "alat": ["Chopper", "Tangki perendaman", "Evaporator"],
+    "metode": "Maserasi",
+    "langkah": [
+      "Cincang daun segar",
+      "Rendam dalam etanol 72 jam",
+      "Saring dan evaporasi pelarut",
+      "Keringkan ekstrak",
+      "Kemas dalam kapsul"
+    ],
+    "produk": "Ekstrak daun jambu biji",
+    "manfaat": "Obat antidiare alami",
+    "yield": "9-11%",
+    "catatan": "Kandungan quercetin >5%"
+  },
+  {
+    "judul": "Minyak Biji Rambutan (Nephelium lappaceum)",
+    "bahan": ["Biji rambutan kering 2kg", "Pelarut n-heksana 5L"],
+    "alat": ["Sokhlet", "Evaporator", "Saringan"],
+    "metode": "Ekstraksi pelarut",
+    "langkah": [
+      "Keringkan dan haluskan biji",
+      "Ekstrak dengan n-heksana 6 jam",
+      "Recovery pelarut",
+      "Saring minyak hasil ekstraksi",
+      "Kemas dalam botol gelap"
+    ],
+    "produk": "Minyak biji rambutan",
+    "manfaat": "Bahan kosmetik & conditioner rambut",
+    "yield": "15-18%",
+    "catatan": "Kaya asam arachidic dan oleat"
+  },
+  {
+    "judul": "Kompos Cacing dari Limbah Sayur",
+    "bahan": ["Limbah sayuran 10kg", "Kardus bekas 2kg", "Cacing tanah 500g"],
+    "alat": ["Kotak kayu", "Penyemprot", "Sekop kecil"],
+    "metode": "Vermikompos",
+    "langkah": [
+      "Campur limbah sayur dengan kardus",
+      "Tempatkan dalam kotak kayu",
+      "Masukkan cacing tanah",
+      "Jaga kelembaban 60-70%",
+      "Panen setelah 40 hari"
+    ],
+    "produk": "Vermicompos",
+    "manfaat": "Pupuk organik kualitas tinggi",
+    "yield": "4-5kg",
+    "catatan": "NPK 1.5-1-1 dengan mikroba menguntungkan"
+  },
+  {
+    "judul": "Minyak Biji Durian (Durio zibethinus)",
+    "bahan": ["Biji durian kering 3kg", "Pelarut n-heksana 5L"],
+    "alat": ["Sokhlet extractor", "Rotary evaporator", "Filter paper"],
+    "metode": "Ekstraksi pelarut",
+    "langkah": [
+      "Keringkan biji hingga kadar air <8%",
+      "Haluskan menjadi granul 20 mesh",
+      "Ekstrak dengan n-heksana 6 jam",
+      "Evaporasi pelarut pada 60°C",
+      "Saring dengan kertas whatman No.1"
+    ],
+    "produk": "Minyak biji durian murni",
+    "manfaat": "Bahan kosmetik antioksidan",
+    "yield": "18-22%",
+    "catatan": "Kaya asam palmitat dan stearat"
+  },
+  {
+    "judul": "Pektin dari Kulit Pisang (Musa acuminata)",
+    "bahan": ["Kulit pisang kepok 5kg", "Asam sitrat 0.5%", "Air 10L"],
+    "alat": ["Autoklaf", "Press filter", "Precipitation tank"],
+    "metode": "Ekstraksi asam panas",
+    "langkah": [
+      "Blender kulit pisang dengan air",
+      "Ekstrak dengan asam sitrat 90°C 2 jam",
+      "Saring dengan press filter",
+      "Presipitasi dengan etanol 95%",
+      "Keringkan dengan spray dryer"
+    ],
+    "produk": "Pektin grade food",
+    "manfaat": "Bahan pengental makanan",
+    "yield": "12-15%",
+    "catatan": "DE value 55-65%"
+  },
+  {
+    "judul": "Bioplastik dari Pati Ganyong (Canna edulis)",
+    "bahan": ["Pati ganyong 500g", "Gliserol 100ml", "Asam asetat 50ml"],
+    "alat": ["Hot plate mixer", "Film applicator", "Oven"],
+    "metode": "Solvent casting",
+    "langkah": [
+      "Larutkan pati dalam air panas",
+      "Tambahkan plasticizer dan pengatur pH",
+      "Tuang ke cetakan film",
+      "Keringkan 50°C selama 6 jam",
+      "Lepaskan dari cetakan"
+    ],
+    "produk": "Edible film",
+    "manfaat": "Kemasan biodegradable",
+    "yield": "20-25 lembar A4",
+    "catatan": "Tensile strength 15-18 MPa"
+  },
+  {
+    "judul": "Ekstrak Antosianin dari Kubis Ungu (Brassica oleracea)",
+    "bahan": ["Kubis ungu 3kg", "Etanol 70% acidified 5L"],
+    "alat": ["Cryogenic grinder", "Ultrasonic extractor", "Centrifuge"],
+    "metode": "Ultrasound-assisted extraction",
+    "langkah": [
+      "Bekukan dan giling kubis",
+      "Ekstrak dengan etanol asam",
+      "Sonikasi 30 menit 40°C",
+      "Sentrifuge 4000 rpm 15 menit",
+      "Evaporasi pelarut"
+    ],
+    "produk": "Pigmen antosianin pekat",
+    "manfaat": "Pewarna makanan alami",
+    "yield": "1.2-1.5%",
+    "catatan": "Stabil pada pH <3"
+  },
+  {
+    "judul": "Nanofiber Selulosa dari Pelepah Pisang (Musa paradisiaca)",
+    "bahan": ["Pelepah pisang 10kg", "NaOH 5% 15L", "NaClO 2% 5L"],
+    "alat": ["High-pressure homogenizer", "Freeze dryer", "Magnetic stirrer"],
+    "metode": "Mekanokimia",
+    "langkah": [
+      "Delignifikasi dengan NaOH 80°C",
+      "Bleaching dengan NaClO",
+      "Homogenisasi tekanan tinggi",
+      "Freeze drying",
+      "Dispersi ultrasonik"
+    ],
+    "produk": "Nanocellulose fiber",
+    "manfaat": "Bahan penguat komposit",
+    "yield": "8-10%",
+    "catatan": "Diameter fiber 20-50nm"
+  },
+  {
+    "judul": "Biopigmen Monascus dari Beras (Monascus purpureus)",
+    "bahan": ["Beras 5kg", "Kultur Monascus", "Air steril 3L"],
+    "alat": ["Fermentor", "Autoclave", "Spray dryer"],
+    "metode": "Fermentasi padat",
+    "langkah": [
+      "Sterilisasi substrat 121°C 15 menit",
+      "Inokulasi kultur 7 hari 30°C",
+      "Ekstraksi dengan etanol 70%",
+      "Sentrifuge 5000 rpm",
+      "Keringkan dengan spray dryer"
+    ],
+    "produk": "Pigmen Monascus",
+    "manfaat": "Pewarna makanan alami",
+    "yield": "5-6g/kg substrat",
+    "catatan": "Stabil pada pH 3-7"
+  },
+  {
+    "judul": "Karbon Aktif dari Tempurung Kemiri (Aleurites moluccanus)",
+    "bahan": ["Tempurung kemiri 5kg", "H3PO4 30% 3L"],
+    "alat": ["Muffle furnace", "Vacuum oven", "Sieve shaker"],
+    "metode": "Aktivasi kimia",
+    "langkah": [
+      "Impreganasi dengan asam 24 jam",
+      "Pirolisis 500°C 2 jam",
+      "Cuci hingga pH netral",
+      "Keringkan 110°C 6 jam",
+      "Ayak 50-100 mesh"
+    ],
+    "produk": "Activated carbon",
+    "manfaat": "Adsorben logam berat",
+    "yield": "35-40%",
+    "catatan": "Surface area 900-1000 m²/g"
+  },
+  {
+    "judul": "Ekstrak Bromelain dari Batang Nanas (Ananas comosus)",
+    "bahan": ["Batang nanas 10kg", "Buffer fosfat 0.1M 5L"],
+    "alat": ["Cold press", "Ultrafilter", "Lyophilizer"],
+    "metode": "Ekstraksi dingin",
+    "langkah": [
+      "Haluskan batang dengan press dingin",
+      "Sentrifuge 8000 rpm 15 menit",
+      "Ultrafiltrasi 10 kDa MWCO",
+      "Presipitasi dengan (NH4)2SO4",
+      "Freeze drying"
+    ],
+    "produk": "Bromelain powder",
+    "manfaat": "Enzim proteolitik industri",
+    "yield": "0.8-1.2%",
+    "catatan": "Aktivitas >2000 CDU/mg"
+  },
+  {
+    "judul": "Mikrokapsul Probiotik (Lactobacillus sp.)",
+    "bahan": ["Kultur Lactobacillus", "Alginat 2%", "CaCl2 0.1M"],
+    "alat": ["Encapsulator", "Incubator", "Freeze dryer"],
+    "metode": "Ionotropic gelation",
+    "langkah": [
+      "Kultivasi bakteri fase log",
+      "Pencampuran dengan alginat",
+      "Ekstrusi ke larutan CaCl2",
+      "Pengerasan 30 menit",
+      "Freeze drying"
+    ],
+    "produk": "Probiotic microcapsules",
+    "manfaat": "Suplemen pangan fungsional",
+    "yield": "85-90% viabilitas",
+    "catatan": "Ukuran partikel 200-300μm"
+  },
+  {
+    "judul": "Biopolimer dari Pati Gembili (Dioscorea esculenta)",
+    "bahan": ["Pati gembili 500g", "Gliserol 15%", "Asam sitrat 5%"],
+    "alat": ["Twin-screw extruder", "Hot press", "Universal tester"],
+    "metode": "Reactive extrusion",
+    "langkah": [
+      "Pencampuran bahan kering",
+      "Ekstrusi 140-160°C",
+      "Pembentukan film",
+      "Conditioning 25°C 48 jam",
+      "Pengujian karakteristik"
+    ],
+    "produk": "Biodegradable polymer",
+    "manfaat": "Bahan kemasan pangan",
+    "yield": "95-98%",
+    "catatan": "Water vapor permeability 2.5g/mm/m²/day"
+  },
+  {
+    "judul": "Ekstrak Fikosianin dari Spirulina (Arthrospira platensis)",
+    "bahan": ["Biomassa spirulina 1kg", "Buffer fosfat 0.01M 3L"],
+    "alat": ["Ultrasonic bath", "Centrifuge", "Dialysis kit"],
+    "metode": "Sonikasi-assisted extraction",
+    "langkah": [
+      "Lisis sel dengan sonikasi 20kHz",
+      "Sentrifuge 10000xg 20 menit",
+      "Presipitasi dengan (NH4)2SO4",
+      "Dialysis terhadap air deionisasi",
+      "Freeze drying"
+    ],
+    "produk": "Phycocyanin powder",
+    "manfaat": "Pewarna alami & suplemen",
+    "yield": "10-12%",
+    "catatan": "Kemurnian A620/A280 >0.7"
+  },
+  {
+    "judul": "Nanopartikel Perak dari Ekstrak Daun Sirsak (Annona muricata)",
+    "bahan": ["Daun sirsak 500g", "AgNO3 1mM 1L"],
+    "alat": ["Magnetic stirrer", "UV-Vis spectrophotometer", "Centrifuge"],
+    "metode": "Green synthesis",
+    "langkah": [
+      "Ekstraksi daun dengan air deionisasi",
+      "Reduksi ion Ag+ dengan ekstrak",
+      "Karakterisasi optik λmax 420nm",
+      "Pemurnian sentrifugasi",
+      "Pengeringan beku"
+    ],
+    "produk": "Silver nanoparticles",
+    "manfaat": "Antimikroba alami",
+    "yield": "85-90%",
+    "catatan": "Ukuran partikel 20-50nm"
+  },
+  {
+    "judul": "Bioplastik dari Karagenan (Eucheuma cottonii)",
+    "bahan": ["Karagenan 200g", "Gliserol 30%", "Air 800ml"],
+    "alat": ["Hot plate", "Casting plate", "Desiccator"],
+    "metode": "Solvent casting",
+    "langkah": [
+      "Hidrasi karagenan dalam air panas",
+      "Tambahkan plasticizer",
+      "Tuang ke cetakan acrylic",
+      "Pengeringan 40°C 24 jam",
+      "Conditioning 53% RH"
+    ],
+    "produk": "Karagenan film",
+    "manfaat": "Edible packaging",
+    "yield": "15-20 lembar A4",
+    "catatan": "Water solubility 40-45%"
+  },
+  {
+    "judul": "Ekstrak Beras Hitam (Oryza sativa L. indica)",
+    "bahan": ["Beras hitam 2kg", "Etanol 50% 5L"],
+    "alat": ["Soxhlet extractor", "Rotary evaporator", "Freeze dryer"],
+    "metode": "Ekstraksi bertingkat",
+    "langkah": [
+      "Giling beras menjadi tepung",
+      "Ekstraksi Soxhlet 6 jam",
+      "Evaporasi pelarut",
+      "Freeze drying",
+      "Pengemasan vakum"
+    ],
+    "produk": "Ekstrak antosianin beras hitam",
+    "manfaat": "Suplemen antioksidan",
+    "yield": "3-4%",
+    "catatan": "ORAC value >5000 μmol TE/g"
+  },
+  {
+    "judul": "Mikrofibril Selulosa dari Sabut Kelapa (Cocos nucifera)",
+    "bahan": ["Sabut kelapa 5kg", "NaOH 17.5% 10L", "Asam asetat 5%"],
+    "alat": ["Digester", "High-shear mixer", "Freeze dryer"],
+    "metode": "Mekanokimia",
+    "langkah": [
+      "Delignifikasi alkali 80°C 4 jam",
+      "Bleaching dengan H2O2",
+      "Defibrilasi mekanik",
+      "Netralisasi asam asetat",
+      "Freeze drying"
+    ],
+    "produk": "Microfibrillated cellulose",
+    "manfaat": "Bahan penguat komposit",
+    "yield": "35-40%",
+    "catatan": "Diameter fibril 10-50μm"
+  },
+  {
+    "judul": "Ekstrak Fucoxanthin dari Rumput Laut (Sargassum sp.)",
+    "bahan": ["Rumput laut kering 1kg", "Etanol 96% 5L"],
+    "alat": ["Ultrasonic extractor", "Centrifuge", "Rotary evaporator"],
+    "metode": "Ultrasound-assisted extraction",
+    "langkah": [
+      "Penghalusan bahan baku",
+      "Ekstraksi dengan sonikasi 40kHz",
+      "Sentrifugasi 10.000rpm",
+      "Evaporasi pelarut",
+      "Kemas dalam botol gelap"
+    ],
+    "produk": "Fucoxanthin concentrate",
+    "manfaat": "Suplemen anti-obesitas",
+    "yield": "0.8-1.2%",
+    "catatan": "Kemurnian >90% HPLC"
+  },
+  {
+    "judul": "Nanokomposit Pati-PVA",
+    "bahan": ["Pati singkong 300g", "PVA 100g", "Gliserol 50ml"],
+    "alat": ["Magnetic stirrer", "Ultrasonic bath", "Casting plate"],
+    "metode": "Solvent casting",
+    "langkah": [
+      "Pembuatan larutan PVA 5%",
+      "Pencampuran dengan pati termodifikasi",
+      "Sonikasi 30 menit",
+      "Penuangan ke cetakan",
+      "Pengeringan 40°C"
+    ],
+    "produk": "Starch-PVA nanocomposite",
+    "manfaat": "Bahan kemasan cerdas",
+    "yield": "20-25 lembar A4",
+    "catatan": "Transparency >85%"
+  },
+  {
+    "judul": "Ekstrak Kurkuminoid dari Temu Lawak (Curcuma xanthorrhiza)",
+    "bahan": ["Rimpang temu lawak 3kg", "Etanol 70% 10L"],
+    "alat": ["Perkolator", "Rotary evaporator", "Spray dryer"],
+    "metode": "Perkolasi",
+    "langkah": [
+      "Penghalusan rimpang",
+      "Perkolasi etanol 24 jam",
+      "Evaporasi pelarut",
+      "Spray drying inlet 180°C",
+      "Pengemasan vakum"
+    ],
+    "produk": "Temu lawak extract",
+    "manfaat": "Bahan obat hepatoprotektor",
+    "yield": "4-5%",
+    "catatan": "Kandungan kurkumin >5%"
+  },
+  {
+    "judul": "Membran Filtrasi dari Selulosa Bakteri",
+    "bahan": ["Medium kultur 10L", "Bakteri Acetobacter xylinum"],
+    "alat": ["Fermentor", "Purification bath", "Freeze dryer"],
+    "metode": "Biosintesis mikroba",
+    "langkah": [
+      "Inokulasi kultur 7 hari",
+      "Pemurnian dengan NaOH 1%",
+      "Pencucian air deionisasi",
+      "Pembentukan membran",
+      "Freeze drying"
+    ],
+    "produk": "Bacterial cellulose membrane",
+    "manfaat": "Membran filtrasi biomedis",
+    "yield": "200-300g/m²",
+    "catatan": "Porosity 80-85%"
+  },
+  {
+    "judul": "Mikropartikel Zein dari Jagung (Zea mays)",
+    "bahan": ["Protein zein 100g", "Etanol 70% 1L", "Crosslinker"],
+    "alat": ["Magnetic stirrer", "Spray dryer", "Sieve shaker"],
+    "metode": "Coacervation",
+    "langkah": [
+      "Pelarutan zein dalam etanol",
+      "Emulsifikasi dengan minyak",
+      "Crosslinking kimia",
+      "Spray drying inlet 120°C",
+      "Pengayakan 50-100μm"
+    ],
+    "produk": "Zein microparticles",
+    "manfaat": "Delivery system nutraceutical",
+    "yield": "75-80%",
+    "catatan": "Loading capacity 15-20%"
+  },
+  {
+    "judul": "Bioplastik dari Kitin Cangkang Rajungan (Portunus pelagicus)",
+    "bahan": ["Cangkang rajungan 2kg", "Asam asetat glasial 1L"],
+    "alat": ["Magnetic stirrer", "Casting plate", "Vacuum oven"],
+    "metode": "Solvent casting",
+    "langkah": [
+      "Deproteinisasi dengan NaOH 1M",
+      "Demineralisasi dengan HCl 1M",
+      "Pelarutan dalam asam asetat",
+      "Penuangan ke cetakan",
+      "Pengeringan vakum"
+    ],
+    "produk": "Chitin-based bioplastic",
+    "manfaat": "Bahan kemasan edible",
+    "yield": "15-20 lembar A5",
+    "catatan": "Water resistance grade B"
+  },
+  {
+    "judul": "Ekstrak Polifenol dari Daun Jati Belanda (Guazuma ulmifolia)",
+    "bahan": ["Daun kering 2kg", "Etanol-air (70:30) 5L"],
+    "alat": ["Maceration tank", "Filter press", "Evaporator"],
+    "metode": "Maserasi bertingkat",
+    "langkah": [
+      "Penghalusan daun",
+      "Ekstraksi bertingkat 3x24 jam",
+      "Penyaringan vakum",
+      "Evaporasi pelarut",
+      "Freeze drying"
+    ],
+    "produk": "Polyphenol extract",
+    "manfaat": "Suplemen anti-obesitas",
+    "yield": "12-15%",
+    "catatan": "Kandungan tanin >20%"
+  },
+  {
+    "judul": "Nanopartikel ZnO dari Ekstrak Daun Salam (Syzygium polyanthum)",
+    "bahan": ["Daun salam 500g", "Zn(CH3COO)2 0.1M 1L"],
+    "alat": ["Magnetic stirrer", "Centrifuge", "UV-Vis spectrometer"],
+    "metode": "Green synthesis",
+    "langkah": [
+      "Ekstraksi daun dengan air deionisasi",
+      "Pencampuran dengan precursor Zn",
+      "Pemanasan 60°C 2 jam",
+      "Sentrifugasi 10000 rpm",
+      "Karakterisasi optik"
+    ],
+    "produk": "ZnO nanoparticles",
+    "manfaat": "Bahan antimikroba alami",
+    "yield": "80-85%",
+    "catatan": "Ukuran partikel 30-50nm"
+  },
+  {
+    "judul": "Mikroenkapsulasi Minyak Atsiri dengan Maltodekstrin",
+    "bahan": ["Minyak serai wangi 100ml", "Maltodekstrin 300g", "Air 500ml"],
+    "alat": ["Homogenizer", "Spray dryer", "Particle size analyzer"],
+    "metode": "Spray drying",
+    "langkah": [
+      "Pembuatan emulsi stabil",
+      "Homogenisasi 15000 rpm",
+      "Spray drying inlet 180°C",
+      "Pengumpulan produk",
+      "Analisis karakteristik"
+    ],
+    "produk": "Mikrokapsul minyak atsiri",
+    "manfaat": "Stabilisasi flavor",
+    "yield": "70-75%",
+    "catatan": "Ukuran partikel 10-50μm"
+  },
+  {
+    "judul": "Selulosa Bakteri dari Limbah Nata de Coco",
+    "bahan": ["Limbah nata 5kg", "NaOH 1M 10L"],
+    "alat": ["Purification tank", "Homogenizer", "Freeze dryer"],
+    "metode": "Bioproses mikroba",
+    "langkah": [
+      "Pemurnian alkali 80°C",
+      "Pencucian netral",
+      "Homogenisasi tekanan tinggi",
+      "Pembentukan sheet",
+      "Freeze drying"
+    ],
+    "produk": "Bacterial nanocellulose",
+    "manfaat": "Bahan biomedis",
+    "yield": "30-35%",
+    "catatan": "Kemurnian selulosa >95%"
+  },
+  {
+  {
+    "judul": "Ekstrak Astaxanthin dari Udang Vaname (Litopenaeus vannamei)",
+    "bahan": ["Kepala udang 5kg", "Aseton 95% 5L"],
+    "alat": ["Soxhlet extractor", "Rotary evaporator", "Chromatography column"],
+    "metode": "Ekstraksi pelarut",
+    "langkah": [
+      "Pengeringan bahan baku",
+      "Ekstraksi Soxhlet 8 jam",
+      "Evaporasi pelarut",
+      "Pemurnian kromatografi",
+      "Pengemasan vakum"
+    ],
+    "produk": "Astaxanthin concentrate",
+    "manfaat": "Suplemen antioksidan",
+    "yield": "0.5-0.8%",
+    "catatan": "Kemurnian >90% HPLC"
+  },
+  {
+    "judul": "Bioplastik dari Pati Suweg (Amorphophallus paeoniifolius)",
+    "bahan": ["Pati suweg 500g", "Gliserol 20%", "Asam sitrat 5%"],
+    "alat": ["Internal mixer", "Hot press", "Universal tester"],
+    "metode": "Thermoplastic processing",
+    "langkah": [
+      "Pencampuran bahan kering",
+      "Pemanasan 150°C 10 menit",
+      "Pembentukan lembaran",
+      "Conditioning 25°C/50% RH",
+      "Pengujian mekanik"
+    ],
+    "produk": "Thermoplastic starch",
+    "manfaat": "Bahan kemasan pangan",
+    "yield": "95-98%",
+    "catatan": "Water vapor permeability 2.8g/m²/day"
+  },
+  {
+    "judul": "Nanofiber Selulosa dari Limbah Tandan Kosong Kelapa Sawit (Elaeis guineensis)",
+    "bahan": ["TKKS 5kg", "NaOH 17.5% 15L", "Asam asetat 5%"],
+    "alat": ["Digester", "High-pressure homogenizer", "Freeze dryer"],
+    "metode": "Mekanokimia",
+    "langkah": [
+      "Delignifikasi alkali 80°C 6 jam",
+      "Bleaching dengan H2O2",
+      "Homogenisasi 1000 bar",
+      "Netralisasi asam asetat",
+      "Freeze drying"
+    ],
+    "produk": "Nanocellulose fiber",
+    "manfaat": "Bahan penguat komposit",
+    "yield": "25-30%",
+    "catatan": "Diameter fiber 20-100nm"
+  },
+  {
+    "judul": "Minyak Biji Alpukat (Persea americana)",
+    "bahan": ["Biji alpukat kering 3kg", "n-heksana 5L", "Air destilasi 2L"],
+    "alat": ["Sokhlet extractor", "Rotary evaporator", "Centrifuge"],
+    "metode": "Ekstraksi azeotropik",
+    "langkah": [
+      "Keringkan biji hingga kadar air <5%",
+      "Haluskan menjadi partikel 20 mesh",
+      "Ekstraksi dengan n-heksana-air (9:1)",
+      "Pisahkan fase organik dengan centrifuge",
+      "Recovery pelarut dengan evaporasi"
+    ],
+    "produk": "Cold-pressed avocado oil",
+    "manfaat": "Bahan kosmetik premium & suplemen",
+    "yield": "12-15%",
+    "catatan": "Kaya asam oleat dan vitamin E"
+  },
+  {
+    "judul": "Bioplastik dari Pati Ganyong (Canna edulis)",
+    "bahan": ["Pati ganyong 500g", "Kitosan 100g", "Gliserol 50ml"],
+    "alat": ["Hot plate mixer", "Film applicator", "UV chamber"],
+    "metode": "Solvent casting-modifikasi",
+    "langkah": [
+      "Formulasi larutan pati-kitosan",
+      "Pencampuran dengan plasticizer",
+      "Penuangan ke substrat kaca",
+      "Crosslinking dengan UV 254nm",
+      "Pelepasan film dari substrat"
+    ],
+    "produk": "Antimicrobial bioplastic film",
+    "manfaat": "Kemasan aktif pangan",
+    "yield": "20-25 lembar A4",
+    "catatan": "Aktivitas antibakteri >90% terhadap E. coli"
+  },
+  {
+    "judul": "Ekstrak Saponin dari Buah Lerak (Sapindus rarak)",
+    "bahan": ["Buah lerak kering 2kg", "Etanol 70% 5L", "NaCl 100g"],
+    "alat": ["Ultrasonic bath", "Vacuum filter", "Spray dryer"],
+    "metode": "Ultrasound-assisted extraction",
+    "langkah": [
+      "Penghalusan bahan baku",
+      "Ekstraksi dengan sonikasi 40kHz",
+      "Presipitasi dengan NaCl",
+      "Penyaringan vakum",
+      "Pengeringan semprot"
+    ],
+    "produk": "Saponin powder 80%",
+    "manfaat": "Bahan detergen alami",
+    "yield": "18-22%",
+    "catatan": "Foaming index >150mm"
+  },
+  {
+    "judul": "Selulosa Bakteri dari Air Kelapa (Acetobacter xylinum)",
+    "bahan": ["Air kelapa 10L", "Gula 500g", "Asam asetat 100ml"],
+    "alat": ["Fermentor statis", "Purification tank", "Hot press"],
+    "metode": "Fermentasi permukaan",
+    "langkah": [
+      "Formulasi medium kultur",
+      "Inokulasi starter 7 hari",
+      "Pemurnian larutan alkali",
+      "Pencetakan lembaran",
+      "Dehidrasi terkontrol"
+    ],
+    "produk": "Bacterial cellulose sheet",
+    "manfaat": "Bahan dasar wound dressing",
+    "yield": "400-500g/m²",
+    "catatan": "Kadar air akhir 8-10%"
+  },
+  {
+    "judul": "Mikroenkapsulasi Minyak Cengkeh dengan Maltodekstrin",
+    "bahan": ["Minyak cengkeh 200ml", "Maltodekstrin DE10 300g", "Air 500ml"],
+    "alat": ["High-pressure homogenizer", "Spray dryer", "Particle analyzer"],
+    "metode": "Spray drying",
+    "langkah": [
+      "Formulasi emulsi stabil",
+      "Homogenisasi 20.000 psi",
+      "Pengeringan semprot 180°C",
+      "Pengumpulan mikrokapsul",
+      "Analisis ukuran partikel"
+    ],
+    "produk": "Clove oil microcapsules",
+    "manfaat": "Bahan aktif antimikroba",
+    "yield": "85-90%",
+    "catatan": "Loading capacity 15-18%"
+  },
+  {
+    "judul": "Karbon Aktif dari Cangkang Telur Ayam",
+    "bahan": ["Cangkang telur 5kg", "H3PO4 30% 2L", "Uap air 100°C"],
+    "alat": ["Muffle furnace", "Fluidized bed", "Sieve shaker"],
+    "metode": "Aktivasi fisika-kimia",
+    "langkah": [
+      "Kalsinasi pendahuluan 400°C",
+      "Impreganasi asam fosfat",
+      "Aktivasi uap 800°C",
+      "Pencucian netral",
+      "Pengayakan 50-100 mesh"
+    ],
+    "produk": "Eggshell-derived activated carbon",
+    "manfaat": "Adsorben logam berat",
+    "yield": "40-45%",
+    "catatan": "Luas permukaan 1100-1200 m²/g"
+  },
+  {
+    "judul": "Nanopartikel Kitosan dari Rajungan (Portunus pelagicus)",
+    "bahan": ["Cangkang rajungan 3kg", "NaOH 1M 5L", "Asam asetat 2%"],
+    "alat": ["Ultrasonic probe", "Centrifuge", "Freeze dryer"],
+    "metode": "Ionotropic gelation",
+    "langkah": [
+      "Deproteinisasi alkali",
+      "Demineralisasi asam",
+      "Dispersi ultrasonik",
+      "Crosslinking TPP",
+      "Lyophilization"
+    ],
+    "produk": "Chitosan nanoparticles",
+    "manfaat": "Drug delivery system",
+    "yield": "75-80%",
+    "catatan": "Ukuran partikel 80-120nm"
+  },
+  {
+    "judul": "Pewarna Alami dari Kulit Buah Naga (Hylocereus undatus)",
+    "bahan": ["Kulit buah naga 5kg", "Etanol 50% 10L", "Asam sitrat 1%"],
+    "alat": ["Pulsed electric field", "Vacuum concentrator", "Spray dryer"],
+    "metode": "PEF-assisted extraction",
+    "langkah": [
+      "Pretreatment dengan PEF 20kV/cm",
+      "Ekstraksi pelarut asam",
+      "Konsentrasi vakum 60°C",
+      "Pengeringan semprot",
+      "Pengemasan vakum"
+    ],
+    "produk": "Betacyanin powder",
+    "manfaat": "Pewarna makanan alami",
+    "yield": "3.5-4%",
+    "catatan": "Stabilitas warna pH 3-6"
+  },
+  {
+    "judul": "Bioplastik dari Pati Suweg (Amorphophallus paeoniifolius)",
+    "bahan": ["Pati suweg 500g", "PVOH 100g", "Gliserol 50ml"],
+    "alat": ["Twin-screw extruder", "Injection molder", "Universal tester"],
+    "metode": "Reactive extrusion",
+    "langkah": [
+      "Pencampuran bahan kering",
+      "Ekstrusi reaktif 160°C",
+      "Pembentukan specimen",
+      "Conditioning 25°C/50% RH",
+      "Pengujian karakteristik"
+    ],
+    "produk": "Thermoplastic starch blend",
+    "manfaat": "Bahan kemasan rigid",
+    "yield": "95-98%",
+    "catatan": "Tensile strength 25-30MPa"
+  },
+  {
+    "judul": "Ekstrak Fenolik dari Daun Jambu Mete (Anacardium occidentale)",
+    "bahan": ["Daun jambu mete 2kg", "Etanol-air (70:30) 5L"],
+    "alat": ["Accelerated solvent extractor", "Rotary evaporator", "HPLC"],
+    "metode": "ASE terkontrol",
+    "langkah": [
+      "Optimalisasi parameter ASE",
+      "Ekstraksi bertekanan 100bar",
+      "Fraksinasi dengan HPLC",
+      "Analisis kualitatif",
+      "Pengemasan aseptik"
+    ],
+    "produk": "Cashew leaf phenolic extract",
+    "manfaat": "Bahan antioksidan",
+    "yield": "8-10%",
+    "catatan": "Total fenol >200mg GAE/g"
+  },
+  {
+    "judul": "Membran Hibrida Selulosa-Silika",
+    "bahan": ["Selulosa bakteri 200g", "TEOS 100ml", "EtOH 500ml"],
+    "alat": ["Sol-gel reactor", "Casting machine", "Vacuum oven"],
+    "metode": "Sol-gel dip-coating",
+    "langkah": [
+      "Sintesis nanopartikel silika",
+      "Pembentukan larutan hybrid",
+      "Pencetakan membran",
+      "Annealing 150°C",
+      "Karakterisasi permukaan"
+    ],
+    "produk": "Cellulose-silica hybrid membrane",
+    "manfaat": "Penyaring air nano",
+    "yield": "10-12 lembar A3",
+    "catatan": "Rejection rate >95% untuk logam berat"
+  },
+  {
+    "judul": "Mikroemulsi Minyak Atsiri Jeruk Purut",
+    "bahan": ["Minyak jeruk purut 100ml", "Tween80 50g", "EtOH 200ml"],
+    "alat": ["High-shear mixer", "Dynamic light scattering", "Stability chamber"],
+    "metode": "Phase inversion",
+    "langkah": [
+      "Formulasi fase minyak-air",
+      "Titrasi spontan",
+      "Karakterisasi ukuran droplet",
+      "Uji stabilitas termal",
+      "Pengemasan aseptik"
+    ],
+    "produk": "Kaffir lime oil microemulsion",
+    "manfaat": "Bahan aktif antimikroba",
+    "yield": "95-98%",
+    "catatan": "Ukuran droplet 50-80nm"
+  },
+  {
+    "judul": "Komposit Pati-PHB dari Bakteri",
+    "bahan": ["Pati singkong 300g", "PHB powder 200g", "PEG400 50ml"],
+    "alat": ["Internal mixer", "Hot press", "DSC analyzer"],
+    "metode": "Melt blending",
+    "langkah": [
+      "Pencampuran komponen",
+      "Pencairan terkontrol 170°C",
+      "Pembentukan film",
+      "Annealing 80°C",
+      "Analisis termal"
+    ],
+    "produk": "Starch-PHB biocomposite",
+    "manfaat": "Bahan kemasan canggih",
+    "yield": "90-95%",
+    "catatan": "Biodegradability >80% dalam 60 hari"
+  },
+  {
+    "judul": "Nanofiber Selulosa dari Limbah Tandan Sawit",
+    "bahan": ["TKKS 5kg", "Ionic liquid 2L", "Air deionisasi 10L"],
+    "alat": ["Electrospinning unit", "Syringe pump", "Collector drum"],
+    "metode": "Electrospinning",
+    "langkah": [
+      "Pretreatment dengan ionic liquid",
+      "Pembuatan dope solution",
+      "Electrospinning 20kV",
+      "Pengumpulan nanofiber",
+      "Karakterisasi morfologi"
+    ],
+    "produk": "Palm-based nanocellulose fiber",
+    "manfaat": "Bahan scaffold biomedis",
+    "yield": "30-35%",
+    "catatan": "Diameter fiber 100-200nm"
+  },
+  {
+    "judul": "Hidrogel Superabsorben dari Pati Sagu",
+    "bahan": ["Pati sagu 500g", "AA monomer 200ml", "MBA crosslinker 5g"],
+    "alat": ["UV polymerization chamber", "Swelling bath", "Rheometer"],
+    "metode": "Radikal bebas",
+    "langkah": [
+      "Grafting copolymerization",
+      "Crosslinking UV-initiated",
+      "Pencucian produk",
+      "Uji swelling capacity",
+      "Analisis rheologi"
+    ],
+    "produk": "Starch-based superabsorbent",
+    "manfaat": "Material penyerap cairan",
+    "yield": "85-90%",
+    "catatan": "Swelling ratio >500g/g dalam air"
+  },
+  {
+    "judul": "Minyak Atsiri Daun Kari (Murraya koenigii)",
+    "bahan": ["Daun kari segar 5kg", "Air destilasi 10L"],
+    "alat": ["Destilator stainless", "Kondensor spiral", "Pisau keramik"],
+    "metode": "Hydrodistilasi fraksional",
+    "langkah": [
+      "Rajang daun menjadi strip 2cm",
+      "Destilasi bertahap 6 jam",
+      "Pisahkan fraksi minyak kepala",
+      "Dehidrasi dengan Na2SO4 anhidrat",
+      "Penyaringan molekuler 0.2μm"
+    ],
+    "produk": "Curry leaf essential oil",
+    "manfaat": "Bahan flavor makanan & aromaterapi",
+    "yield": "0.6-0.8%",
+    "catatan": "Kandungan β-caryophyllene >25%"
+  },
+  {
+    "judul": "Bioplastik dari Pati Biji Nangka (Artocarpus heterophyllus)",
+    "bahan": ["Biji nangka kering 2kg", "Gliserol 15%", "Asam laktat 3%"],
+    "alat": ["Ekstruder twin-screw", "Hot press", "Tensile tester"],
+    "metode": "Reaktive extrusion",
+    "langkah": [
+      "Ekstraksi pati dari biji nangka",
+      "Modifikasi asam laktat",
+      "Pencampuran dengan plasticizer",
+      "Ekstrusi 140-160°C",
+      "Pembentukan film"
+    ],
+    "produk": "Jackfruit seed starch film",
+    "manfaat": "Kemasan edible antioksidan",
+    "yield": "30-35% dari berat biji",
+    "catatan": "Tensile strength 12-15MPa"
+  },
+  {
+    "judul": "Ekstrak Fenolik dari Kulit Batang Jati (Tectona grandis)",
+    "bahan": ["Kulit batang jati 3kg", "Etanol-aseton (7:3) 10L"],
+    "alat": ["Soxhlet extractor", "Rotary evaporator", "Freeze dryer"],
+    "metode": "Ekstraksi bertingkat",
+    "langkah": [
+      "Keringkan dan haluskan bahan",
+      "Ekstraksi pelarut 8 jam",
+      "Fraksinasi dengan rotary evaporator",
+      "Kromatografi kolom awal",
+      "Lyophilization"
+    ],
+    "produk": "Teak bark phenolic extract",
+    "manfaat": "Bahan pengawet kayu alami",
+    "yield": "8-10%",
+    "catatan": "Kandungan tectoquinone >5%"
+  },
+  {
+    "judul": "Nanopartikel Perak dari Ekstrak Daun Belimbing Wuluh (Averrhoa bilimbi)",
+    "bahan": ["Daun belimbing wuluh 1kg", "AgNO3 1mM 2L"],
+    "alat": ["Magnetic stirrer", "UV-Vis spectrometer", "Centrifuge"],
+    "metode": "Green synthesis",
+    "langkah": [
+      "Ekstraksi daun dengan air deionisasi",
+      "Reduksi ion Ag+ dengan ekstrak",
+      "Karakterisasi optik λmax 420nm",
+      "Pemurnian sentrifugasi",
+      "Pengeringan beku"
+    ],
+    "produk": "AgNPs bilimbi leaf-mediated",
+    "manfaat": "Antibakteri alami",
+    "yield": "80-85%",
+    "catatan": "Ukuran partikel 15-30nm (TEM)"
+  },
+  {
+    "judul": "Mikrokapsul Probiotik Lactobacillus dalam Alginat",
+    "bahan": ["Kultur L. casei", "Natrium alginat 2%", "CaCl2 0.1M"],
+    "alat": ["Encapsulator vibrating", "Incubator", "Microscope"],
+    "metode": "Ionotropic gelation",
+    "langkah": [
+      "Aktivasi kultur fase log",
+      "Pencampuran dengan alginat",
+      "Ekstrusi ke larutan CaCl2",
+      "Pengerasan 30 menit",
+      "Evaluasi viabilitas"
+    ],
+    "produk": "Probiotic microbeads",
+    "manfaat": "Suplemen pangan fungsional",
+    "yield": "90-95% viabilitas",
+    "catatan": "Ukuran bead 300-500μm"
+  },
+  {
+    "judul": "Pewarna Alami dari Bunga Telang (Clitoria ternatea)",
+    "bahan": ["Bunga telang kering 1kg", "Air asam (pH3) 5L"],
+    "alat": ["Pulsed electric field", "Vacuum concentrator", "Spray dryer"],
+    "metode": "PEF-assisted extraction",
+    "langkah": [
+      "Pretreatment PEF 25kV/cm",
+      "Ekstraksi pelarut asam",
+      "Sentrifugasi 8000rpm",
+      "Konsentrasi vakum 50°C",
+      "Pengeringan semprot"
+    ],
+    "produk": "Anthocyanin powder",
+    "manfaat": "Pewarna makanan biru alami",
+    "yield": "5-7%",
+    "catatan": "Stabil pada pH <4"
+  },
+  {
+    "judul": "Membran Selulosa Bakteri dari Limbah Nata de Coco",
+    "bahan": ["Limbah nata 5kg", "NaOH 1M 10L", "Gliserol 5%"],
+    "alat": ["High-pressure homogenizer", "Casting machine", "UV crosslinker"],
+    "metode": "Bioproses termodifikasi",
+    "langkah": [
+      "Pemurnian alkali 80°C",
+      "Homogenisasi 15.000psi",
+      "Pembentukan membran",
+      "Crosslinking UV",
+      "Karakterisasi permeabilitas"
+    ],
+    "produk": "BC-PVA hybrid membrane",
+    "manfaat": "Material dressing luka",
+    "yield": "20-25 lembar A4",
+    "catatan": "Water vapor transmission 500g/m²/day"
+  },
+  {
+    "judul": "Bioplastik dari Pati Umbi Gembili (Dioscorea esculenta)",
+    "bahan": ["Pati gembili 500g", "Kitin 100g", "Asam sitrat 5%"],
+    "alat": ["Internal mixer", "Hot press", "Universal tester"],
+    "metode": "Thermoplastic processing",
+    "langkah": [
+      "Pencampuran komponen",
+      "Pemanasan 150°C 10 menit",
+      "Pembentukan lembaran",
+      "Conditioning 25°C/50% RH",
+      "Pengujian mekanik"
+    ],
+    "produk": "Starch-chitin biocomposite",
+    "manfaat": "Kemasan pangan aktif",
+    "yield": "95-98%",
+    "catatan": "Aktivitas antimikroba >80%"
+  },
+  {
+    "judul": "Ekstrak Antioksidan dari Kulit Buah Manggis (Garcinia mangostana)",
+    "bahan": ["Kulit manggis kering 2kg", "Etanol 70% 5L"],
+    "alat": ["Maceration tank", "Ultrasonic bath", "Freeze dryer"],
+    "metode": "Ultrasound-assisted extraction",
+    "langkah": [
+      "Penghalusan bahan baku",
+      "Ekstraksi dengan sonikasi 40kHz",
+      "Sentrifugasi 10.000rpm",
+      "Konsentrasi rotary evaporator",
+      "Lyophilization"
+    ],
+    "produk": "Xanthone-rich extract",
+    "manfaat": "Suplemen anti-inflamasi",
+    "yield": "6-8%",
+    "catatan": "Total fenol >200mg GAE/g"
+  },
+  {
+    "judul": "Nanofiber Selulosa dari Limbah Tandan Kosong Kelapa Sawit",
+    "bahan": ["TKKS 5kg", "Ionic liquid 2L", "Air deionisasi 10L"],
+    "alat": ["Electrospinning unit", "Syringe pump", "Collector drum"],
+    "metode": "Electrospinning",
+    "langkah": [
+      "Delignifikasi dengan ionic liquid",
+      "Pembuatan dope solution 10%",
+      "Electrospinning 18kV",
+      "Pengumpulan nanofiber",
+      "Karakterisasi SEM"
+    ],
+    "produk": "Palm-based nanocellulose fiber",
+    "manfaat": "Bahan scaffold tissue engineering",
+    "yield": "25-30%",
+    "catatan": "Diameter fiber 50-100nm"
+  },
+  {
+    "judul": "Minyak Atsiri dari Kulit Batang Kayu Manis (Cinnamomum verum)",
+    "bahan": ["Kulit kayu manis 2kg", "Air destilasi 15L"],
+    "alat": ["Clevenger apparatus", "Boiler", "Fractional condenser"],
+    "metode": "Hydrodistilasi fraksional",
+    "langkah": [
+      "Rajang kulit kayu tipis",
+      "Destilasi bertahap 8 jam",
+      "Pisahkan fraksi minyak",
+      "Dehidrasi dengan molekular sieve",
+      "Penyaringan mikro"
+    ],
+    "produk": "Cinnamon bark oil",
+    "manfaat": "Bahan flavor & antimikroba",
+    "yield": "1.8-2.2%",
+    "catatan": "Kandungan cinnamaldehyde >75%"
+  },
+  {
+    "judul": "Hidrogel Superabsorben dari Pati Garut (Maranta arundinacea)",
+    "bahan": ["Pati garut 500g", "Akrilamida 200g", "MBA crosslinker 5g"],
+    "alat": ["UV polymerization chamber", "Swelling bath", "Rheometer"],
+    "metode": "Radikal bebas",
+    "langkah": [
+      "Grafting copolymerization",
+      "Crosslinking UV-initiated",
+      "Pencucian produk",
+      "Uji swelling capacity",
+      "Analisis rheologi"
+    ],
+    "produk": "Arrowroot starch hydrogel",
+    "manfaat": "Material penyerap cairan",
+    "yield": "85-90%",
+    "catatan": "Swelling ratio >400g/g dalam air"
+  },
+  {
+    "judul": "Ekstrak Oleoresin dari Rimpang Temu Kunci (Boesenbergia pandurata)",
+    "bahan": ["Rimpang temu kunci 3kg", "Etanol 95% 5L"],
+    "alat": ["Soxhlet extractor", "Rotary evaporator", "Decanter"],
+    "metode": "Ekstraksi pelarut",
+    "langkah": [
+      "Keringkan dan haluskan rimpang",
+      "Ekstraksi Soxhlet 8 jam",
+      "Pemisahan fase",
+      "Evaporasi pelarut",
+      "Pengemasan aseptik"
+    ],
+    "produk": "Fingerroot oleoresin",
+    "manfaat": "Bahan baku farmasi & flavor",
+    "yield": "8-10%",
+    "catatan": "Kandungan panduratin >5%"
+  },
+  {
+    "judul": "Bioplastik dari Pati Uwi (Dioscorea alata)",
+    "bahan": ["Pati uwi 500g", "PVA 100g", "Asam sitrat 5%"],
+    "alat": ["Twin-screw extruder", "Injection molder", "Universal tester"],
+    "metode": "Reactive extrusion",
+    "langkah": [
+      "Pencampuran bahan kering",
+      "Ekstrusi reaktif 150°C",
+      "Pembentukan specimen",
+      "Conditioning 25°C/50% RH",
+      "Pengujian karakteristik"
+    ],
+    "produk": "Purple yam starch bioplastic",
+    "manfaat": "Bahan kemasan pangan",
+    "yield": "95-98%",
+    "catatan": "Warna ungu alami dari antosianin"
+  },
+  {
+    "judul": "Mikroemulsi Minyak Atsiri Kencur (Kaempferia galanga)",
+    "bahan": ["Minyak kencur 100ml", "Tween80-Span80 (HLB 12)", "EtOH 200ml"],
+    "alat": ["High-shear mixer", "DLS analyzer", "Stability chamber"],
+    "metode": "Phase inversion",
+    "langkah": [
+      "Formulasi fase minyak-air",
+      "Titrasi spontan",
+      "Karakterisasi ukuran droplet",
+      "Uji stabilitas termal",
+      "Pengemasan aseptik"
+    ],
+    "produk": "Galangal oil microemulsion",
+    "manfaat": "Sistem penghantaran obat",
+    "yield": "95-98%",
+    "catatan": "Ukuran droplet 30-50nm"
+  },
+  {
+    "judul": "Komposit Pati-PCL dari Limbah Pertanian",
+    "bahan": ["Pati singkong 300g", "PCL 200g", "PEG400 50ml"],
+    "alat": ["Internal mixer", "Hot press", "DSC analyzer"],
+    "metode": "Melt blending",
+    "langkah": [
+      "Pencampuran komponen",
+      "Pencairan terkontrol 170°C",
+      "Pembentukan film",
+      "Annealing 80°C",
+      "Analisis termal"
+    ],
+    "produk": "Starch-PCL biocomposite",
+    "manfaat": "Bahan kemasan biodegradable",
+    "yield": "90-95%",
+    "catatan": "Biodegradability >70% dalam 90 hari"
+  }
+]
