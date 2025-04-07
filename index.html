@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalimantan Bioextracts Database</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c786c;
+            --secondary: #004445;
+            --accent: #f8b400;
+            --light: #faf5e4;
+            --dark: #1a1a2e;
+            --success: #4caf50;
+            --warning: #ff9800;
+            --danger: #f44336;
+            --gray: #6c757d;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--accent);
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .search-container {
+            display: flex;
+            gap: 15px;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            align-items: center;
+        }
+        
+        .search-box {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 12px 20px;
+            border-radius: 30px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            padding-left: 45px;
+            transition: all 0.3s;
+            background: #f8f9fa;
+        }
+        
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(44, 120, 108, 0.2);
+            background: white;
+        }
+        
+        .search-box i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray);
+        }
+        
+        .filter-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            align-items: center;
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        select, .material-select {
+            padding: 12px 15px;
+            border-radius: 30px;
+            border: 1px solid #ddd;
+            background-color: #f8f9fa;
+            font-size: 14px;
+            min-width: 180px;
+            cursor: pointer;
+            transition: all 0.3s;
+            height: 44px;
+        }
+        
+        select:hover, .material-select:hover {
+            border-color: var(--primary);
+        }
+        
+        select:focus, .material-select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(44, 120, 108, 0.2);
+            background: white;
+        }
+        
+        .material-select-container {
+            position: relative;
+            min-width: 200px;
+            flex: 1;
+        }
+        
+        .material-select {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            height: 44px;
+        }
+        
+        .material-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            max-height: 400px; /* Increased height */
+            overflow-y: auto;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+            display: none;
+            margin-top: 5px;
+        }
+        
+        .material-dropdown.show {
+            display: block;
+        }
+        
+        .material-option {
+            padding: 12px 15px; /* Increased padding */
+            cursor: pointer;
+            transition: background-color 0.2s;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 14px;
+        }
+        
+        .material-option:last-child {
+            border-bottom: none;
+        }
+        
+        .material-option:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .material-option.selected {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .selected-materials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        
+        .selected-tag {
+            background-color: var(--accent);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-weight: 500;
+        }
+        
+        .selected-tag i {
+            cursor: pointer;
+            font-size: 10px;
+        }
+        
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 25px;
+            margin: 2rem 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-header {
+            background-color: var(--primary);
+            color: white;
+            padding: 15px 20px;
+            position: relative;
+        }
+        
+        .card-header h2 {
+            font-size: 1.25rem;
+            margin-right: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .extraction-method {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: capitalize;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        
+        .card-body {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .card-section {
+            margin-bottom: 15px;
+        }
+        
+        .card-section h3 {
+            color: var(--secondary);
+            margin-bottom: 8px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .card-section h3 i {
+            color: var(--primary);
+            width: 20px;
+            text-align: center;
+        }
+        
+        .tag {
+            display: inline-block;
+            background-color: #e1f5fe;
+            color: var(--primary);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        .step {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 25px;
+            font-size: 14px;
+        }
+        
+        .step:before {
+            content: "•";
+            color: var(--accent);
+            font-size: 24px;
+            position: absolute;
+            left: 5px;
+            top: -5px;
+        }
+        
+        .specs {
+            display: flex;
+            justify-content: space-between;
+            margin-top: auto;
+            padding-top: 15px;
+            border-top: 1px dashed #ddd;
+        }
+        
+        .spec-item {
+            text-align: center;
+            flex: 1;
+        }
+        
+        .spec-value {
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .yield-high {
+            color: var(--success);
+        }
+        
+        .yield-medium {
+            color: var(--warning);
+        }
+        
+        .yield-low {
+            color: var(--danger);
+        }
+        
+        .spec-label {
+            font-size: 12px;
+            color: var(--gray);
+            margin-top: 4px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .no-results {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 3rem;
+            color: var(--gray);
+        }
+        
+        .no-results i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--gray);
+            opacity: 0.5;
+        }
+        
+        .loading {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 3rem;
+            color: var(--gray);
+        }
+        
+        .loading-spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top: 4px solid var(--primary);
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            .cards-container {
+                display: flex;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                padding-bottom: 20px;
+                margin: 1rem 0;
+                -webkit-overflow-scrolling: touch;
+                scroll-snap-type: x mandatory;
+                scroll-behavior: smooth;
+                scroll-padding: 0 20px;
+            }
+            
+            .card {
+                min-width: calc(100vw - 40px);
+                width: calc(100vw - 40px);
+                margin: 0 10px;
+                scroll-snap-align: start;
+                flex: 0 0 auto;
+                height: auto;
+                max-height: 80vh;
+                overflow-y: auto;
+            }
+            
+            .card-body {
+                overflow-y: visible;
+            }
+            
+            .search-container {
+                flex-direction: column;
+            }
+            
+            .filter-group {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            select, .material-select-container {
+                width: 100%;
+            }
+            
+            header {
+                padding: 1rem 0;
+            }
+            
+            header h1 {
+                font-size: 1.5rem;
+            }
+            
+            header p {
+                font-size: 0.9rem;
+            }
+            
+            .material-dropdown {
+                max-height: 60vh;
+            }
+        }
+        
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .card {
+            animation: fadeIn 0.5s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .card:nth-child(1) { animation-delay: 0.1s; }
+        .card:nth-child(2) { animation-delay: 0.2s; }
+        .card:nth-child(3) { animation-delay: 0.3s; }
+        .card:nth-child(4) { animation-delay: 0.4s; }
+        .card:nth-child(5) { animation-delay: 0.5s; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Kalimantan Bioextracts Database</h1>
+            <p>Comprehensive Plant Extraction Research Data</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="search-container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search by plant name, product, or benefit...">
+            </div>
+            <div class="filter-group">
+                <select id="yieldFilter">
+                    <option value="">All Yields</option>
+                    <option value="low">Low (0-1%)</option>
+                    <option value="medium">Medium (1-15%)</option>
+                    <option value="high">High (>15%)</option>
+                </select>
+                <div class="material-select-container">
+                    <div class="material-select" id="materialSelect">
+                        <i class="fas fa-leaf"></i> Select Materials
+                    </div>
+                    <div class="material-dropdown" id="materialDropdown"></div>
+                    <div class="selected-materials" id="selectedMaterials"></div>
+                </div>
+                <select id="methodFilter">
+                    <option value="">All Methods</option>
+                    <option value="maserasi">Maserasi</option>
+                    <option value="destilasi">Destilasi</option>
+                    <option value="rebusan">Rebusan</option>
+                    <option value="fermentasi">Fermentasi</option>
+                    <option value="infusi">Infusi</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="cards-container" id="cardsContainer">
+            <div class="loading">
+                <div class="loading-spinner"></div>
+                <p>Loading data...</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>Ardiansyah © 2025 Kalimantan Bioresources | FREE </p>
+        </div>
+    </footer>
+
+    <script>
+        // Main data structure
+        let allData = [];
+        let uniqueMaterials = new Set();
+        let selectedMaterials = new Set();
+        
+        // DOM elements
+        const cardsContainer = document.getElementById('cardsContainer');
+        const searchInput = document.getElementById('searchInput');
+        const yieldFilter = document.getElementById('yieldFilter');
+        const methodFilter = document.getElementById('methodFilter');
+        const materialSelect = document.getElementById('materialSelect');
+        const materialDropdown = document.getElementById('materialDropdown');
+        const selectedMaterialsContainer = document.getElementById('selectedMaterials');
+        
+        // Touch/swipe variables
+        let touchStartX = 0;
+        let touchEndX = 0;
+        let currentCardIndex = 0;
+        
+        // Initialize the application
+        document.addEventListener('DOMContentLoaded', function() {
+            loadData();
+            setupSwipe();
+        });
+        
+        function setupSwipe() {
+            cardsContainer.addEventListener('touchstart', function(e) {
+                touchStartX = e.changedTouches[0].screenX;
+            }, false);
+            
+            cardsContainer.addEventListener('touchend', function(e) {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            }, false);
+        }
+        
+        function handleSwipe() {
+            const cards = document.querySelectorAll('.card');
+            if (cards.length === 0) return;
+            
+            const threshold = 50; // Minimum swipe distance
+            
+            if (touchStartX - touchEndX > threshold) {
+                // Swipe left - next card
+                currentCardIndex = Math.min(currentCardIndex + 1, cards.length - 1);
+            } else if (touchEndX - touchStartX > threshold) {
+                // Swipe right - previous card
+                currentCardIndex = Math.max(currentCardIndex - 1, 0);
+            }
+            
+            // Scroll to the current card
+            cards[currentCardIndex].scrollIntoView({
+                behavior: 'smooth',
+                block: 'nearest',
+                inline: 'start'
+            });
+        }
+        
+        async function loadData() {
+            try {
+                // Try to load from data.json first
+                const response = await fetch('data.json');
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                allData = await response.json();
+                
+                // Check if data is empty
+                if (!allData || allData.length === 0) {
+                    throw new Error('Data is empty');
+                }
+                
+                processMaterials(allData);
+                displayData(allData);
+                setupFilters();
+                
+            } catch (error) {
+                console.error('Error loading data:', error);
+                showError('Failed to load data. Please check if data.json exists and contains valid data.');
+            }
+        }
+        
+        function showError(message) {
+            cardsContainer.innerHTML = `
+                <div class="no-results">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h3>Data Loading Error</h3>
+                    <p>${message}</p>
+                    <p>Please ensure:</p>
+                    <ul style="text-align: left; max-width: 500px; margin: 10px auto;">
+                        <li>data.json exists in the same folder as this HTML file</li>
+                        <li>data.json contains valid JSON data</li>
+                        <li>You're running this on a web server (not just opening the HTML file directly)</li>
+                    </ul>
+                </div>
+            `;
+        }
+        
+        function processMaterials(data) {
+            uniqueMaterials.clear();
+            
+            data.forEach(item => {
+                item.bahan.forEach(material => {
+                    // Remove quantities and percentages for grouping
+                    const cleanMaterial = material.replace(/\d+%|\d+g|\d+kg|\d+L/g, '').trim();
+                    if (cleanMaterial) {
+                        uniqueMaterials.add(cleanMaterial);
+                    }
+                });
+            });
+            
+            // Populate material dropdown
+            materialDropdown.innerHTML = '';
+            const sortedMaterials = Array.from(uniqueMaterials).sort((a, b) => a.localeCompare(b));
+            
+            sortedMaterials.forEach(material => {
+                const option = document.createElement('div');
+                option.className = 'material-option';
+                if (selectedMaterials.has(material)) {
+                    option.classList.add('selected');
+                }
+                option.textContent = material;
+                option.addEventListener('click', () => toggleMaterial(material));
+                materialDropdown.appendChild(option);
+            });
+        }
+        
+        function toggleMaterial(material) {
+            if (selectedMaterials.has(material)) {
+                selectedMaterials.delete(material);
+            } else {
+                selectedMaterials.add(material);
+            }
+            updateSelectedMaterialsDisplay();
+            applyFilters();
+        }
+        
+        function updateSelectedMaterialsDisplay() {
+            selectedMaterialsContainer.innerHTML = '';
+            
+            if (selectedMaterials.size === 0) {
+                selectedMaterialsContainer.style.display = 'none';
+                return;
+            }
+            
+            selectedMaterialsContainer.style.display = 'flex';
+            selectedMaterials.forEach(material => {
+                const tag = document.createElement('div');
+                tag.className = 'selected-tag';
+                tag.innerHTML = `${material} <i class="fas fa-times"></i>`;
+                tag.addEventListener('click', (e) => {
+                    if (e.target.tagName === 'I' || e.target.classList.contains('fa-times')) {
+                        selectedMaterials.delete(material);
+                        updateSelectedMaterialsDisplay();
+                        applyFilters();
+                    }
+                });
+                selectedMaterialsContainer.appendChild(tag);
+            });
+        }
+        
+        function displayData(data) {
+            if (!data || data.length === 0) {
+                cardsContainer.innerHTML = `
+                    <div class="no-results">
+                        <i class="fas fa-search"></i>
+                        <p>No matching results found</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            cardsContainer.innerHTML = '';
+            
+            data.forEach((item, index) => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                
+                // Extract yield value for filtering and styling
+                const yieldValue = parseFloat(item.yield.split('%')[0].replace('±', '').replace('<', ''));
+                let yieldClass = '';
+                if (yieldValue > 15) yieldClass = 'yield-high';
+                else if (yieldValue > 1) yieldClass = 'yield-medium';
+                else yieldClass = 'yield-low';
+                
+                // Determine extraction method for filtering
+                const method = item.metode ? item.metode.toLowerCase() : '';
+                let methodType = 'other';
+                if (method.includes('maserasi')) methodType = 'maserasi';
+                else if (method.includes('destilasi')) methodType = 'destilasi';
+                else if (method.includes('rebusan')) methodType = 'rebusan';
+                else if (method.includes('fermentasi')) methodType = 'fermentasi';
+                else if (method.includes('infusi')) methodType = 'infusi';
+                
+                card.innerHTML = `
+                    <div class="card-header">
+                        <h2>${item.judul}</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-section">
+                            <h3><i class="fas fa-leaf"></i> Bahan</h3>
+                            ${item.bahan.map(b => `<span class="tag">${b}</span>`).join('')}
+                            <span class="extraction-method">${item.metode || 'Not specified'}</span>
+                        </div>
+                        <div class="card-section">
+                            <h3><i class="fas fa-flask"></i> Alat</h3>
+                            ${item.alat.map(a => `<span class="tag">${a}</span>`).join('')}
+                        </div>
+                        <div class="card-section">
+                            <h3><i class="fas fa-list-ol"></i> Prosedur</h3>
+                            ${item.langkah.map((step, i) => `<div class="step">${step}</div>`).join('')}
+                        </div>
+                        <div class="card-section">
+                            <h3><i class="fas fa-cube"></i> Produk</h3>
+                            <p>${item.produk}</p>
+                        </div>
+                        <div class="card-section">
+                            <h3><i class="fas fa-heart"></i> Manfaat</h3>
+                            <p>${item.manfaat}</p>
+                        </div>
+                        <div class="card-section">
+                            <h3><i class="fas fa-sticky-note"></i> Catatan</h3>
+                            <p>${item.catatan}</p>
+                        </div>
+                        <div class="specs" data-yield="${yieldValue}" data-method="${methodType}">
+                            <div class="spec-item">
+                                <div class="spec-value ${yieldClass}">${item.yield}</div>
+                                <div class="spec-label">Yield</div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                cardsContainer.appendChild(card);
+            });
+            
+            // Reset card index when new data is displayed
+            currentCardIndex = 0;
+        }
+        
+        function setupFilters() {
+            // Material dropdown toggle
+            materialSelect.addEventListener('click', (e) => {
+                e.stopPropagation();
+                materialDropdown.classList.toggle('show');
+            });
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', () => {
+                materialDropdown.classList.remove('show');
+            });
+            
+            // Prevent dropdown from closing when clicking inside
+            materialDropdown.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+            
+            // Event listeners for all filters
+            searchInput.addEventListener('input', applyFilters);
+            yieldFilter.addEventListener('change', applyFilters);
+            methodFilter.addEventListener('change', applyFilters);
+        }
+        
+        function applyFilters() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const yieldValue = yieldFilter.value;
+            const methodValue = methodFilter.value;
+            
+            const filteredData = allData.filter(item => {
+                // Search filter
+                const matchesSearch = searchTerm === '' || 
+                    item.judul.toLowerCase().includes(searchTerm) ||
+                    item.produk.toLowerCase().includes(searchTerm) ||
+                    item.manfaat.toLowerCase().includes(searchTerm) ||
+                    item.bahan.some(b => b.toLowerCase().includes(searchTerm)) ||
+                    item.alat.some(a => a.toLowerCase().includes(searchTerm)) ||
+                    (item.metode && item.metode.toLowerCase().includes(searchTerm));
+                
+                // Material filter
+                const matchesMaterials = selectedMaterials.size === 0 || 
+                    item.bahan.some(b => 
+                        Array.from(selectedMaterials).some(m => 
+                            b.toLowerCase().includes(m.toLowerCase())
+                        )
+                    );
+                
+                // Yield filter
+                const itemYield = parseFloat(item.yield.split('%')[0].replace('±', '').replace('<', ''));
+                let matchesYield = true;
+                if (yieldValue === 'low') {
+                    matchesYield = itemYield < 1;
+                } else if (yieldValue === 'medium') {
+                    matchesYield = itemYield >= 1 && itemYield <= 15;
+                } else if (yieldValue === 'high') {
+                    matchesYield = itemYield > 15;
+                }
+                
+                // Method filter
+                const method = item.metode ? item.metode.toLowerCase() : '';
+                let matchesMethod = true;
+                if (methodValue === 'maserasi') {
+                    matchesMethod = method.includes('maserasi');
+                } else if (methodValue === 'destilasi') {
+                    matchesMethod = method.includes('destilasi');
+                } else if (methodValue === 'rebusan') {
+                    matchesMethod = method.includes('rebusan');
+                } else if (methodValue === 'fermentasi') {
+                    matchesMethod = method.includes('fermentasi');
+                } else if (methodValue === 'infusi') {
+                    matchesMethod = method.includes('infusi');
+                }
+                
+                return matchesSearch && matchesMaterials && matchesYield && matchesMethod;
+            });
+            
+            displayData(filteredData);
+        }
+    </script>
+</body>
+</html>
