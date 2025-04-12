@@ -1,6 +1,6 @@
 📊 Tabel Gabut
 
-No.	Aktivitas Gabut	Tingkat Kepuasan
+Aktivitas Gabut	Tingkat Kepuasan
 
 1	Ngelamun	🌟🌟🌟🌟🌟
 
