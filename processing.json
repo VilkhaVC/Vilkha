@@ -130,5 +130,1088 @@
     "manfaat": "Bahan perhiasan atau investasi",
     "yield": "0.01-0.05% dari berat komponen",
     "catatan": "Proses berbahaya, perlu keahlian khusus"
+  },
+  {
+    "judul": "Peleburan Aluminium dari Rangka Jendela Bekas",
+    "bahan": ["Rangka jendela aluminium 8kg", "Fluks (NaCl-KCl) 300g"],
+    "alat": ["Tungku gas", "Cawan silikon karbida", "Penjepit panjang"],
+    "metode": "Peleburan langsung",
+    "langkah": [
+      "Bersihkan rangka dari kaca dan kotoran",
+      "Potong menjadi bagian 10x10cm",
+      "Panaskan tungku hingga 750°C",
+      "Masukkan potongan aluminium",
+      "Tambahkan fluks secara bertahap",
+      "Aduk setiap 15 menit",
+      "Tuang ke cetakan ingot"
+    ],
+    "produk": "Aluminium sekunder",
+    "manfaat": "Bahan baku industri konstruksi",
+    "yield": "88-92%",
+    "catatan": "Hindari kontaminasi besi"
+  },
+  {
+    "judul": "Peleburan Tembaga dari Radiator Bekas",
+    "bahan": ["Radiator tembaga 6kg", "Arang kayu 2kg", "Borax 200g"],
+    "alat": ["Tungku tanur", "Cawan tembikar", "Pengaduk grafit"],
+    "metode": "Peleburan reduksi",
+    "langkah": [
+      "Bersihkan radiator dari solder dan kotoran",
+      "Potong menjadi bagian kecil",
+      "Susun dengan lapisan arang",
+      "Panaskan hingga 1150°C",
+      "Tambahkan borax untuk mengurangi oksida",
+      "Tunggu 2 jam hingga mencair sempurna",
+      "Tuang ke cetakan batang"
+    ],
+    "produk": "Tembaga murni",
+    "manfaat": "Bahan kabel listrik",
+    "yield": "82-87%",
+    "catatan": "Radiator sering mengandung seng, perlu pemisahan"
+  },
+  {
+    "judul": "Peleburan Baja dari Perkakas Bekas",
+    "bahan": ["Perkakas baja 12kg", "Ferrosilikon 1kg", "Batu kapur 800g"],
+    "alat": ["Tungku busur listrik", "Ladel baja", "Termometer digital"],
+    "metode": "Peleburan paduan",
+    "langkah": [
+      "Sortir perkakas berdasarkan jenis baja",
+      "Masukkan ke tungku secara berlapis",
+      "Nyalakan tungku hingga 1600°C",
+      "Tambahkan ferrosilikon untuk mengatur kadar karbon",
+      "Buang slag setiap 30 menit",
+      "Pertahankan suhu selama 3 jam",
+      "Tuang ke cetakan ingot"
+    ],
+    "produk": "Baja daur ulang",
+    "manfaat": "Bahan baku industri manufaktur",
+    "yield": "78-83%",
+    "catatan": "Periksa komposisi dengan spektrometer"
+  },
+  {
+    "judul": "Peleburan Timbal dari Aki Bekas",
+    "bahan": ["Pelat aki bekas 15kg", "Soda abu 1kg", "Arang 3kg"],
+    "alat": ["Tungku reverberatory", "Cawan besi", "Alat pengaduk"],
+    "metode": "Peleburan reduksi",
+    "langkah": [
+      "Pisahkan pelat timbal dari casing plastik",
+      "Cuci dengan larutan soda abu",
+      "Susun dalam tungku dengan arang",
+      "Panaskan hingga 400°C selama 4 jam",
+      "Tambahkan lebih banyak arang jika perlu",
+      "Kumpulkan timbal cair",
+      "Tuang ke cetakan blok"
+    ],
+    "produk": "Timbal murni",
+    "manfaat": "Bahan baku aki baru",
+    "yield": "85-90%",
+    "catatan": "Lakukan di area berventilasi, timbal beracun"
+  },
+  {
+    "judul": "Peleburan Nikel dari Baterai Bekas",
+    "bahan": ["Baterai NiCd 5kg", "Asam sulfat 2L", "Natrium hidroksida 1kg"],
+    "alat": ["Wadah plastik tahan kimia", "Penyaring tekanan", "Tungku listrik"],
+    "metode": "Ekstraksi kimia",
+    "langkah": [
+      "Pisahkan komponen baterai",
+      "Larutkan dalam asam sulfat encer",
+      "Netralkan dengan NaOH",
+      "Saring endapan nikel hidroksida",
+      "Keringkan dan reduksi dengan hidrogen",
+      "Lelehkan pada suhu 1450°C",
+      "Tuang ke cetakan kecil"
+    ],
+    "produk": "Nikel murni",
+    "manfaat": "Bahan baku baterai atau stainless steel",
+    "yield": "2-3% dari berat baterai",
+    "catatan": "Proses membutuhkan fasilitas khusus"
+  },
+  {
+    "judul": "Peleburan Seng dari Atap Bekas",
+    "bahan": ["Atap seng bekas 20kg", "Arang kayu 5kg", "Fluks NaCl 500g"],
+    "alat": ["Tungku retort", "Kondensor", "Cawan kolektor"],
+    "metode": "Destilasi",
+    "langkah": [
+      "Bersihkan atap dari cat dan kotoran",
+      "Potong menjadi bagian kecil",
+      "Susun dalam retort dengan arang",
+      "Panaskan hingga 950°C",
+      "Kumpulkan uap seng di kondensor",
+      "Lelehkan kembali pada 500°C",
+      "Tuang ke cetakan ingot"
+    ],
+    "produk": "Seng murni",
+    "manfaat": "Bahan pelapis anti karat",
+    "yield": "75-80%",
+    "catatan": "Suhu harus dijaga stabil untuk hasil optimal"
+  },
+  {
+    "judul": "Peleburan Perunggu dari Patung Bekas",
+    "bahan": ["Patung perunggu 10kg", "Tembaga murni 2kg", "Timah 1kg"],
+    "alat": ["Tungku induksi frekuensi menengah", "Cawan grafit", "Termokopel"],
+    "metode": "Peleburan paduan",
+    "langkah": [
+      "Hancurkan patung menjadi bagian kecil",
+      "Timbang komponen sesuai rasio 88:12 Cu-Sn",
+      "Lelehkan tembaga terlebih dahulu",
+      "Tambahkan timah setelah tembaga mencair",
+      "Aduk selama 20 menit",
+      "Tambahkan potongan patung",
+      "Tuang ke cetakan baru"
+    ],
+    "produk": "Perunggu daur ulang",
+    "manfaat": "Bahan seni dan kerajinan",
+    "yield": "92-95%",
+    "catatan": "Komposisi tepat penting untuk kualitas seni"
+  },
+  {
+    "judul": "Peleburan Magnesium dari Suku Cadang Pesawat",
+    "bahan": ["Komponen magnesium 5kg", "Fluks khusus 400g", "Gas argon"],
+    "alat": ["Tungku tahan api", "Cawan baja tahan panas", "Sistem atmosfer inert"],
+    "metode": "Peleburan protektif",
+    "langkah": [
+      "Bersihkan komponen dari lapisan luar",
+      "Potong menjadi kubus kecil",
+      "Nyalakan tungku dengan atmosfer argon",
+      "Panaskan hingga 700°C",
+      "Tambahkan fluks khusus",
+      "Aduk perlahan dengan pengaduk grafit",
+      "Tuang cepat ke cetakan"
+    ],
+    "produk": "Magnesium murni",
+    "manfaat": "Bahan industri aerospace",
+    "yield": "85-88%",
+    "catatan": "Hindari kontak dengan air, sangat mudah terbakar"
+  },
+  {
+    "judul": "Peleburan Titanium dari Implan Medis",
+    "bahan": ["Implan titanium bekas 3kg", "Gas argon murni", "Fluks klorida"],
+    "alat": ["Tungku busur vakum", "Electrode tembaga", "Cetakan tembaga dingin"],
+    "metode": "Peleburan vakum",
+    "langkah": [
+      "Sterilkan implan terlebih dahulu",
+      "Potong menjadi bagian kecil",
+      "Susun dalam tungku vakum",
+      "Lelehkan dengan busur listrik",
+      "Tambahkan fluks untuk menghilangkan inklusi",
+      "Pertahankan suhu 1700°C selama 1 jam",
+      "Tuang ke cetakan tembaga"
+    ],
+    "produk": "Titanium murni",
+    "manfaat": "Bahan implan medis baru",
+    "yield": "90-95%",
+    "catatan": "Memerlukan peralatan khusus dan keahlian tinggi"
+  },
+  {
+    "judul": "Peleburan Kobalt dari Baterai Li-ion",
+    "bahan": ["Katoda baterai Li-ion 10kg", "Asam klorida 3L", "Natrium hidroksida 2kg"],
+    "alat": ["Reaktor kimia", "Penyaring sentrifugal", "Tungku reduksi"],
+    "metode": "Ekstraksi hidrometalurgi",
+    "langkah": [
+      "Pisahkan katoda dari komponen lain",
+      "Larutkan dalam asam klorida",
+      "Presipitasi selektif dengan NaOH",
+      "Saring kobalt hidroksida",
+      "Kalsinasi pada 600°C",
+      "Reduksi dengan gas hidrogen",
+      "Lelehkan pada suhu 1500°C"
+    ],
+    "produk": "Kobalt murni",
+    "manfaat": "Bahan baterai baru atau superalloy",
+    "yield": "5-8% dari berat baterai",
+    "catatan": "Proses kompleks dengan banyak tahap kimia"
+  },
+  {
+    "judul": "Peleburan Wolfram dari Filamen Lampu",
+    "bahan": ["Filamen lampu bekas 2kg", "Natrium hidroksida 1kg", "Gas hidrogen"],
+    "alat": ["Tungku hidrogen", "Cawan molibdenum", "Alat penekan"],
+    "metode": "Metalurgi serbuk",
+    "langkah": [
+      "Kumpulkan filamen dari lampu",
+      "Bersihkan dengan NaOH untuk hilangkan kaca",
+      "Keringkan dan haluskan menjadi serbuk",
+      "Tekan menjadi briket",
+      "Sinter dalam atmosfer hidrogen pada 2000°C",
+      "Lelehkan pada suhu 3400°C",
+      "Tuang ke cetakan grafit"
+    ],
+    "produk": "Wolfram murni",
+    "manfaat": "Bahan filamen atau peralatan pemotong",
+    "yield": "60-65%",
+    "catatan": "Memerlukan suhu sangat tinggi"
+  },
+  {
+    "judul": "Peleburan Molibdenum dari Katalis Bekas",
+    "bahan": ["Katalis molibdenum 5kg", "Amonium hidroksida 2L", "Gas hidrogen"],
+    "alat": ["Reaktor kimia", "Penyaring vakum", "Tungku tabung"],
+    "metode": "Ekstraksi kimia",
+    "langkah": [
+      "Larutkan katalis dalam amonium hidroksida",
+      "Saring larutan molibdat",
+      "Kristalisasi dengan penguapan",
+      "Reduksi dengan hidrogen pada 800°C",
+      "Kumpulkan serbuk molibdenum",
+      "Tekan menjadi briket",
+      "Sinter pada 2200°C"
+    ],
+    "produk": "Molibdenum murni",
+    "manfaat": "Bahan paduan atau katalis baru",
+    "yield": "70-75%",
+    "catatan": "Proses membutuhkan kontrol pH yang ketat"
+  },
+  {
+    "judul": "Peleburan Kadmium dari Baterai NiCd",
+    "bahan": ["Baterai NiCd 10kg", "Asam sulfat 3L", "Seng murni 500g"],
+    "alat": ["Wadah tahan asam", "Sel elektrolisis", "Tungku listrik"],
+    "metode": "Elektrowinning",
+    "langkah": [
+      "Pisahkan komponen baterai",
+      "Larutkan dalam asam sulfat",
+      "Elektrolisis untuk mendapatkan kadmium",
+      "Kumpulkan katoda kadmium",
+      "Cuci dengan air deionisasi",
+      "Lelehkan pada suhu 400°C",
+      "Tuang ke cetakan batang"
+    ],
+    "produk": "Kadmium murni",
+    "manfaat": "Bahan baterai atau pelapis",
+    "yield": "1-2% dari berat baterai",
+    "catatan": "Zat beracun, butuh penanganan khusus"
+  },
+  {
+    "judul": "Peleburan Indium dari Layar LCD Bekas",
+    "bahan": ["Layar LCD bekas 15kg", "Asam klorida 5L", "Seng murni 1kg"],
+    "alat": ["Reaktor kaca", "Penyaring keramik", "Tungku kecil"],
+    "metode": "Ekstraksi kimia",
+    "langkah": [
+      "Hancurkan layar LCD",
+      "Larutkan dalam asam klorida panas",
+      "Saring larutan",
+      "Tambahkan seng untuk cementation",
+      "Kumpulkan indium yang mengendap",
+      "Cuci dengan etanol",
+      "Lelehkan pada suhu 200°C"
+    ],
+    "produk": "Indium murni",
+    "manfaat": "Bahan elektronik atau solder khusus",
+    "yield": "0.05-0.1% dari berat layar",
+    "catatan": "Indium sangat langka, recovery penting"
+  },
+  {
+    "judul": "Peleburan Germanium dari Serat Optik Bekas",
+    "bahan": ["Serat optik bekas 8kg", "Asam sulfat 2L", "Gas klorin"],
+    "alat": ["Reaktor kuarsa", "Kondensor", "Tungku vakum"],
+    "metode": "Distilasi klorida",
+    "langkah": [
+      "Hancurkan serat optik",
+      "Klorinasi pada suhu 400°C",
+      "Distilasi germanium tetraklorida",
+      "Hidrolisis menjadi germanium dioksida",
+      "Reduksi dengan hidrogen",
+      "Lelehkan pada suhu 1000°C",
+      "Tuang ke cetakan khusus"
+    ],
+    "produk": "Germanium murni",
+    "manfaat": "Bahan semikonduktor atau optik",
+    "yield": "0.5-1% dari berat serat",
+    "catatan": "Proses memerlukan peralatan khusus"
+  },
+  {
+    "judul": "Peleburan Galium dari Chip Semikonduktor",
+    "bahan": ["Chip semikonduktor bekas 5kg", "Asam nitrat 2L", "Eter"],
+    "alat": ["Wadah Teflon", "Ekstraktor cair-cair", "Tungku kecil"],
+    "metode": "Ekstraksi pelarut",
+    "langkah": [
+      "Hancurkan chip menjadi bubuk",
+      "Larutkan dalam asam nitrat",
+      "Ekstraksi dengan eter",
+      "Kembalikan ke fase air",
+      "Elektrolisis larutan",
+      "Kumpulkan galium",
+      "Lelehkan pada suhu rendah"
+    ],
+    "produk": "Galium murni",
+    "manfaat": "Bahan elektronik atau paduan suhu rendah",
+    "yield": "0.1-0.3% dari berat chip",
+    "catatan": "Galium meleleh di tangan, penanganan khusus"
+  },
+  {
+    "judul": "Peleburan Rhenium dari Superalloy Bekas",
+    "bahan": ["Superalloy bekas 10kg", "Asam perklorat 1L", "Gas amonia"],
+    "alat": ["Autoklaf", "Penyaring tekanan", "Tungku reduksi"],
+    "metode": "Ekstraksi kimia",
+    "langkah": [
+      "Larutkan alloy dalam asam perklorat",
+      "Saring larutan",
+      "Presipitasi dengan amonia",
+      "Kalsinasi pada 800°C",
+      "Reduksi dengan hidrogen",
+      "Tekan menjadi briket",
+      "Sinter pada 3000°C"
+    ],
+    "produk": "Rhenium murni",
+    "manfaat": "Bahan superalloy atau katalis",
+    "yield": "2-3% dari berat alloy",
+    "catatan": "Logam sangat langka, proses kompleks"
+  },
+  {
+    "judul": "Peleburan Rhodium dari Konverter Katalitik",
+    "bahan": ["Konverter katalitik bekas 20kg", "Aqua regia 5L", "Natrium bisulfit 1kg"],
+    "alat": ["Wadah kaca tebal", "Penyaring vakum", "Tungku kecil"],
+    "metode": "Ekstraksi kimia",
+    "langkah": [
+      "Hancurkan konverter",
+      "Ekstraksi dengan aqua regia",
+      "Saring larutan",
+      "Presipitasi dengan bisulfit",
+      "Cuci endapan rhodium",
+      "Kalsinasi pada 600°C",
+      "Lelehkan pada suhu 2000°C"
+    ],
+    "produk": "Rhodium murni",
+    "manfaat": "Bahan katalis atau perhiasan",
+    "yield": "0.01-0.05% dari berat konverter",
+    "catatan": "Logam platinum grup, bernilai tinggi"
+  },
+  {
+    "judul": "Peleburan Iridium dari Peralatan Medis",
+    "bahan": ["Peralatan medis bekas 5kg", "Asam klorida 2L", "Gas klorin"],
+    "alat": ["Autoklaf Teflon", "Penyaring keramik", "Tungku busur"],
+    "metode": "Klorinasi",
+    "langkah": [
+      "Bersihkan peralatan dari kontaminan",
+      "Klorinasi pada suhu 300°C",
+      "Saring iridium klorida",
+      "Reduksi dengan magnesium",
+      "Cuci dengan asam encer",
+      "Lelehkan pada suhu 2500°C",
+      "Tuang ke cetakan khusus"
+    ],
+    "produk": "Iridium murni",
+    "manfaat": "Bahan alat medis atau kontak listrik",
+    "yield": "1-2% dari berat peralatan",
+    "catatan": "Salah satu logam paling tahan korosi"
+  },
+  {
+    "judul": "Peleburan Osmium dari Paduan Alami",
+    "bahan": ["Paduan osmiridium 3kg", "Aqua regia 3L", "Natrium hidroksida 2kg"],
+    "alat": ["Wadah kaca tebal", "Penyaring vakum", "Tungku busur"],
+    "metode": "Ekstraksi kimia",
+    "langkah": [
+      "Hancurkan paduan menjadi bubuk",
+      "Ekstraksi dengan aqua regia",
+      "Saring larutan",
+      "Presipitasi dengan NaOH",
+      "Reduksi dengan hidrogen",
+      "Tekan menjadi briket",
+      "Sinter pada suhu tinggi"
+    ],
+    "produk": "Osmium murni",
+    "manfaat": "Bahan paduan keras atau penelitian",
+    "yield": "30-40% dari berat paduan",
+    "catatan": "Logam sangat padat dan langka"
+  },
+  {
+    "judul": "Peleburan Palladium dari Komponen Elektronik",
+    "bahan": ["Komponen elektronik 10kg", "Asam nitrat 3L", "Asam klorida 1L"],
+    "alat": ["Wadah tahan kimia", "Penyaring halus", "Tungku listrik"],
+    "metode": "Ekstraksi kimia",
+    "langkah": [
+      "Pisahkan komponen yang mengandung Pd",
+      "Larutkan dalam aqua regia",
+      "Saring larutan",
+      "Presipitasi dengan amonium klorida",
+      "Reduksi dengan hidrazin",
+      "Cuci dengan air deionisasi",
+      "Lelehkan pada suhu 1600°C"
+    ],
+    "produk": "Palladium murni",
+    "manfaat": "Bahan katalis atau elektronik",
+    "yield": "0.1-0.5% dari berat komponen",
+    "catatan": "Logam platinum grup bernilai tinggi"
+  },
+  {
+    "judul": "Peleburan Platinum dari Katalis Bekas",
+    "bahan": ["Katalis platinum 15kg", "Aqua regia 10L", "Amonium klorida 2kg"],
+    "alat": ["Reaktor kaca", "Penyaring keramik", "Tungku busur"],
+    "metode": "Ekstraksi kimia",
+    "langkah": [
+      "Hancurkan katalis menjadi bubuk",
+      "Ekstraksi dengan aqua regia",
+      "Saring larutan",
+      "Presipitasi dengan NH4Cl",
+      "Kalsinasi pada 800°C",
+      "Reduksi dengan hidrogen",
+      "Lelehkan pada suhu 1800°C"
+    ],
+    "produk": "Platinum murni",
+    "manfaat": "Bahan katalis atau perhiasan",
+    "yield": "1-3% dari berat katalis",
+    "catatan": "Proses membutuhkan keahlian khusus"
+  },
+  {
+    "judul": "Peleburan Ruthenium dari Chip Elektronik",
+    "bahan": ["Chip elektronik 8kg", "Asam sulfat 5L", "Gas klorin"],
+    "alat": ["Reaktor tahan asam", "Penyaring tekanan", "Tungku busur"],
+    "metode": "Klorinasi selektif",
+    "langkah": [
+      "Hancurkan chip menjadi bubuk",
+      "Oksidasi dengan asam sulfat",
+      "Klorinasi pada suhu 400°C",
+      "Distilasi ruthenium tetroksida",
+      "Reduksi dengan hidrogen",
+      "Tekan menjadi briket",
+      "Sinter pada suhu tinggi"
+    ],
+    "produk": "Ruthenium murni",
+    "manfaat": "Bahan elektronik atau paduan",
+    "yield": "0.05-0.1% dari berat chip",
+    "catatan": "Logam platinum grup yang langka"
+  },
+  {
+    "judul": "Peleburan Berilium dari Komponen Nuklir",
+    "bahan": ["Komponen berilium 5kg", "Asam fluorida 2L", "Magnesium 1kg"],
+    "alat": ["Wadah Teflon", "Sel elektrolisis", "Tungku vakum"],
+    "metode": "Reduksi fluorida",
+    "langkah": [
+      "Larutkan komponen dalam HF",
+      "Elektrolisis untuk mendapatkan BeF2 murni",
+      "Reduksi dengan magnesium",
+      "Kumpulkan berilium",
+      "Cuci dengan asam encer",
+      "Lelehkan pada suhu 1300°C",
+      "Tuang ke cetakan khusus"
+    ],
+    "produk": "Berilium murni",
+    "manfaat": "Bahan industri nuklir atau aerospace",
+    "yield": "60-70% dari berat komponen",
+    "catatan": "Zat sangat beracun, butuh penanganan khusus"
+  },
+  {
+    "judul": "Peleburan Lithium dari Baterai Bekas",
+    "bahan": ["Baterai lithium 10kg", "Air deionisasi 5L", "Asam klorida 2L"],
+    "alat": ["Glove box argon", "Sel elektrolisis", "Tungku kecil"],
+    "metode": "Elektrolisis garam lebur",
+    "langkah": [
+      "Bongkar baterai dalam atmosfer inert",
+      "Ekstraksi lithium kobalt oksida",
+      "Pelarutan selektif dalam asam",
+      "Elektrolisis LiCl lelehan",
+      "Kumpulkan lithium cair",
+      "Tuang ke dalam minyak mineral",
+      "Bentuk ingot dalam atmosfer argon"
+    ],
+    "produk": "Lithium murni",
+    "manfaat": "Bahan baterai atau paduan",
+    "yield": "3-5% dari berat baterai",
+    "catatan": "Sangat reaktif dengan air dan udara"
+  },
+  {
+    "judul": "Peleburan Kalium dari Senyawa Kimia",
+    "bahan": ["Kalium hidroksida 5kg", "Natrium murni 1kg", "Minyak mineral"],
+    "alat": ["Reaktor baja", "Kondensor", "Tungku kecil"],
+    "metode": "Reduksi kimia",
+    "langkah": [
+      "Lelehkan KOH pada suhu 400°C",
+      "Tambahkan natrium sedikit demi sedikit",
+      "Kumpulkan uap kalium",
+      "Kondensasi dalam atmosfer inert",
+      "Simpan dalam minyak mineral",
+      "Lelehkan kembali jika diperlukan",
+      "Tuang ke cetakan khusus"
+    ],
+    "produk": "Kalium murni",
+    "manfaat": "Bahan penelitian atau industri kimia",
+    "yield": "50-60% teoritis",
+    "catatan": "Logam sangat reaktif, penanganan khusus"
+  },
+  {
+    "judul": "Peleburan Natrium dari Garam Batu",
+    "bahan": ["Natrium klorida 20kg", "Kalsium klorida 5kg", "Grafit elektroda"],
+    "alat": ["Sel Downs", "Pipa kolektor", "Tungku kecil"],
+    "metode": "Elektrolisis lelehan",
+    "langkah": [
+      "Campur NaCl dengan CaCl2",
+      "Lelehkan pada suhu 800°C",
+      "Elektrolisis dengan arus tinggi",
+      "Kumpulkan natrium cair",
+      "Pisahkan dari kalsium",
+      "Tuang ke dalam minyak mineral",
+      "Bentuk ingot dalam atmosfer inert"
+    ],
+    "produk": "Natrium murni",
+    "manfaat": "Bahan industri kimia atau pendingin",
+    "yield": "90-95% teoritis",
+    "catatan": "Reaktif dengan air, simpan dalam minyak"
+  },
+  {
+    "judul": "Peleburan Rubidium dari Mineral Lepidolite",
+    "bahan": ["Lepidolite 50kg", "Asam sulfat 10L", "Gas klorin"],
+    "alat": ["Reaktor tahan asam", "Penyaring vakum", "Tungku vakum"],
+    "metode": "Ekstraksi kimia",
+    "langkah": [
+      "Hancurkan mineral menjadi bubuk",
+      "Ekstraksi dengan asam sulfat panas",
+      "Saring larutan",
+      "Presipitasi selektif",
+      "Elektrolisis rubidium klorida",
+      "Kumpulkan rubidium",
+      "Simpan dalam ampul vakum"
+    ],
+    "produk": "Rubidium murni",
+    "manfaat": "Bahan penelitian atau elektronik",
+    "yield": "0.1-0.3% dari berat mineral",
+    "catatan": "Logam sangat reaktif, jarang dimurnikan"
+  },
+  {
+    "judul": "Peleburan Cesium dari Pollucite",
+    "bahan": ["Pollucite 30kg", "Asam klorida 15L", "Gas hidrogen"],
+    "alat": ["Reaktor kaca tebal", "Penyaring keramik", "Tungku vakum"],
+    "metode": "Ekstraksi kimia",
+    "langkah": [
+      "Hancurkan mineral menjadi bubuk",
+      "Ekstraksi dengan HCl pekat",
+      "Saring larutan",
+      "Presipitasi selektif",
+      "Reduksi dengan hidrogen",
+      "Distilasi cesium murni",
+      "Simpan dalam ampul vakum"
+    ],
+    "produk": "Cesium murni",
+    "manfaat": "Bahan penelitian atau jam atom",
+    "yield": "0.5-1% dari berat mineral",
+    "catatan": "Logam paling elektropositif, penanganan khusus"
+  },
+  {
+    "judul": "Peleburan Barium dari Barite",
+    "bahan": ["Barite 50kg", "Kokas 10kg", "Aluminium 5kg"],
+    "alat": ["Tungku busur", "Cawan tahan api", "Penyaring vakum"],
+    "metode": "Reduksi termal",
+    "langkah": [
+      "Hancurkan barite menjadi bubuk",
+      "Campur dengan kokas dan aluminium",
+      "Panaskan dalam tungku busur",
+      "Kumpulkan barium sulfida",
+      "Elektrolisis lelehan BaCl2",
+      "Kumpulkan barium",
+      "Simpan dalam minyak mineral"
+    ],
+    "produk": "Barium murni",
+    "manfaat": "Bahan industri atau penelitian",
+    "yield": "40-50% teoritis",
+    "catatan": "Logam reaktif, jarang dimurnikan"
+  },
+  {
+    "judul": "Peleburan Strontium dari Celestite",
+    "bahan": ["Celestite 40kg", "Asam klorida 10L", "Natrium karbonat 5kg"],
+    "alat": ["Reaktor tahan asam", "Penyaring vakum", "Tungku listrik"],
+    "metode": "Ekstraksi kimia",
+    "langkah": [
+      "Hancurkan mineral menjadi bubuk",
+      "Konversi menjadi strontium karbonat",
+      "Pelarutan dalam HCl",
+      "Elektrolisis lelehan SrCl2",
+      "Kumpulkan strontium",
+      "Cuci dengan eter",
+      "Simpan dalam minyak mineral"
+    ],
+    "produk": "Strontium murni",
+    "manfaat": "Bahan kembang api atau penelitian",
+    "yield": "50-60% teoritis",
+    "catatan": "Logam reaktif, penanganan khusus"
+  },
+  {
+    "judul": "Peleburan Kalsium dari Batu Kapur",
+    "bahan": ["Batu kapur 100kg", "Aluminium oksida 20kg", "Kokas 30kg"],
+    "alat": ["Tungku busur", "Cawan tahan api", "Penyaring vakum"],
+    "metode": "Reduksi termal",
+    "langkah": [
+      "Kalsinasi batu kapur menjadi CaO",
+      "Campur dengan Al2O3 dan kokas",
+      "Panaskan dalam tungku busur",
+      "Kumpulkan kalsium aluminat",
+      "Elektrolisis lelehan CaCl2",
+      "Kumpulkan kalsium",
+      "Simpan dalam atmosfer inert"
+    ],
+    "produk": "Kalsium murni",
+    "manfaat": "Bahan industri atau penelitian",
+    "yield": "60-70% teoritis",
+    "catatan": "Logam reaktif, jarang dimurnikan"
+  },
+  {
+    "judul": "Peleburan Yttrium dari Monazite",
+    "bahan": ["Monazite sand 50kg", "Asam sulfat 20L", "Oksalat amonium 5kg"],
+    "alat": ["Reaktor tahan asam", "Penyaring vakum", "Tungku busur"],
+    "metode": "Ekstraksi kimia",
+    "langkah": [
+      "Hancurkan monazite menjadi bubuk",
+      "Ekstraksi dengan H2SO4 pekat",
+      "Presipitasi selektif dengan oksalat",
+      "Kalsinasi menjadi Y2O3",
+      "Reduksi dengan logam alkali",
+      "Lelehkan dalam tungku busur",
+      "Tuang ke cetakan khusus"
+    ],
+    "produk": "Yttrium murni",
+    "manfaat": "Bahan superkonduktor atau keramik",
+    "yield": "1-2% dari berat monazite",
+    "catatan": "Logam tanah jarang, proses kompleks"
+  },
+  {
+    "judul": "Peleburan Lantanum dari Bastnasite",
+    "bahan": ["Bastnasite 60kg", "Asam klorida 25L", "Asam oksalat 10kg"],
+    "alat": ["Reaktor tahan asam", "Ekstraktor pelarut", "Tungku busur"],
+    "metode": "Ekstraksi pelarut",
+    "langkah": [
+      "Hancurkan mineral menjadi bubuk",
+      "Ekstraksi dengan HCl pekat",
+      "Pemisahan dengan ekstraksi pelarut",
+      "Presipitasi dengan oksalat",
+      "Kalsinasi menjadi La2O3",
+      "Reduksi dengan logam alkali",
+      "Lelehkan dalam tungku busur"
+    ],
+    "produk": "Lantanum murni",
+    "manfaat": "Bahan paduan atau katalis",
+    "yield": "10-15% dari berat mineral",
+    "catatan": "Logam tanah jarang, pemisahan kompleks"
+  },
+  {
+    "judul": "Peleburan Cerium dari Mineral Cerite",
+    "bahan": ["Cerite 70kg", "Asam nitrat 30L", "Hidrogen peroksida 5L"],
+    "alat": ["Reaktor tahan asam", "Penyaring vakum", "Tungku busur"],
+    "metode": "Oksidasi selektif",
+    "langkah": [
+      "Hancurkan mineral menjadi bubuk",
+      "Ekstraksi dengan HNO3 pekat",
+      "Oksidasi dengan H2O2",
+      "Presipitasi selektif",
+      "Kalsinasi menjadi CeO2",
+      "Reduksi dengan logam alkali",
+      "Lelehkan dalam tungku busur"
+    ],
+    "produk": "Cerium murni",
+    "manfaat": "Bahan poles atau paduan",
+    "yield": "15-20% dari berat mineral",
+    "catatan": "Logam tanah jarang, mudah teroksidasi"
+  },
+  {
+    "judul": "Peleburan Neodymium dari Magnet Bekas",
+    "bahan": ["Magnet NdFeB 20kg", "Asam sulfat 10L", "Asam oksalat 5kg"],
+    "alat": ["Reaktor tahan asam", "Sel elektrolisis", "Tungku busur"],
+    "metode": "Ekstraksi kimia",
+    "langkah": [
+      "Hancurkan magnet menjadi bubuk",
+      "Ekstraksi dengan H2SO4 encer",
+      "Presipitasi dengan oksalat",
+      "Kalsinasi menjadi Nd2O3",
+      "Elektrolisis lelehan NdCl3",
+      "Kumpulkan neodymium",
+      "Lelehkan dalam tungku busur"
+    ],
+    "produk": "Neodymium murni",
+    "manfaat": "Bahan magnet kuat baru",
+    "yield": "20-25% dari berat magnet",
+    "catatan": "Logam tanah jarang bernilai tinggi"
+  },
+  {
+    "judul": "Peleburan Samarium dari Residu Pemrosesan",
+    "bahan": ["Residu monazite 50kg", "Asam klorida 20L", "Tributil fosfat"],
+    "alat": ["Reaktor tahan asam", "Ekstraktor pelarut", "Tungku busur"],
+    "metode": "Ekstraksi pelarut",
+    "langkah": [
+      "Larutkan residu dalam HCl pekat",
+      "Ekstraksi dengan TBP dalam minyak tanah",
+      "Pisahkan fase organik",
+      "Stripping dengan asam encer",
+      "Presipitasi dengan oksalat",
+      "Kalsinasi menjadi Sm2O3",
+      "Reduksi dengan logam alkali"
+    ],
+    "produk": "Samarium murni",
+    "manfaat": "Bahan magnet atau penelitian",
+    "yield": "1-2% dari berat residu",
+    "catatan": "Logam tanah jarang, pemisahan kompleks"
+  },
+  {
+    "judul": "Peleburan Europium dari Fosfor Lampu",
+    "bahan": ["Fosfor lampu bekas 10kg", "Asam nitrat 5L", "Eter"],
+    "alat": ["Reaktor kaca", "Ekstraktor cair-cair", "Tungku reduksi"],
+    "metode": "Ekstraksi pelarut",
+    "langkah": [
+      "Hancurkan fosfor menjadi bubuk",
+      "Ekstraksi dengan HNO3 pekat",
+      "Ekstraksi dengan eter",
+      "Stripping dengan air",
+      "Presipitasi dengan oksalat",
+      "Reduksi dengan hidrogen",
+      "Lelehkan dalam tungku vakum"
+    ],
+    "produk": "Europium murni",
+    "manfaat": "Bahan fosfor baru atau penelitian",
+    "yield": "0.1-0.5% dari berat fosfor",
+    "catatan": "Logam tanah jarang bernilai tinggi"
+  },
+  {
+    "judul": "Peleburan Gadolinium dari Kontrol Nuklir",
+    "bahan": ["Batang kontrol nuklir 15kg", "Asam klorida 10L", "Asam oksalat 3kg"],
+    "alat": ["Reaktor tahan asam", "Penyaring vakum", "Tungku busur"],
+    "metode": "Ekstraksi kimia",
+    "langkah": [
+      "Hancurkan batang menjadi bubuk",
+      "Larutkan dalam HCl pekat",
+      "Presipitasi dengan oksalat",
+      "Kalsinasi menjadi Gd2O3",
+      "Reduksi dengan logam alkali",
+      "Lelehkan dalam tungku busur",
+      "Tuang ke cetakan khusus"
+    ],
+    "produk": "Gadolinium murni",
+    "manfaat": "Bahan kontrol nuklir atau MRI",
+    "yield": "30-40% dari berat batang",
+    "catatan": "Penanganan khusus karena radioaktivitas"
+  },
+  {
+    "judul": "Peleburan Terbium dari Fosfor Hijau",
+    "bahan": ["Fosfor hijau 8kg", "Asam sulfat 4L", "Tributil fosfat"],
+    "alat": ["Reaktor kaca", "Ekstraktor pelarut", "Tungku reduksi"],
+    "metode": "Ekstraksi pelarut",
+    "langkah": [
+      "Hancurkan fosfor menjadi bubuk",
+      "Ekstraksi dengan H2SO4 pekat",
+      "Ekstraksi dengan TBP",
+      "Stripping dengan asam encer",
+      "Presipitasi dengan oksalat",
+      "Reduksi dengan hidrogen",
+      "Lelehkan dalam tungku vakum"
+    ],
+    "produk": "Terbium murni",
+    "manfaat": "Bahan fosfor atau paduan",
+    "yield": "0.5-1% dari berat fosfor",
+    "catatan": "Logam tanah jarang bernilai tinggi"
+  },
+  {
+    "judul": "Peleburan Dysprosium dari Magnet Khusus",
+    "bahan": ["Magnet Dy-doped 12kg", "Asam klorida 6L", "Asam oksalat 2kg"],
+    "alat": ["Reaktor tahan asam", "Penyaring vakum", "Tungku busur"],
+    "metode": "Ekstraksi kimia",
+    "langkah": [
+      "Hancurkan magnet menjadi bubuk",
+      "Larutkan dalam HCl pekat",
+      "Presipitasi dengan oksalat",
+      "Kalsinasi menjadi Dy2O3",
+      "Reduksi dengan logam alkali",
+      "Lelehkan dalam tungku busur",
+      "Tuang ke cetakan khusus"
+    ],
+    "produk": "Dysprosium murni",
+    "manfaat": "Bahan magnet suhu tinggi",
+    "yield": "5-10% dari berat magnet",
+    "catatan": "Logam tanah jarang kritis"
+  },
+  {
+    "judul": "Peleburan Holmium dari Laser Bekas",
+    "bahan": ["Komponen laser 5kg", "Asam nitrat 2L", "Eter"],
+    "alat": ["Reaktor kaca", "Ekstraktor cair-cair", "Tungku reduksi"],
+    "metode": "Ekstraksi pelarut",
+    "langkah": [
+      "Hancurkan komponen menjadi bubuk",
+      "Ekstraksi dengan HNO3 pekat",
+      "Ekstraksi dengan eter",
+      "Stripping dengan air",
+      "Presipitasi dengan oksalat",
+      "Reduksi dengan hidrogen",
+      "Lelehkan dalam tungku vakum"
+    ],
+    "produk": "Holmium murni",
+    "manfaat": "Bahan laser atau penelitian",
+    "yield": "0.1-0.3% dari berat komponen",
+    "catatan": "Logam tanah jarang sangat langka"
+  },
+  {
+    "judul": "Peleburan Erbium dari Serat Optik",
+    "bahan": ["Serat optik doped 10kg", "Asam klorida 5L", "Asam oksalat 1kg"],
+    "alat": ["Reaktor tahan asam", "Penyaring vakum", "Tungku busur"],
+    "metode": "Ekstraksi kimia",
+    "langkah": [
+      "Hancurkan serat menjadi bubuk",
+      "Larutkan dalam HCl pekat",
+      "Presipitasi dengan oksalat",
+      "Kalsinasi menjadi Er2O3",
+      "Reduksi dengan logam alkali",
+      "Lelehkan dalam tungku busur",
+      "Tuang ke cetakan khusus"
+    ],
+    "produk": "Erbium murni",
+    "manfaat": "Bahan amplifier optik",
+    "yield": "0.5-1% dari berat serat",
+    "catatan": "Logam tanah jarang penting untuk telekomunikasi"
+  },
+  {
+    "judul": "Peleburan Thulium dari Peralatan Medis",
+    "bahan": ["Peralatan medis bekas 8kg", "Asam sulfat 4L", "Tributil fosfat"],
+    "alat": ["Reaktor kaca", "Ekstraktor pelarut", "Tungku reduksi"],
+    "metode": "Ekstraksi pelarut",
+    "langkah": [
+      "Hancurkan peralatan menjadi bubuk",
+      "Ekstraksi dengan H2SO4 pekat",
+      "Ekstraksi dengan TBP",
+      "Stripping dengan asam encer",
+      "Presipitasi dengan oksalat",
+      "Reduksi dengan hidrogen",
+      "Lelehkan dalam tungku vakum"
+    ],
+    "produk": "Thulium murni",
+    "manfaat": "Bahan peralatan medis atau penelitian",
+    "yield": "0.05-0.1% dari berat peralatan",
+    "catatan": "Logam tanah jarang paling langka"
+  },
+  {
+    "judul": "Peleburan Ytterbium dari Jam Atom",
+    "bahan": ["Komponen jam atom 5kg", "Asam klorida 3L", "Asam oksalat 1kg"],
+    "alat": ["Reaktor tahan asam", "Penyaring vakum", "Tungku busur"],
+    "metode": "Ekstraksi kimia",
+    "langkah": [
+      "Hancurkan komponen menjadi bubuk",
+      "Larutkan dalam HCl pekat",
+      "Presipitasi dengan oksalat",
+      "Kalsinasi menjadi Yb2O3",
+      "Reduksi dengan logam alkali",
+      "Lelehkan dalam tungku busur",
+      "Tuang ke cetakan khusus"
+    ],
+    "produk": "Ytterbium murni",
+    "manfaat": "Bahan penelitian atau jam atom",
+    "yield": "0.2-0.5% dari berat komponen",
+    "catatan": "Logam tanah jarang dengan aplikasi presisi"
+  },
+  {
+    "judul": "Peleburan Lutetium dari Detektor Medis",
+    "bahan": ["Detektor medis bekas 6kg", "Asam nitrat 3L", "Eter"],
+    "alat": ["Reaktor kaca", "Ekstraktor cair-cair", "Tungku reduksi"],
+    "metode": "Ekstraksi pelarut",
+    "langkah": [
+      "Hancurkan detektor menjadi bubuk",
+      "Ekstraksi dengan HNO3 pekat",
+      "Ekstraksi dengan eter",
+      "Stripping dengan air",
+      "Presipitasi dengan oksalat",
+      "Reduksi dengan hidrogen",
+      "Lelehkan dalam tungku vakum"
+    ],
+    "produk": "Lutetium murni",
+    "manfaat": "Bahan detektor atau penelitian",
+    "yield": "0.1-0.3% dari berat detektor",
+    "catatan": "Logam tanah jarang terberat"
+  },
+  {
+    "judul": "Peleburan Zirkonium dari Bahan Nuklir",
+    "bahan": ["Bahan kladding 20kg", "Asam fluorida 10L", "Magnesium 5kg"],
+    "alat": ["Reaktor Teflon", "Sel elektrolisis", "Tungku busur"],
+    "metode": "Proses Kroll",
+    "langkah": [
+      "Konversi menjadi zirkonium tetraklorida",
+      "Reduksi dengan magnesium",
+      "Leaching dengan asam encer",
+      "Pencucian dengan air deionisasi",
+      "Lelehkan dalam tungku busur",
+      "Tuang ke cetakan khusus",
+      "Anil dalam atmosfer argon"
+    ],
+    "produk": "Zirkonium murni",
+    "manfaat": "Bahan kladding reaktor nuklir",
+    "yield": "80-85% teoritis",
+    "catatan": "Penanganan khusus karena aplikasi nuklir"
+  },
+  {
+    "judul": "Peleburan Hafnium dari Zirkonium Komersial",
+    "bahan": ["Zirkonium komersial 50kg", "Asam klorida 20L", "MIBK"],
+    "alat": ["Ekstraktor pelarut", "Penyaring vakum", "Tungku busur"],
+    "metode": "Ekstraksi pelarut",
+    "langkah": [
+      "Larutkan dalam HCl pekat",
+      "Ekstraksi dengan MIBK",
+      "Stripping dengan asam encer",
+      "Presipitasi dengan amonia",
+      "Kalsinasi menjadi HfO2",
+      "Reduksi dengan logam alkali",
+      "Lelehkan dalam tungku busur"
+    ],
+    "produk": "Hafnium murni",
+    "manfaat": "Bahan kontrol nuklir atau paduan",
+    "yield": "2-3% dari berat zirkonium",
+    "catatan": "Pemisahan dari zirkonium sangat sulit"
+  },
+  {
+    "judul": "Peleburan Vanadium dari Katalis Bekas",
+    "bahan": ["Katalis vanadium 30kg", "Asam sulfat 15L", "Ammonium sulfat 5kg"],
+    "alat": ["Reaktor tahan asam", "Penyaring vakum", "Tungku reduksi"],
+    "metode": "Ekstraksi kimia",
+    "langkah": [
+      "Larutkan katalis dalam H2SO4 pekat",
+      "Presipitasi dengan (NH4)2SO4",
+      "Kalsinasi menjadi V2O5",
+      "Reduksi dengan kalsium",
+      "Lelehkan dalam tungku busur",
+      "Tuang ke cetakan khusus",
+      "Anil dalam atmosfer inert"
+    ],
+    "produk": "Vanadium murni",
+    "manfaat": "Bahan paduan baja atau baterai",
+    "yield": "60-70% dari berat katalis",
+    "catatan": "Logam penting untuk industri baja"
+  },
+  {
+    "judul": "Peleburan Niobium dari Columbite",
+    "bahan": ["Columbite 100kg", "Asam fluorida 20L", "Natrium 10kg"],
+    "alat": ["Reaktor Teflon", "Penyaring vakum", "Tungku busur"],
+    "metode": "Reduksi fluorida",
+    "langkah": [
+      "Ekstraksi dengan HF pekat",
+      "Pemisahan dari tantalum",
+      "Presipitasi sebagai oksida",
+      "Konversi menjadi fluorida",
+      "Reduksi dengan natrium",
+      "Lelehkan dalam tungku busur",
+      "Tuang ke cetakan khusus"
+    ],
+    "produk": "Niobium murni",
+    "manfaat": "Bahan superkonduktor atau paduan",
+    "yield": "50-60% dari berat mineral",
+    "catatan": "Logam tahan panas penting"
+  },
+  {
+    "judul": "Peleburan Tantalum dari Tantalite",
+    "bahan": ["Tantalite 80kg", "Asam fluorida 15L", "Natrium 8kg"],
+    "alat": ["Reaktor Teflon", "Ekstraktor pelarut", "Tungku busur"],
+    "metode": "Ekstraksi pelarut",
+    "langkah": [
+      "Ekstraksi dengan HF pekat",
+      "Pemisahan dari niobium",
+      "Ekstraksi dengan MIBK",
+      "Stripping dengan air",
+      "Konversi menjadi fluorida",
+      "Reduksi dengan natrium",
+      "Lelehkan dalam tungku busur"
+    ],
+    "produk": "Tantalum murni",
+    "manfaat": "Bahan kapasitor atau implan medis",
+    "yield": "40-50% dari berat mineral",
+    "catatan": "Logam tahan korosi penting"
+  },
+  {
+    "judul": "Peleburan Kromium dari Bijih Kromit",
+    "bahan": ["Kromit 200kg", "Aluminium 50kg", "Batu kapur 30kg"],
+    "alat": ["Tungku busur", "Cawan tahan api", "Penyaring vakum"],
+    "metode": "Proses aluminotermik",
+    "langkah": [
+      "Campur dengan aluminium dan batu kapur",
+      "Nyalakan dengan barium peroksida",
+      "Biarkan reaksi eksotermik berlangsung",
+      "Kumpulkan kromium cair",
+      "Tuang ke cetakan khusus",
+      "Anil dalam atmosfer inert",
+      "Bersihkan dari slag"
+    ],
+    "produk": "Kromium murni",
+    "manfaat": "Bahan pelapis atau paduan baja",
+    "yield": "70-80% teoritis",
+    "catatan": "Proses eksotermik berbahaya"
+  },
+  {
+    "judul": "Peleburan Mangan dari Bijih Pyrolusite",
+    "bahan": ["Pyrolusite 150kg", "Aluminium 40kg", "Fluks silika 20kg"],
+    "alat": ["Tungku busur", "Cawan tahan api", "Penyaring vakum"],
+    "metode": "Reduksi aluminotermik",
+    "langkah": [
+      "Campur dengan aluminium dan fluks",
+      "Nyalakan dengan magnesium ribbon",
+      "Biarkan reaksi berlangsung",
+      "Kumpulkan mangan cair",
+      "Tuang ke cetakan khusus",
+      "Anil dalam atmosfer inert",
+      "Bersihkan dari slag"
+    ],
+    "produk": "Mangan murni",
+    "manfaat": "Bahan paduan baja atau baterai",
+    "yield": "60-70% teoritis",
+    "catatan": "Reaksi sangat eksotermik"
+  },
+  {
+    "judul": "Peleburan Rhenium dari Molibdenit",
+    "bahan": ["Molibdenit 100kg", "Asam nitrat 50L", "Gas amonia 10kg"],
+    "alat": ["Autoklaf", "Penyaring tekanan", "Tungku reduksi"],
+    "metode": "Ekstraksi kimia",
+    "langkah": [
+      "Oksidasi dalam autoklaf dengan HNO3",
+      "Saring larutan",
+      "Presipitasi dengan NH3",
+      "Kalsinasi menjadi Re2O7",
+      "Reduksi dengan hidrogen",
+      "Tekan menjadi briket",
+      "Sinter pada suhu tinggi"
+    ],
+    "produk": "Rhenium murni",
+    "manfaat": "Bahan superalloy atau katalis",
+    "yield": "0.1-0.2% dari berat bijih",
+    "catatan": "Logam sangat langka dan berharga"
+  },
+  {
+    "judul": "Peleburan Teknesium dari Bahan Nuklir",
+    "bahan": ["Bahan nuklir bekas 5kg", "Asam nitrat 2L", "Ekstraktan khusus"],
+    "alat": ["Sel panas", "Penyaring vakum", "Tungku kecil"],
+    "metode": "Ekstraksi kimia",
+    "langkah": [
+      "Larutkan dalam HNO3 pekat",
+      "Ekstraksi selektif dengan ekstraktan",
+      "Stripping dengan asam encer",
+      "Presipitasi sebagai sulfida",
+      "Oksidasi menjadi perteknetat",
+      "Reduksi dengan hidrogen",
+      "Lelehkan dalam tungku kecil"
+    ],
+    "produk": "Teknesium murni",
+    "manfaat": "Bahan penelitian medis",
+    "yield": "0.001-0.01% dari berat bahan",
+    "catatan": "Unsur radioaktif buatan"
+  },
+  {
+    "judul": "Peleburan Ruthenium dari Bijih Platina",
+    "bahan": ["Bijih platina 50kg", "Aqua regia 20L", "Gas klorin 5kg"],
+    "alat": ["Reaktor kaca tebal", "Penyaring vakum", "Tungku busur"],
+    "metode": "Ekstraksi kimia",
+    "langkah": [
+      "Ekstraksi dengan aqua regia",
+      "Pemisahan dengan klorinasi",
+      "Distilasi ruthenium tetroksida",
+      "Reduksi dengan hidrogen",
+      "Tekan menjadi briket",
+      "Sinter pada suhu tinggi",
+      "Anil dalam atmosfer inert"
+    ],
+    "produk": "Ruthenium murni",
+    "manfaat": "Bahan elektronik atau katalis",
+    "yield": "0.1-0.5% dari berat bijih",
+    "catatan": "Logam platinum grup yang langka"
+  },
+  {
+    "judul": "Peleburan Osmium dari Paduan Alami",
+    "bahan": ["Paduan osmiridium 10kg", "Aqua regia 5L", "Natrium hidroksida 3kg"],
+    "alat": ["Wadah kaca tebal", "Penyaring vakum", "Tungku busur"],
+    "metode": "Ekstraksi kimia",
+    "langkah": [
+      "Hancurkan paduan menjadi bubuk",
+      "Ekstraksi dengan aqua regia",
+      "Saring larutan",
+      "Presipitasi dengan NaOH",
+      "Reduksi dengan hidrogen",
+      "Tekan menjadi briket",
+      "Sinter pada suhu tinggi"
+    ],
+    "produk": "Osmium murni",
+    "manfaat": "Bahan paduan keras atau penelitian",
+    "yield": "30-40% dari berat paduan",
+    "catatan": "Logam sangat padat dan langka"
   }
-]
+]  
