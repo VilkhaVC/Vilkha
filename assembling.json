@@ -1,0 +1,359 @@
+[
+  {
+    "judul": "Perakitan Lampu LED Sederhana",
+    "bahan": ["LED 5mm", "Resistor 220 ohm", "PCB kecil", "Kabel jumper", "Baterai 9V"],
+    "alat": ["Tang potong", "Penyolder", "Multimeter"],
+    "metode": "Perakitan manual",
+    "langkah": [
+      "Pasang LED ke PCB dengan memperhatikan polaritas",
+      "Solder resistor ke kaki LED",
+      "Hubungkan kabel jumper ke resistor",
+      "Sambungkan ke terminal baterai",
+      "Tes dengan multimeter"
+    ],
+    "produk": "Lampu LED portable",
+    "manfaat": "Penerangan darurat",
+    "waktu": "30 menit",
+    "catatan": "Perhatikan polaritas LED untuk menghindari kerusakan"
+  },
+  {
+    "judul": "Perakitan Power Bank 10000mAh",
+    "bahan": ["Baterai Li-ion 18650", "Modul pengisi USB", "Kotak plastik", "Saklar"],
+    "alat": ["Penyolder", "Obeng", "Pita perekat"],
+    "metode": "Perakitan modular",
+    "langkah": [
+      "Rangkai baterai secara paralel",
+      "Solder ke modul pengisi",
+      "Pasang saklar on/off",
+      "Masukkan ke kotak plastik",
+      "Tes pengisian daya"
+    ],
+    "produk": "Power bank portabel",
+    "manfaat": "Pengisian daya perangkat mobile",
+    "waktu": "1 jam",
+    "catatan": "Jangan sampai terjadi korsleting pada baterai"
+  },
+  {
+    "judul": "Perakitan Speaker Bluetooth",
+    "bahan": ["Driver speaker 4Ω", "Modul Bluetooth", "Amplifier mini", "Baterai", "Kotak kayu"],
+    "alat": ["Penyolder", "Gergaji", "Lem kayu"],
+    "metode": "Perakitan sistem audio",
+    "langkah": [
+      "Rangkai modul Bluetooth dengan amplifier",
+      "Hubungkan ke driver speaker",
+      "Buat enclosure dari kotak kayu",
+      "Pasang semua komponen",
+      "Tes konektivitas Bluetooth"
+    ],
+    "produk": "Speaker nirkabel",
+    "manfaat": "Sistem audio portabel",
+    "waktu": "2 jam",
+    "catatan": "Perhatikan impedansi speaker dan amplifier"
+  },
+  {
+    "judul": "Perakitan Drone Quadcopter",
+    "bahan": ["Frame carbon fiber", "Motor brushless", "ESC", "Flight controller", "Baterai LiPo"],
+    "alat": ["Obeng set", "Penyolder", "Kabel ties"],
+    "metode": "Perakitan presisi",
+    "langkah": [
+      "Pasang motor ke frame",
+      "Hubungkan ke ESC",
+      "Instal flight controller",
+      "Sambungkan semua kabel",
+      "Kalibrasi dengan software"
+    ],
+    "produk": "Drone FPV",
+    "manfaat": "Fotografi udara atau hobi",
+    "waktu": "3 jam",
+    "catatan": "Perhatikan arah putaran motor"
+  },
+  {
+    "judul": "Perakitan Komputer Rakitan",
+    "bahan": ["Motherboard", "Processor", "RAM", "SSD", "Casing", "PSU"],
+    "alat": ["Obeng magnet", "Gelang anti-statis"],
+    "metode": "Perakitan komponen PC",
+    "langkah": [
+      "Pasang processor ke motherboard",
+      "Install RAM dan heatsink",
+      "Mount SSD ke casing",
+      "Hubungkan kabel PSU",
+      "Tes booting pertama"
+    ],
+    "produk": "PC desktop",
+    "manfaat": "Komputasi pribadi atau gaming",
+    "waktu": "1.5 jam",
+    "catatan": "Gunakan gelang anti-statis untuk mencegah kerusakan komponen"
+  },
+  {
+    "judul": "Perakitan Meja Kayu Lipat",
+    "bahan": ["Papan kayu", "Kaki lipat besi", "Engsel", "Sekrup", "Lem kayu"],
+    "alat": ["Gergaji", "Bor", "Obeng"],
+    "metode": "Perakitan furnitur",
+    "langkah": [
+      "Potong papan sesuai ukuran",
+      "Pasang engsel ke kaki lipat",
+      "Sekrup kaki ke bagian bawah meja",
+      "Perkuat dengan lem kayu",
+      "Tes mekanisme lipat"
+    ],
+    "produk": "Meja lipat portable",
+    "manfaat": "Furnitur ruang terbatas",
+    "waktu": "2 jam",
+    "catatan": "Pastikan semua sudut rata sebelum dirakit"
+  },
+  {
+    "judul": "Perakitan Sistem Irigasi Tetes",
+    "bahan": ["Selang PE", "Emitter tetes", "Konektor", "Timer", "Filter"],
+    "alat": ["Gunting selang", "Tang", "Teflon tape"],
+    "metode": "Perakitan sistem hidroponik",
+    "langkah": [
+      "Rancang layout sistem",
+      "Pasang filter dan timer",
+      "Buat lubang untuk emitter",
+      "Sambungkan semua komponen",
+      "Tes aliran air"
+    ],
+    "produk": "Sistem irigasi otomatis",
+    "manfaat": "Penyiraman tanaman efisien",
+    "waktu": "1 jam",
+    "catatan": "Gunakan tekanan air yang sesuai"
+  },
+  {
+    "judul": "Perakitan Kit Robot Pemadam",
+    "bahan": ["Chassis robot", "Sensor api", "Motor DC", "Pompa air mini", "Modul Arduino"],
+    "alat": ["Obeng set", "Penyolder", "Kabel ties"],
+    "metode": "Perakitan robotik",
+    "langkah": [
+      "Pasang motor ke chassis",
+      "Install sensor api",
+      "Sambungkan pompa air",
+      "Program modul Arduino",
+      "Tes respon terhadap api"
+    ],
+    "produk": "Robot pemadam mini",
+    "manfaat": "Edukasi teknologi robotik",
+    "waktu": "2.5 jam",
+    "catatan": "Perhatikan kabel yang terhubung ke Arduino"
+  },
+  {
+    "judul": "Perakitan Panel Surya 100W",
+    "bahan": ["Modul surya", "Charge controller", "Baterai", "Inverter", "Kabel"],
+    "alat": ["Tang crimping", "Multimeter", "Obeng"],
+    "metode": "Perakitan sistem PV",
+    "langkah": [
+      "Hubungkan modul surya ke controller",
+      "Sambungkan ke baterai",
+      "Pasang inverter",
+      "Tes tegangan output",
+      "Mounting panel"
+    ],
+    "produk": "Sistem tenaga surya",
+    "manfaat": "Sumber energi terbarukan",
+    "waktu": "1.5 jam",
+    "catatan": "Perhatikan polaritas saat menyambung"
+  },
+  {
+    "judul": "Perakitan Alat Penyiram Otomatis",
+    "bahan": ["Sensor kelembaban", "Modul relay", "Pompa air", "Selang", "Controller"],
+    "alat": ["Penyolder", "Tang", "Pisau cutter"],
+    "metode": "Perakitan sistem otomatisasi",
+    "langkah": [
+      "Pasang sensor ke tanah",
+      "Hubungkan ke controller",
+      "Sambungkan pompa air",
+      "Program interval penyiraman",
+      "Tes respon sensor"
+    ],
+    "produk": "Smart watering system",
+    "manfaat": "Penyiraman tanaman otomatis",
+    "waktu": "1.5 jam",
+    "catatan": "Kalibrasi sensor sesuai jenis tanah"
+  },
+  {
+    "judul": "Perakitan Sepeda Listrik",
+    "bahan": ["Kit konversi listrik", "Baterai Li-ion", "Controller", "Sepeda standar"],
+    "alat": ["Kunci pas set", "Tang", "Pita isolasi"],
+    "metode": "Konversi sepeda",
+    "langkah": [
+      "Pasang motor hub ke roda",
+      "Mount baterai ke frame",
+      "Sambungkan controller",
+      "Install throttle",
+      "Tes performa"
+    ],
+    "produk": "Sepeda listrik",
+    "manfaat": "Transportasi ramah lingkungan",
+    "waktu": "3 jam",
+    "catatan": "Perhatikan berat distribusi baterai"
+  },
+  {
+    "judul": "Perakitan Smart Mirror",
+    "bahan": ["Cermin dua arah", "Monitor LCD", "Raspberry Pi", "Frame kayu"],
+    "alat": ["Obeng", "Gergaji", "Lem silikon"],
+    "metode": "Perakitan elektronik",
+    "langkah": [
+      "Buat frame untuk cermin",
+      "Pasang monitor di belakang cermin",
+      "Install Raspberry Pi",
+      "Sambungkan semua kabel",
+      "Program interface"
+    ],
+    "produk": "Cermin pintar",
+    "manfaat": "Display informasi digital",
+    "waktu": "2.5 jam",
+    "catatan": "Pastikan monitor terpasang rata"
+  },
+  {
+    "judul": "Perakitan Alat Ukur Cuaca",
+    "bahan": ["Sensor suhu", "Sensor kelembaban", "Anemometer", "Modul WiFi", "Enclosure"],
+    "alat": ["Penyolder", "Obeng", "Pistol lem"],
+    "metode": "Perakitan stasiun cuaca",
+    "langkah": [
+      "Sambungkan semua sensor",
+      "Hubungkan ke modul WiFi",
+      "Pasang di enclosure",
+      "Program pembacaan data",
+      "Tes koneksi cloud"
+    ],
+    "produk": "Stasiun cuaca IoT",
+    "manfaat": "Monitoring kondisi lingkungan",
+    "waktu": "2 jam",
+    "catatan": "Kalibrasi sensor sebelum digunakan"
+  },
+  {
+    "judul": "Perakitan 3D Printer Kit",
+    "bahan": ["Frame aluminium", "Motor stepper", "Hotend", "Controller board", "Baut"],
+    "alat": ["Kunci Allen", "Tang", "Multimeter"],
+    "metode": "Perakitan presisi",
+    "langkah": [
+      "Rakit frame utama",
+      "Pasang sistem gerak XYZ",
+      "Install hotend dan bed",
+      "Sambungkan elektronik",
+      "Kalibrasi awal"
+    ],
+    "produk": "3D printer FDM",
+    "manfaat": "Prototyping cepat",
+    "waktu": "4 jam",
+    "catatan": "Perhatikan leveling bed dengan seksama"
+  },
+  {
+    "judul": "Perakitan Mixer Audio Portable",
+    "bahan": ["Modul mixer", "Potensiometer", "Jack audio", "Enclosure", "Baterai"],
+    "alat": ["Penyolder", "Bor", "Tang"],
+    "metode": "Perakitan audio",
+    "langkah": [
+      "Pasang potensiometer ke enclosure",
+      "Solder ke modul mixer",
+      "Install jack input/output",
+      "Sambungkan sumber daya",
+      "Tes semua channel"
+    ],
+    "produk": "Audio mixer mini",
+    "manfaat": "Perekaman lapangan",
+    "waktu": "1.5 jam",
+    "catatan": "Perhatikan grounding untuk mengurangi noise"
+  },
+  {
+    "judul": "Perakitan Smart Door Lock",
+    "bahan": ["Solenoid lock", "Fingerprint sensor", "Modul WiFi", "Baterai", "Enclosure"],
+    "alat": ["Obeng", "Penyolder", "Pistol lem"],
+    "metode": "Perakitan sistem keamanan",
+    "langkah": [
+      "Pasang solenoid ke pintu",
+      "Install fingerprint sensor",
+      "Hubungkan modul WiFi",
+      "Program sistem",
+      "Tes mekanisme kunci"
+    ],
+    "produk": "Gembok pintar",
+    "manfaat": "Sistem keamanan digital",
+    "waktu": "2 jam",
+    "catatan": "Pastikan mekanisme kunci bekerja halus"
+  },
+  {
+    "judul": "Perakitan Lampu Taman Solar",
+    "bahan": ["Panel surya kecil", "Baterai AA", "LED high power", "Sensor cahaya", "Enclosure"],
+    "alat": ["Penyolder", "Tang", "Lem epoxy"],
+    "metode": "Perakitan otomatis",
+    "langkah": [
+      "Sambungkan panel ke baterai",
+      "Pasang sensor cahaya",
+      "Rangkai LED dengan driver",
+      "Masukkan ke enclosure",
+      "Tes siklus charge/discharge"
+    ],
+    "produk": "Lampu taman otomatis",
+    "manfaat": "Penerangan jalan hemat energi",
+    "waktu": "1 jam",
+    "catatan": "Pastikan sealing enclosure tahan air"
+  },
+  {
+    "judul": "Perakitan Alat Penetas Telur",
+    "bahan": ["Box styrofoam", "Pemanas", "Termostat", "Kipas", "Termometer"],
+    "alat": ["Pisau cutter", "Penyolder", "Pita perekat"],
+    "metode": "Perakitan sistem inkubasi",
+    "langkah": [
+      "Buat lubang ventilasi",
+      "Pasang elemen pemanas",
+      "Install sistem kontrol suhu",
+      "Tambahkan kipas sirkulasi",
+      "Kalibrasi suhu dan kelembaban"
+    ],
+    "produk": "Mesin penetas telur",
+    "manfaat": "Peternakan unggas",
+    "waktu": "1.5 jam",
+    "catatan": "Pertahankan suhu 37.5-38°C"
+  },
+  {
+    "judul": "Perakitan Pompa Hidroponik Timer",
+    "bahan": ["Pompa air", "Timer digital", "Selang", "Konektor", "Enclosure"],
+    "alat": ["Tang", "Pisau cutter", "Obeng"],
+    "metode": "Perakitan sistem hidroponik",
+    "langkah": [
+      "Sambungkan pompa ke timer",
+      "Pasang sistem selang",
+      "Mount di enclosure",
+      "Set interval pompa",
+      "Tes siklus kerja"
+    ],
+    "produk": "Sistem nutrisi otomatis",
+    "manfaat": "Budidaya hidroponik",
+    "waktu": "45 menit",
+    "catatan": "Pilih timer yang tahan air"
+  },
+  {
+    "judul": "Perakitan Tracker GPS Mobil",
+    "bahan": ["Modul GPS", "SIM card", "Baterai", "Enclosure", "Magnet"],
+    "alat": ["Penyolder", "Obeng", "Pistol lem"],
+    "metode": "Perakitan sistem pelacakan",
+    "langkah": [
+      "Sambungkan modul GPS ke modem GSM",
+      "Pasang slot SIM card",
+      "Rangkai sumber daya",
+      "Program sistem pelaporan",
+      "Tes sinyal GPS"
+    ],
+    "produk": "GPS tracker kendaraan",
+    "manfaat": "Keamanan kendaraan",
+    "waktu": "1 jam",
+    "catatan": "Pastikan antena GPS mendapat sinyal baik"
+  },
+  {
+    "judul": "Perakitan Sistem Aquaponik",
+    "bahan": ["Kolam ikan", "Bed grow", "Pompa air", "Pipa PVC", "Media tanam"],
+    "alat": ["Gergaji", "Tang", "Lem pipa"],
+    "metode": "Perakitan sistem terintegrasi",
+    "langkah": [
+      "Susun sistem pipa untuk sirkulasi",
+      "Pasang bed grow di atas kolam",
+      "Install pompa sirkulasi",
+      "Tambahkan media tanam",
+      "Tes aliran air"
+    ],
+    "produk": "Sistem aquaponik",
+    "manfaat": "Pertanian terintegrasi",
+    "waktu": "3 jam",
+    "catatan": "Jaga keseimbangan ekosistem ikan-tanaman"
+  }
+]

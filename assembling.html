@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Assembly Projects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4a6fa5;
+            --secondary: #166088;
+            --accent: #4fc3f7;
+            --light: #e8f4f8;
+            --dark: #1a1a2e;
+            --success: #2e7d32;
+            --warning: #ff8f00;
+            --danger: #c62828;
+            --gray: #7f8c8d;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            touch-action: manipulation;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1.2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--accent);
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .search-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 1.5rem 0;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .search-box {
+            width: 100%;
+            position: relative;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 12px 15px 12px 45px;
+            border-radius: 30px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            transition: all 0.3s;
+            background: #f8f9fa;
+        }
+        
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(74, 111, 165, 0.2);
+            background: white;
+        }
+        
+        .search-box i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray);
+        }
+        
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            width: 100%;
+        }
+        
+        select, .material-select {
+            width: 100%;
+            padding: 12px 15px;
+            border-radius: 30px;
+            border: 1px solid #ddd;
+            background-color: #f8f9fa;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+        
+        select:hover, .material-select:hover {
+            border-color: var(--primary);
+        }
+        
+        select:focus, .material-select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(74, 111, 165, 0.2);
+            background: white;
+        }
+        
+        .material-select-container {
+            position: relative;
+            width: 100%;
+        }
+        
+        .material-select {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .material-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            max-height: 50vh;
+            overflow-y: auto;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+            display: none;
+            margin-top: 5px;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .material-dropdown.show {
+            display: block;
+        }
+        
+        .material-option {
+            padding: 12px 15px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            border-bottom: 1px solid #f0f0f0;
+            white-space: normal;
+            word-break: break-word;
+        }
+        
+        .material-option:last-child {
+            border-bottom: none;
+        }
+        
+        .material-option:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .material-option.selected {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .selected-materials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        
+        .selected-tag {
+            background-color: var(--accent);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-weight: 500;
+        }
+        
+        .selected-tag i {
+            cursor: pointer;
+            font-size: 12px;
+        }
+        
+        .cards-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 1.5rem 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 100%;
+            animation: fadeIn 0.5s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-header {
+            background-color: var(--primary);
+            color: white;
+            padding: 15px;
+            position: relative;
+        }
+        
+        .card-header h2 {
+            font-size: 1.2rem;
+            white-space: normal;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+        
+        .assembly-method {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: capitalize;
+            margin-top: 8px;
+        }
+        
+        .time-indicator {
+            display: inline-block;
+            background-color: var(--warning);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-left: 8px;
+        }
+        
+        .card-body {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .card-section {
+            margin-bottom: 15px;
+        }
+        
+        .card-section h3 {
+            color: var(--secondary);
+            margin-bottom: 8px;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .card-section h3 i {
+            color: var(--primary);
+            width: 20px;
+            text-align: center;
+        }
+        
+        .tag {
+            display: inline-block;
+            background-color: #e1f5fe;
+            color: var(--primary);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-right: 5px;
+            margin-bottom: 8px;
+            font-weight: 500;
+            white-space: normal;
+            word-break: break-word;
+        }
+        
+        .step {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 25px;
+            font-size: 14px;
+        }
+        
+        .step:before {
+            content: "•";
+            color: var(--accent);
+            font-size: 24px;
+            position: absolute;
+            left: 5px;
+            top: -5px;
+        }
+        
+        .specs {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px dashed #ddd;
+        }
+        
+        .spec-item {
+            text-align: center;
+            flex: 1;
+        }
+        
+        .spec-value {
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        .time-short {
+            color: var(--success);
+        }
+        
+        .time-medium {
+            color: var(--warning);
+        }
+        
+        .time-long {
+            color: var(--danger);
+        }
+        
+        .spec-label {
+            font-size: 12px;
+            color: var(--gray);
+            margin-top: 4px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: var(--gray);
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .no-results i {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--gray);
+            opacity: 0.5;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: var(--gray);
+        }
+        
+        .loading-spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top: 4px solid var(--primary);
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .card:nth-child(1) { animation-delay: 0.1s; }
+        .card:nth-child(2) { animation-delay: 0.2s; }
+        .card:nth-child(3) { animation-delay: 0.3s; }
+        .card:nth-child(4) { animation-delay: 0.4s; }
+        .card:nth-child(5) { animation-delay: 0.5s; }
+        
+        /* Improved scrollbar for Android */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--secondary);
+        }
+        
+        /* Tablet view */
+        @media (min-width: 600px) {
+            .cards-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+                gap: 20px;
+            }
+            
+            .search-container {
+                padding: 20px;
+            }
+            
+            .filter-group {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            
+            .filter-group select {
+                flex: 1;
+                min-width: 180px;
+            }
+            
+            .material-select-container {
+                flex: 2;
+            }
+        }
+        
+        /* Desktop view */
+        @media (min-width: 992px) {
+            .search-container {
+                flex-direction: row;
+                align-items: center;
+            }
+            
+            .search-box {
+                min-width: 300px;
+                max-width: 400px;
+            }
+            
+            .filter-group {
+                flex: 1;
+            }
+            
+            .cards-container {
+                grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+                gap: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Assembly Projects</h1>
+            <p>DIY Electronics and Mechanical Assembly Guides</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="search-container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search by project name, components, or benefits...">
+            </div>
+            <div class="filter-group">
+                <select id="timeFilter">
+                    <option value="">All Durations</option>
+                    <option value="short">Quick (<1 hour)</option>
+                    <option value="medium">Medium (1-2 hours)</option>
+                    <option value="long">Long (>2 hours)</option>
+                </select>
+                <div class="material-select-container">
+                    <div class="material-select" id="materialSelect">
+                        <i class="fas fa-cubes"></i> Select Components
+                    </div>
+                    <div class="material-dropdown" id="materialDropdown"></div>
+                    <div class="selected-materials" id="selectedMaterials"></div>
+                </div>
+                <select id="categoryFilter">
+                    <option value="">All Categories</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="mechanical">Mechanical</option>
+                    <option value="furniture">Furniture</option>
+                    <option value="iot">IoT/Smart</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="cards-container" id="cardsContainer">
+            <div class="loading">
+                <div class="loading-spinner"></div>
+                <p>Loading projects...</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>Assembly Projects ©  | DIY Guides for Makers</p>
+        </div>
+    </footer>
+
+    <script>
+        // Main data structure
+        let allData = [];
+        let uniqueMaterials = new Set();
+        let selectedMaterials = new Set();
+        
+        // DOM elements
+        const cardsContainer = document.getElementById('cardsContainer');
+        const searchInput = document.getElementById('searchInput');
+        const timeFilter = document.getElementById('timeFilter');
+        const categoryFilter = document.getElementById('categoryFilter');
+        const materialSelect = document.getElementById('materialSelect');
+        const materialDropdown = document.getElementById('materialDropdown');
+        const selectedMaterialsContainer = document.getElementById('selectedMaterials');
+        
+        // Initialize the application
+        document.addEventListener('DOMContentLoaded', function() {
+            loadData();
+            
+            // Prevent dropdown from closing when scrolling on mobile
+            materialDropdown.addEventListener('touchmove', function(e) {
+                e.stopPropagation();
+            }, { passive: false });
+        });
+        
+        async function loadData() {
+            try {
+                // Try to load from assembling.json
+                const response = await fetch('assembling.json');
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                allData = await response.json();
+                
+                // Check if data is empty
+                if (!allData || allData.length === 0) {
+                    throw new Error('Data is empty');
+                }
+                
+                processMaterials(allData);
+                displayData(allData);
+                setupFilters();
+                
+            } catch (error) {
+                console.error('Error loading data:', error);
+                showError('Failed to load data. Please check if assembling.json exists and contains valid data.');
+            }
+        }
+        
+        function showError(message) {
+            cardsContainer.innerHTML = `
+                <div class="no-results">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h3>Data Loading Error</h3>
+                    <p>${message}</p>
+                    <p>Please ensure:</p>
+                    <ul style="text-align: left; max-width: 500px; margin: 10px auto;">
+                        <li>assembling.json exists in the same folder as this HTML file</li>
+                        <li>assembling.json contains valid JSON data</li>
+                        <li>You're running this on a web server (not just opening the HTML file directly)</li>
+                    </ul>
+                </div>
+            `;
+        }
+        
+        function processMaterials(data) {
+            uniqueMaterials.clear();
+            
+            data.forEach(item => {
+                item.bahan.forEach(material => {
+                    // Remove quantities for grouping
+                    const cleanMaterial = material.replace(/\d+%|\d+g|\d+kg|\d+L/g, '').trim();
+                    if (cleanMaterial) {
+                        uniqueMaterials.add(cleanMaterial);
+                    }
+                });
+            });
+            
+            // Populate material dropdown
+            materialDropdown.innerHTML = '';
+            const sortedMaterials = Array.from(uniqueMaterials).sort((a, b) => a.localeCompare(b));
+            
+            sortedMaterials.forEach(material => {
+                const option = document.createElement('div');
+                option.className = 'material-option';
+                if (selectedMaterials.has(material)) {
+                    option.classList.add('selected');
+                }
+                option.textContent = material;
+                option.addEventListener('click', () => toggleMaterial(material));
+                materialDropdown.appendChild(option);
+            });
+        }
+        
+        function toggleMaterial(material) {
+            if (selectedMaterials.has(material)) {
+                selectedMaterials.delete(material);
+            } else {
+                selectedMaterials.add(material);
+            }
+            updateSelectedMaterialsDisplay();
+            applyFilters();
+        }
+        
+        function updateSelectedMaterialsDisplay() {
+            selectedMaterialsContainer.innerHTML = '';
+            
+            if (selectedMaterials.size === 0) {
+                selectedMaterialsContainer.style.display = 'none';
+                return;
+            }
+            
+            selectedMaterialsContainer.style.display = 'flex';
+            selectedMaterials.forEach(material => {
+                const tag = document.createElement('div');
+                tag.className = 'selected-tag';
+                tag.innerHTML = `${material} <i class="fas fa-times"></i>`;
+                tag.addEventListener('click', (e) => {
+                    if (e.target.tagName === 'I' || e.target.classList.contains('fa-times')) {
+                        selectedMaterials.delete(material);
+                        updateSelectedMaterialsDisplay();
+                        applyFilters();
+                    }
+                });
+                selectedMaterialsContainer.appendChild(tag);
+            });
+        }
+        
+        function displayData(data) {
+            if (!data || data.length === 0) {
+                cardsContainer.innerHTML = `
+                    <div class="no-results">
+                        <i class="fas fa-search"></i>
+                        <p>No matching projects found</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            cardsContainer.innerHTML = '';
+            
+            data.forEach((item, index) => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                
+                // Extract time value for filtering and styling
+                const timeText = item.waktu.toLowerCase();
+                let timeValue = 0;
+                let timeClass = '';
+                
+                if (timeText.includes('hour') || timeText.includes('jam')) {
+                    const timeMatch = timeText.match(/(\d+)\s*(hour|jam)/);
+                    if (timeMatch) {
+                        timeValue = parseFloat(timeMatch[1]);
+                    }
+                } else if (timeText.includes('minute') || timeText.includes('menit')) {
+                    const timeMatch = timeText.match(/(\d+)\s*(minute|menit)/);
+                    if (timeMatch) {
+                        timeValue = parseFloat(timeMatch[1]) / 60;
+                    }
+                }
+                
+                if (timeValue < 1) timeClass = 'time-short';
+                else if (timeValue <= 2) timeClass = 'time-medium';
+                else timeClass = 'time-long';
+                
+                // Determine category for filtering
+                let category = 'other';
+                if (item.judul.toLowerCase().includes('led') || 
+                    item.judul.toLowerCase().includes('solar') || 
+                    item.judul.toLowerCase().includes('bluetooth') ||
+                    item.bahan.some(b => b.toLowerCase().includes('arduino') || b.toLowerCase().includes('raspberry'))) {
+                    category = 'electronics';
+                } else if (item.judul.toLowerCase().includes('meja') || 
+                          item.judul.toLowerCase().includes('furniture')) {
+                    category = 'furniture';
+                } else if (item.judul.toLowerCase().includes('smart') || 
+                          item.judul.toLowerCase().includes('iot')) {
+                    category = 'iot';
+                } else if (item.judul.toLowerCase().includes('pompa') || 
+                          item.judul.toLowerCase().includes('sistem') ||
+                          item.metode.toLowerCase().includes('mechanical')) {
+                    category = 'mechanical';
+                }
+                
+                card.innerHTML = `
+                    <div class="card-header">
+                        <h2>${item.judul}</h2>
+                        <span class="assembly-method">${item.metode || 'Not specified'}</span>
+                        <span class="time-indicator">${item.waktu}</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-section">
+                            <h3><i class="fas fa-cubes"></i> Components</h3>
+                            ${item.bahan.map(b => `<span class="tag">${b}</span>`).join('')}
+                        </div>
+                        <div class="card-section">
+                            <h3><i class="fas fa-tools"></i> Tools</h3>
+                            ${item.alat.map(a => `<span class="tag">${a}</span>`).join('')}
+                        </div>
+                        <div class="card-section">
+                            <h3><i class="fas fa-list-ol"></i> Assembly Steps</h3>
+                            ${item.langkah.map((step, i) => `<div class="step">${step}</div>`).join('')}
+                        </div>
+                        <div class="card-section">
+                            <h3><i class="fas fa-cube"></i> Final Product</h3>
+                            <p>${item.produk}</p>
+                        </div>
+                        <div class="card-section">
+                            <h3><i class="fas fa-lightbulb"></i> Benefits</h3>
+                            <p>${item.manfaat}</p>
+                        </div>
+                        ${item.catatan ? `
+                        <div class="card-section">
+                            <h3><i class="fas fa-exclamation-triangle"></i> Notes</h3>
+                            <p>${item.catatan}</p>
+                        </div>
+                        ` : ''}
+                        <div class="specs" data-time="${timeValue}" data-category="${category}">
+                            <div class="spec-item">
+                                <div class="spec-value ${timeClass}">${item.waktu}</div>
+                                <div class="spec-label">Duration</div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-value">${item.metode || 'N/A'}</div>
+                                <div class="spec-label">Method</div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                cardsContainer.appendChild(card);
+            });
+        }
+        
+        function setupFilters() {
+            // Material dropdown toggle
+            materialSelect.addEventListener('click', (e) => {
+                e.stopPropagation();
+                materialDropdown.classList.toggle('show');
+            });
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', () => {
+                materialDropdown.classList.remove('show');
+            });
+            
+            // Prevent dropdown from closing when clicking inside
+            materialDropdown.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+            
+            // Event listeners for all filters
+            searchInput.addEventListener('input', applyFilters);
+            timeFilter.addEventListener('change', applyFilters);
+            categoryFilter.addEventListener('change', applyFilters);
+        }
+        
+        function applyFilters() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const timeValue = timeFilter.value;
+            const categoryValue = categoryFilter.value;
+            
+            const filteredData = allData.filter(item => {
+                // Search filter
+                const matchesSearch = searchTerm === '' || 
+                    item.judul.toLowerCase().includes(searchTerm) ||
+                    item.produk.toLowerCase().includes(searchTerm) ||
+                    item.manfaat.toLowerCase().includes(searchTerm) ||
+                    item.bahan.some(b => b.toLowerCase().includes(searchTerm)) ||
+                    item.alat.some(a => a.toLowerCase().includes(searchTerm)) ||
+                    (item.metode && item.metode.toLowerCase().includes(searchTerm));
+                
+                // Material filter
+                const matchesMaterials = selectedMaterials.size === 0 || 
+                    item.bahan.some(b => 
+                        Array.from(selectedMaterials).some(m => 
+                            b.toLowerCase().includes(m.toLowerCase())
+                        )
+                    );
+                
+                // Time filter
+                const timeText = item.waktu.toLowerCase();
+                let timeInHours = 0;
+                
+                if (timeText.includes('hour') || timeText.includes('jam')) {
+                    const timeMatch = timeText.match(/(\d+)\s*(hour|jam)/);
+                    if (timeMatch) {
+                        timeInHours = parseFloat(timeMatch[1]);
+                    }
+                } else if (timeText.includes('minute') || timeText.includes('menit')) {
+                    const timeMatch = timeText.match(/(\d+)\s*(minute|menit)/);
+                    if (timeMatch) {
+                        timeInHours = parseFloat(timeMatch[1]) / 60;
+                    }
+                }
+                
+                let matchesTime = true;
+                if (timeValue === 'short') {
+                    matchesTime = timeInHours < 1;
+                } else if (timeValue === 'medium') {
+                    matchesTime = timeInHours >= 1 && timeInHours <= 2;
+                } else if (timeValue === 'long') {
+                    matchesTime = timeInHours > 2;
+                }
+                
+                // Category filter
+                let category = 'other';
+                if (item.judul.toLowerCase().includes('led') || 
+                    item.judul.toLowerCase().includes('solar') || 
+                    item.judul.toLowerCase().includes('bluetooth') ||
+                    item.bahan.some(b => b.toLowerCase().includes('arduino') || b.toLowerCase().includes('raspberry'))) {
+                    category = 'electronics';
+                } else if (item.judul.toLowerCase().includes('meja') || 
+                          item.judul.toLowerCase().includes('furniture')) {
+                    category = 'furniture';
+                } else if (item.judul.toLowerCase().includes('smart') || 
+                          item.judul.toLowerCase().includes('iot')) {
+                    category = 'iot';
+                } else if (item.judul.toLowerCase().includes('pompa') || 
+                          item.judul.toLowerCase().includes('sistem') ||
+                          item.metode.toLowerCase().includes('mechanical')) {
+                    category = 'mechanical';
+                }
+                
+                let matchesCategory = true;
+                if (categoryValue === 'electronics') {
+                    matchesCategory = category === 'electronics';
+                } else if (categoryValue === 'mechanical') {
+                    matchesCategory = category === 'mechanical';
+                } else if (categoryValue === 'furniture') {
+                    matchesCategory = category === 'furniture';
+                } else if (categoryValue === 'iot') {
+                    matchesCategory = category === 'iot';
+                }
+                
+                return matchesSearch && matchesMaterials && matchesTime && matchesCategory;
+            });
+            
+            displayData(filteredData);
+        }
+    </script>
+</body>
+</html>
