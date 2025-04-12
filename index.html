@@ -29,9 +29,9 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            overflow: hidden;
+            /* Hapus overflow: hidden untuk mengaktifkan scroll */
             position: relative;
-            touch-action: manipulation;
+            touch-action: pan-y; /* Ubah ke pan-y untuk mengizinkan scroll vertikal */
         }
         
         header {
@@ -70,6 +70,7 @@
             transition: transform 0.3s, box-shadow 0.3s;
             text-decoration: none;
             color: inherit;
+            touch-action: manipulation; /* Tambahkan ini untuk kartu */
         }
         
         .menu-card:hover {
@@ -147,11 +148,12 @@
 
         /* Ball styles */
         .ball {
-            position: absolute;
+            position: fixed; /* Ubah dari absolute ke fixed untuk memastikan bola tetap di viewport */
             border-radius: 50%;
             pointer-events: none;
             transform: translate(-50%, -50%);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            touch-action: none; /* Pastikan bola tidak mengganggu touch events */
         }
 
         /* Game instructions */
@@ -166,19 +168,6 @@
             padding: 10px;
             background-color: rgba(255, 255, 255, 0.8);
             z-index: 100;
-        }
-
-        /* Size indicator */
-        .size-indicator {
-            position: fixed;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            border: 2px dashed var(--primary-bio);
-            transform: translate(-50%, -50%);
-            pointer-events: none;
-            opacity: 0;
-            transition: opacity 0.2s;
         }
     </style>
 </head>
@@ -214,10 +203,7 @@
                 </div>
             </a>
         </div>
-        
     </div>
-
-    <div class="size-indicator"></div>
     
     <footer>
         <p>Ardiansyah © | FEEL FREE</p>
@@ -235,64 +221,30 @@
             let lastTap = 0;
             let tapCount = 0;
             
-            // For right click hold
-            let rightMouseDown = false;
-            let holdStartTime = 0;
-            let holdInterval = null;
-            const sizeIndicator = document.querySelector('.size-indicator');
-            
-            // Right click hold events
-            document.addEventListener('mousedown', function(e) {
-                if (e.button === 2) { // Right click
-                    rightMouseDown = true;
-                    holdStartTime = Date.now();
-                    sizeIndicator.style.left = `${e.clientX}px`;
-                    sizeIndicator.style.top = `${e.clientY}px`;
-                    sizeIndicator.style.opacity = '0.7';
-                    
-                    holdInterval = setInterval(function() {
-                        const holdDuration = Date.now() - holdStartTime;
-                        const size = Math.min(100, 20 + (holdDuration / 1000 * 80)); // Max 100px
-                        sizeIndicator.style.width = `${size}px`;
-                        sizeIndicator.style.height = `${size}px`;
-                    }, 16);
-                }
-            });
-            
-            document.addEventListener('mouseup', function(e) {
-                if (e.button === 2 && rightMouseDown) {
-                    rightMouseDown = false;
-                    clearInterval(holdInterval);
-                    sizeIndicator.style.opacity = '0';
-                    
-                    const holdDuration = Date.now() - holdStartTime;
-                    const size = Math.min(100, 20 + (holdDuration / 1000 * 80)); // Max 100px
-                    createBall(e.clientX, e.clientY, size);
-                }
-            });
-            
+            // Create ball on right click or double tap
             document.addEventListener('contextmenu', function(e) {
                 e.preventDefault();
+                createBall(e.clientX, e.clientY);
             });
             
-            // Mobile double tap
             document.addEventListener('touchend', function(e) {
                 const currentTime = new Date().getTime();
                 const tapLength = currentTime - lastTap;
                 
                 if (tapLength < 300 && tapLength > 0) {
                     // Double tap detected
-                    createBall(e.changedTouches[0].clientX, e.changedTouches[0].clientY, Math.random() * 30 + 20);
+                    createBall(e.changedTouches[0].clientX, e.changedTouches[0].clientY);
                     e.preventDefault();
                 }
                 
                 lastTap = currentTime;
-            });
+            }, { passive: true }); // Ubah ke passive: true untuk scroll yang lebih baik
             
-            function createBall(x, y, size) {
+            function createBall(x, y) {
                 const ball = document.createElement('div');
                 ball.className = 'ball';
                 
+                const size = Math.random() * 30 + 20;
                 const color = colors[Math.floor(Math.random() * colors.length)];
                 
                 ball.style.width = `${size}px`;
@@ -414,24 +366,28 @@
                 }
             });
             
-            // Touch interaction - push balls
+            // Touch interaction - push balls (hanya saat tidak scrolling)
+            let isScrolling;
             document.addEventListener('touchmove', function(e) {
-                e.preventDefault();
-                for (const ball of balls) {
-                    const touch = e.touches[0];
-                    const dx = touch.clientX - ball.x;
-                    const dy = touch.clientY - ball.y;
-                    const distance = Math.sqrt(dx * dx + dy * dy);
-                    
-                    if (distance < 100) {
-                        const force = (100 - distance) / 10;
-                        const angle = Math.atan2(dy, dx);
+                // Batasi interaksi saat scroll aktif
+                clearTimeout(isScrolling);
+                isScrolling = setTimeout(() => {
+                    for (const ball of balls) {
+                        const touch = e.touches[0];
+                        const dx = touch.clientX - ball.x;
+                        const dy = touch.clientY - ball.y;
+                        const distance = Math.sqrt(dx * dx + dy * dy);
                         
-                        ball.vx -= Math.cos(angle) * force;
-                        ball.vy -= Math.sin(angle) * force;
+                        if (distance < 100) {
+                            const force = (100 - distance) / 10;
+                            const angle = Math.atan2(dy, dx);
+                            
+                            ball.vx -= Math.cos(angle) * force;
+                            ball.vy -= Math.sin(angle) * force;
+                        }
                     }
-                }
-            }, { passive: false });
+                }, 100); // Delay untuk membedakan scroll dan interaksi
+            }, { passive: true });
             
             // Start animation
             animate();
