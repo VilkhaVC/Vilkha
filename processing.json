@@ -1,0 +1,134 @@
+[
+  {
+    "judul": "Peleburan Aluminium dari Kaleng Bekas",
+    "bahan": ["Kaleng aluminium bekas 5kg", "Fluks (NaCl-KCl) 200g"],
+    "alat": ["Tungku peleburan", "Cawan crucible", "Penjepit logam"],
+    "metode": "Peleburan langsung",
+    "langkah": [
+      "Bersihkan kaleng dari kotoran dan lapisan cat",
+      "Potong kaleng menjadi bagian kecil",
+      "Panaskan tungku hingga suhu 700°C",
+      "Masukkan kaleng ke dalam crucible",
+      "Tambahkan fluks untuk mengurangi oksidasi",
+      "Tunggu hingga aluminium mencair sempurna",
+      "Tuang ke dalam cetakan"
+    ],
+    "produk": "Aluminium ingot",
+    "manfaat": "Bahan baku industri daur ulang",
+    "yield": "85-90%",
+    "catatan": "Suhu kerja 660-700°C, hindari overheating"
+  },
+  {
+    "judul": "Peleburan Tembaga dari Kabel Bekas",
+    "bahan": ["Kabel tembaga bekas 3kg", "Arang kayu 1kg"],
+    "alat": ["Tungku induksi", "Cawan grafit", "Sarung tangan tahan panas"],
+    "metode": "Peleburan reduksi",
+    "langkah": [
+      "Kupas isolasi kabel untuk mendapatkan tembaga murni",
+      "Potong tembaga menjadi bagian kecil",
+      "Panaskan tungku hingga 1100°C",
+      "Masukkan tembaga dan arang kayu",
+      "Pertahankan suhu selama 1 jam",
+      "Kurangi slag yang terbentuk",
+      "Tuang ke dalam cetakan batang"
+    ],
+    "produk": "Batangan tembaga",
+    "manfaat": "Bahan dasar industri elektronik",
+    "yield": "80-85%",
+    "catatan": "Gunakan flux borax untuk hasil lebih baik"
+  },
+  {
+    "judul": "Peleburan Besi dari Bahan Skrap",
+    "bahan": ["Besi skrap 10kg", "Kokas 3kg", "Batu kapur 500g"],
+    "alat": ["Cupola furnace", "Ladel penuang", "Alat pengaduk"],
+    "metode": "Peleburan tinggi",
+    "langkah": [
+      "Susun kokas dan batu kapur di dasar tungku",
+      "Masukkan besi skrap secara berlapis",
+      "Nyalakan tungku hingga suhu 1500°C",
+      "Tambahkan batu kapur sebagai flux",
+      "Tunggu hingga besi mencair sempurna",
+      "Kurangi slag yang mengapung",
+      "Tuang ke dalam cetakan pasir"
+    ],
+    "produk": "Besi cor",
+    "manfaat": "Bahan baku industri pengecoran",
+    "yield": "75-80%",
+    "catatan": "Perhatikan komposisi karbon untuk kualitas besi"
+  },
+  {
+    "judul": "Peleburan Timah dari Solder Bekas",
+    "bahan": ["Solder bekas 2kg", "Resin flux 100g"],
+    "alat": ["Tungku listrik kecil", "Cawan keramik", "Termokopel"],
+    "metode": "Peleburan suhu rendah",
+    "langkah": [
+      "Pisahkan solder dari komponen elektronik",
+      "Panaskan tungku hingga 250°C",
+      "Masukkan solder ke cawan",
+      "Tambahkan resin flux",
+      "Aduk perlahan hingga semua timah mencair",
+      "Saring kotoran yang mengapung",
+      "Tuang ke cetakan kecil"
+    ],
+    "produk": "Timah murni",
+    "manfaat": "Bahan solder baru atau kerajinan",
+    "yield": "90-95%",
+    "catatan": "Gunakan ventilasi baik karena uap flux berbahaya"
+  },
+  {
+    "judul": "Peleburan Kuningan dari Limbah Industri",
+    "bahan": ["Limbah kuningan 5kg", "Seng murni 500g", "Fluks borax 200g"],
+    "alat": ["Tungku reverberatory", "Cawan peleburan", "Alat pengaduk grafit"],
+    "metode": "Peleburan paduan",
+    "langkah": [
+      "Sortir limbah kuningan berdasarkan komposisi",
+      "Panaskan tungku hingga 900°C",
+      "Masukkan limbah kuningan",
+      "Setelah mencair, tambahkan seng",
+      "Tambahkan borax sebagai flux",
+      "Aduk rata dan pertahankan suhu",
+      "Tuang ke dalam cetakan ingot"
+    ],
+    "produk": "Kuningan daur ulang",
+    "manfaat": "Bahan baku industri kerajinan logam",
+    "yield": "85-90%",
+    "catatan": "Komposisi ideal 67% Cu dan 33% Zn"
+  },
+  {
+    "judul": "Peleburan Perak dari Film Fotografi Bekas",
+    "bahan": ["Film fotografi bekas 10kg", "Asam nitrat 1L", "Natrium klorida 500g"],
+    "alat": ["Wadah tahan asam", "Penyaring vakum", "Tungku kecil"],
+    "metode": "Ekstraksi kimia dan peleburan",
+    "langkah": [
+      "Rendam film dalam asam nitrat untuk ekstraksi perak",
+      "Saring larutan dan tambahkan NaCl untuk presipitasi",
+      "Kumpulkan perak klorida hasil presipitasi",
+      "Reduksi dengan aluminium foil",
+      "Keringkan dan lebur pada suhu 1000°C",
+      "Tuang ke dalam cetakan batang"
+    ],
+    "produk": "Perak murni 99%",
+    "manfaat": "Bahan perhiasan atau industri elektronik",
+    "yield": "0.5-1% dari berat film",
+    "catatan": "Lakukan di area berventilasi baik, hati-hati dengan asam"
+  },
+  {
+    "judul": "Peleburan Emas dari Komponen Elektronik",
+    "bahan": ["Komponen elektronik bekas 2kg", "Aqua regia 2L", "Metabisulfit 500g"],
+    "alat": ["Wadah kaca tahan asam", "Pemanas listrik", "Penyaring halus"],
+    "metode": "Ekstraksi kimia dan peleburan",
+    "langkah": [
+      "Pisahkan bagian yang mengandung emas",
+      "Larutkan dalam aqua regia",
+      "Saring larutan dan netralkan dengan metabisulfit",
+      "Kumpulkan emas yang mengendap",
+      "Cuci dengan air destilasi",
+      "Lelehkan pada suhu 1100°C",
+      "Tuang ke dalam cetakan batangan"
+    ],
+    "produk": "Emas murni 24 karat",
+    "manfaat": "Bahan perhiasan atau investasi",
+    "yield": "0.01-0.05% dari berat komponen",
+    "catatan": "Proses berbahaya, perlu keahlian khusus"
+  }
+]
