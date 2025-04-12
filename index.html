@@ -11,6 +11,8 @@
             --secondary-bio: #004445;
             --primary-metal: #3a5a78;
             --secondary-metal: #2c3e50;
+            --primary-assembly: #4a6fa5;
+            --secondary-assembly: #166088;
             --light: #faf5e4;
             --dark: #1a1a2e;
         }
@@ -29,9 +31,8 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            /* Hapus overflow: hidden untuk mengaktifkan scroll */
             position: relative;
-            touch-action: pan-y; /* Ubah ke pan-y untuk mengizinkan scroll vertikal */
+            touch-action: pan-y;
         }
         
         header {
@@ -70,7 +71,7 @@
             transition: transform 0.3s, box-shadow 0.3s;
             text-decoration: none;
             color: inherit;
-            touch-action: manipulation; /* Tambahkan ini untuk kartu */
+            touch-action: manipulation;
         }
         
         .menu-card:hover {
@@ -84,6 +85,10 @@
         
         .card-metal .card-header {
             background: linear-gradient(135deg, var(--primary-metal), var(--secondary-metal));
+        }
+        
+        .card-assembly .card-header {
+            background: linear-gradient(135deg, var(--primary-assembly), var(--secondary-assembly));
         }
         
         .card-header {
@@ -133,6 +138,14 @@
             background-color: var(--secondary-metal);
         }
         
+        .btn-assembly {
+            background-color: var(--primary-assembly);
+        }
+        
+        .btn-assembly:hover {
+            background-color: var(--secondary-assembly);
+        }
+        
         footer {
             text-align: center;
             padding: 1.5rem 0;
@@ -148,12 +161,13 @@
 
         /* Ball styles */
         .ball {
-            position: fixed; /* Ubah dari absolute ke fixed untuk memastikan bola tetap di viewport */
+            position: fixed;
             border-radius: 50%;
             pointer-events: none;
             transform: translate(-50%, -50%);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            touch-action: none; /* Pastikan bola tidak mengganggu touch events */
+            touch-action: none;
+            z-index: 1000;
         }
 
         /* Game instructions */
@@ -202,6 +216,18 @@
                     <span class="btn btn-metal">Buka Metal Processing</span>
                 </div>
             </a>
+            
+            <a href="assembling.html" class="menu-card card-assembly">
+                <div class="card-header">
+                    <i class="fas fa-tools"></i>
+                    <h2>Assembly Projects</h2>
+                    <p>Proyek perakitan</p>
+                </div>
+                <div class="card-body">
+                    <p>Panduan perakitan DIY untuk proyek elektronik dan mekanik dengan berbagai komponen dan metode.</p>
+                    <span class="btn btn-assembly">Buka Assembly Projects</span>
+                </div>
+            </a>
         </div>
     </div>
     
@@ -212,43 +238,53 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const balls = [];
-            const colors = ['#2c786c', '#004445', '#3a5a78', '#2c3e50'];
+            const colors = ['#2c786c', '#004445', '#3a5a78', '#2c3e50', '#4a6fa5', '#166088'];
             const gravity = 0.2;
             const friction = 0.99;
             const bounce = 0.8;
             
-            // For mobile double tap detection
-            let lastTap = 0;
-            let tapCount = 0;
+            // For long press detection
+            let pressTimer;
+            let isLongPress = false;
+            const longPressDuration = 500; // milliseconds
             
-            // Create ball on right click or double tap
+            // Create ball on right click or long press
             document.addEventListener('contextmenu', function(e) {
                 e.preventDefault();
-                createBall(e.clientX, e.clientY);
+                createBall(e.clientX, e.clientY, 40 + Math.random() * 60);
             });
             
-            document.addEventListener('touchend', function(e) {
-                const currentTime = new Date().getTime();
-                const tapLength = currentTime - lastTap;
-                
-                if (tapLength < 300 && tapLength > 0) {
-                    // Double tap detected
-                    createBall(e.changedTouches[0].clientX, e.changedTouches[0].clientY);
-                    e.preventDefault();
-                }
-                
-                lastTap = currentTime;
-            }, { passive: true }); // Ubah ke passive: true untuk scroll yang lebih baik
+            // Touch events for long press
+            document.addEventListener('touchstart', function(e) {
+                const touch = e.touches[0];
+                pressTimer = setTimeout(() => {
+                    isLongPress = true;
+                    createBall(touch.clientX, touch.clientY, 80 + Math.random() * 120);
+                }, longPressDuration);
+            }, { passive: true });
             
-            function createBall(x, y) {
+            document.addEventListener('touchend', function(e) {
+                clearTimeout(pressTimer);
+                if (isLongPress) {
+                    e.preventDefault();
+                    isLongPress = false;
+                }
+            }, { passive: true });
+            
+            document.addEventListener('touchmove', function(e) {
+                clearTimeout(pressTimer);
+                isLongPress = false;
+            }, { passive: true });
+            
+            function createBall(x, y, size = null) {
                 const ball = document.createElement('div');
                 ball.className = 'ball';
                 
-                const size = Math.random() * 30 + 20;
+                const ballSize = size || (Math.random() * 30 + 20);
                 const color = colors[Math.floor(Math.random() * colors.length)];
                 
-                ball.style.width = `${size}px`;
-                ball.style.height = `${size}px`;
+                ball.style.width = `${ballSize}px`;
+                ball.style.height = `${ballSize}px`;
                 ball.style.background = color;
                 
                 document.body.appendChild(ball);
@@ -257,7 +293,7 @@
                     element: ball,
                     x,
                     y,
-                    size,
+                    size: ballSize,
                     vx: (Math.random() - 0.5) * 10,
                     vy: (Math.random() - 0.5) * 10
                 });
@@ -366,10 +402,10 @@
                 }
             });
             
-            // Touch interaction - push balls (hanya saat tidak scrolling)
+            // Touch interaction - push balls (only when not scrolling)
             let isScrolling;
             document.addEventListener('touchmove', function(e) {
-                // Batasi interaksi saat scroll aktif
+                // Limit interaction when scrolling is active
                 clearTimeout(isScrolling);
                 isScrolling = setTimeout(() => {
                     for (const ball of balls) {
@@ -386,7 +422,7 @@
                             ball.vy -= Math.sin(angle) * force;
                         }
                     }
-                }, 100); // Delay untuk membedakan scroll dan interaksi
+                }, 100); // Delay to distinguish between scroll and interaction
             }, { passive: true });
             
             // Start animation
